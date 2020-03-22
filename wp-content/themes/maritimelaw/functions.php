@@ -182,6 +182,7 @@ class StarterSite extends TimberSite {
 		) );
 
 		add_post_type_support( 'post', 'simple-page-sidebars' );
+		add_post_type_support( 'faqs', 'simple-page-sidebars' );
 	}
 
 	/**
