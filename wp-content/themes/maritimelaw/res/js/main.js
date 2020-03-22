@@ -976,12 +976,12 @@ JalChatPopup.prototype = {
 
             var _this = this;
 
-            setTimeout(function() {
-                console.log("[JAL][Chat] New code uploaded on 02/23/20");
-                _this.openPopup();
-            }, 20000);
+            /*setTimeout(function() {
+             console.log("[JAL][Chat] New code uploaded on 02/23/20");
+             _this.openPopup();
+             }, 20000);*/
 
-            if (typeof Date !== "undefined" && false) {
+            if (typeof Date !== "undefined") {
 
                 // The current time, in seconds (linux tstamp)
                 var currently = Math.floor(Date.now() / 1000);
@@ -999,18 +999,34 @@ JalChatPopup.prototype = {
                 var visitedDifference = currently - userLastVisitTime;
                 var shownDifference = currently - userLastPopupTime;
 
+                console.log("THE SHOWN DIFFERENCE " + shownDifference);
+
                 // # 1 - If popup has not been shown, wait until the current time is past 60 seconds from last visit
-                if (this.userLastPopupShownTime == 0 && (visitedDifference >= 60)) {
-                    console.log("[JAL][Chat] Its been ONE minute");
-                    this.openPopup();
+                /*if (this.userLastPopupShownTime == 0 && (visitedDifference >= 60)) {
+                 console.log("[JAL][Chat] Its been ONE minute");
+                 this.openPopup();
+                 }*/
+
+                // # 2 - If the popup has been shown, and its been over 1 hour
+                if (this.userLastPopupShownTime > 0 && shownDifference >= (1 * 60 * 60)) {
+                    // We also reset the last visit time because we want it to trigger again
+                    console.log("[JAL][Chat] Its been 1 hour at least");
+                    _this.openPopup();
+                } else {
+                    console.log("[JAL][Chat] It hasn't been an hour yet");
                 }
 
-                // # 2 - If the popup has been shown, and its been over 24 hours
-                if (shownDifference >= (24 * 60 * 60)) {
+                // # 4 - If the popup has been shown, and its been over 1 hour
+                if (this.userLastPopupShownTime > 0 && shownDifference >= (24 * 60 * 60)) {
                     // We also reset the last visit time because we want it to trigger again
-                    console.log("[JAL][Chat] Its been 24 hours");
+                    console.log("[JAL][Chat] Its been 24 hours, resetting for this user");
                     window.localStorage.setItem("userLastVisitTime", 0);
-                    this.openPopup();
+                    window.localStorage.setItem("userLastPopupShownTime",0);
+                    setTimeout(function(){
+                        _this.openPopup();
+                    },20000)
+                } else {
+                    console.log("[JAL][Chat] It hasn't been 24 hours yet");
                 }
 
                 // # 3 - If the popup hasn't been shown yet, and 30 seconds passes
@@ -1018,14 +1034,16 @@ JalChatPopup.prototype = {
                     console.log("[JAL][Chat] Scheduling to show in 30 seconds");
                     setTimeout(function(){
                         _this.openPopup();
-                    },30000)
+                    },20000)
+                } else {
+                    console.log("[JAL][Chat] The user has seen this before.. not scheduling to show");
                 }
 
             } else {
                 // Sorry. Always open the popup after 60000, regardless
                 setTimeout(function(){
-                    this.openPopup();
-                },60000)
+                    _this.openPopup();
+                },20000)
             }
         } else {
             console.log("[JAL][Chat] Tried to activate chat before it existed.");

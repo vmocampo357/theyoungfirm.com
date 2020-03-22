@@ -1402,13 +1402,15 @@ blockquote {
     transition: .1s;
     color: #fff;
     text-decoration: none;
-    font-size: 16px
+    font-size: 16px;
+    cursor:pointer;
 }
 
 #nbb-footer-banner ul li a.active,
 #nbb-footer-banner ul li a:hover {
     background-color: #b50f1e;
-    color: #fff
+    color: #fff;
+    cursor:pointer !important;
 }
 
 #nbb-fb-quiet ul {
