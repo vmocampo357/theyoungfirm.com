@@ -14,15 +14,15 @@
 
 $context = Timber::get_context();
 
-# This is the actual Our Team content
-$post = new TimberPost();
-$context['post'] = $post;
-
 # These are the Attorneys
 $args = array(
     'post_type' => 'attorney',
 );
 $context['attorneys'] = Timber::get_posts( $args );
+
+# This is the actual Our Team content
+$post = new TimberPost();
+$context['post'] = $post;
 
 # These are the Staff Members
 $args = array(
