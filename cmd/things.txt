@@ -1,0 +1,13 @@
+5/12 todoes
+000
+
+The title is fine for that section (can always edit it later). As for populating it, is there a way to have it populate it with pages with a certain category or tag? or posts? 
+
+[ ] Add some kind of option to populate with certain category/tag/posts
+[x] Do all the links tasks
+[x] Do all of the 301s
+[x] Remove cpts
+
+Check this for redirects
+
+http://tyf.jonesactlaw.com/the-jones-act-and-safety-are-you-at-risk/

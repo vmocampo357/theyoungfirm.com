@@ -1,0 +1,49 @@
+{#<a id="jal-compass-up" href="#"><i class="fa fa-compass" aria-hidden="true"></i></a>#}
+{#<a id="jal-compass-up" class="trigger-responsive-menu-toggle" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>#}
+<div id="jal-div-element-logos-container">
+    <div id="jal-div-element-logos">
+        <ul>{{ footer_sidebar_logos }}</ul>
+    </div>
+</div>
+<div id="jal-div-element-footer-container">
+    <div id="jal-div-element-footer" class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3">
+                {{ footer_sidebar_a }}
+            </div>
+            <div class="col-lg-2 col-md-2">
+                {{ footer_sidebar_b }}
+            </div>
+            <div class="col-lg-4 col-md-3">
+                {{ footer_sidebar_c }}
+                <ul class="jal-any-footer-social-bar">
+                    {% if facebook_url %}
+                        <li><a target="_blank" title="" class="jal-ico-footer-facebook" href="{{ facebook_url }}"><i class="fa fa-facebook"></i></a></li>
+                    {% endif %}
+                    {% if twitter_url %}
+                        <li><a target="_blank" title="" class="jal-ico-footer-twitter" href="{{ twitter_url }}"><i class="fa fa-twitter"></i></a></li>
+                    {% endif %}
+                    {% if linkedin_url %}
+                        <li><a class="jal-ico-footer-linkedin" href="{{ linkedin_url }}"><i class="fa fa-linkedin"></i></a></li>
+                    {% endif %}
+                    {% if google_url %}
+                        <li><a class="jal-ico-footer-google" href="{{ google_url }}"><i class="fa fa-google-plus"></i></a></li>
+                    {% endif %}
+                    {% if youtube_url %}
+                        <li><a class="jal-ico-footer-youtube" href="{{ youtube_url }}"><i class="fa fa-youtube"></i></a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <div class="jal-search-box">
+                    <form method="get" action="{{ home_link }}">
+                        <button class="jal-search-icon fa fa-search btn btn-default"></button>
+                        <input placeholder="Search for answers" type="text" class="form-control" value="{{ term|default('') }}" name="s" />
+                        <label style="display: none" for="s">Search for answers</label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'partial/footer-bar.twig' %}

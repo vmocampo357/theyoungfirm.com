@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-md-12 results-left">
+        <p><strong>Complete</strong></p>
+        <h2>So, How did You Do?</h2>
+        <div id="results-blue-box">
+            <h2>Your Score</h2>
+            <h3>{{ points }}</h3>
+            {% if points <= 20 %}
+                <p>&nbsp;</p><p>Some of the answers you gave indicate that you will face multiple challenges in pursuing your claim.  This does not necessarily mean you don’t have a valuable claim.  All it means is that you can expect the company to throw the usual defenses at you while you move forward trying to collect a fair settlement.</p>
+            {% endif %}
+            {% if points > 20 and points <= 30 %}
+                <p>&nbsp;</p><p>Moving forward with your claim will likely be a smart move on your part.  While the company may try to challenge some of your claim, other parts are probably well in your favor.  You probably have a lot of money at stake, so be careful moving forward to handle everything properly. </p>
+            {% endif %}
+            {% if points > 30 %}
+                <p>&nbsp;</p><p>You want to be very careful moving forward.  Your future has probably been very affected by your injury and you may have the basis of a very valuable claim.  A lot is at stake for you, and there are definitely right and wrong ways to handle things to make your future better.   Speak to an attorney as soon as you can.</p>
+            {% endif %}
+        </div>
+        <p>Remember that the above points are really only basic guidelines and may not apply to your specific situation. Hopefully the answers got you thinking about your claim and how to best protect yourself moving forward. And with many of the answers above, even if you scored low on the questions, there may be ways to minimize or avoid the challenges to your claim.</p>
+        <!--<p>Thanks for using our calculator! You can download <a target="_blank" style="color:blue;" href="https://www.jonesactlaw.com/wp-content/uploads/2016/07/JAL-Rate-Your-Claim-Calculator-Download.pdf">this PDF</a> version for future use.</p>!-->
+        {# <p>Thanks for using our calculator! Submit the form below to get a free, PDF version of the calculator!</p>
+         <script type="text/javascript" src="https://tschedule.infusionsoft.com/app/form/iframe/ea47e1967bb06c43965f4ca46a743a13"></script>
+         <form accept-charset="UTF-8" action="https://tschedule.infusionsoft.com/app/form/process/ea47e1967bb06c43965f4ca46a743a13" class="infusion-form" method="POST">
+             <input name="inf_form_xid" type="hidden" value="ea47e1967bb06c43965f4ca46a743a13" />
+             <input name="inf_form_name" type="hidden" value="Rate Claim Webform" />
+             <input name="infusionsoft_version" type="hidden" value="1.55.0.65" />
+             <div class="infusion-field">
+                 <label for="inf_field_FirstName">First Name *</label>
+                 <input class="infusion-field-input-container" id="inf_field_FirstName" name="inf_field_FirstName" type="text" />
+             </div>
+             <div class="infusion-field">
+                 <label for="inf_field_Email">Email *</label>
+                 <input class="infusion-field-input-container" id="inf_field_Email" name="inf_field_Email" type="text" />
+             </div>
+             <div class="infusion-submit">
+                 <input type="submit" value="Submit" />
+             </div>
+         </form>
+         <script type="text/javascript" src="https://tschedule.infusionsoft.com/app/webTracking/getTrackingCode?trackingId=e370abe00d8ff5e4b9a050d36c0821cd"></script>
+
+         <p>&nbsp;</p>
+         <a href="javascript:location.reload();" id="start_again">Start Over</a>#}
+    </div>
+    {#<div class="col-md-6 col-md-push-1 results-right">
+        <br />
+
+    </div>#}
+</div>
+<div class="row"><div class="col-md-12"><br /><br /></div></div>
+

@@ -1,0 +1,31 @@
+/* Grid Shortcodes CSS */
+/* Row */
+.gdc_row {overflow:auto; margin-bottom:20px;}
+
+/* Column — Sizes */
+.gdc_cfull {width:100%;}
+.gdc_chalf {width:50%;}
+.gdc_cthird {width:33.3%;}
+.gdc_ctwo-thirds {width:66.6%;}
+.gdc_cquarter {width:25%;}
+.gdc_cthree-quarters {width:75%;}
+
+/* Column — Generals */
+.gdc_column {float:left;}
+.gdc_column div.gdc_inner {padding:0 20px;}
+
+.gdc_column:first-of-type .gdc_inner {padding-left:0;}
+.gdc_column:last-of-type .gdc_inner {padding-right:0;}
+
+@media only screen and (max-width: 40em) {
+    /* Column — Sizes */
+    .gdc_cfull {width:100%;}
+    .gdc_chalf {width:100%;}
+    .gdc_cthird {width:100%;}
+    .gdc_ctwo-thirds {width:100%;}
+    .gdc_cquarter {width:100%;}
+    .gdc_cthree-quarters {width:100%;} 
+    
+    .gdc_column .gdc_inner {padding:0 !important;}
+    .gdc_column {margin-bottom:20px;}
+}

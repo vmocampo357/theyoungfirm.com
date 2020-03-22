@@ -1,0 +1,15 @@
+{% macro sub_menu(item) %}
+    {% set classes = item.classes %}
+    {% if item.children|length > 0 %}
+        {% set classes = item.classes|merge(['jal-regmenu-li']) %}
+    {% endif %}
+    <li class="{{ classes|join(" ") }}"><a href="{{ item.link }}">{{ item.title }}</a>
+        {% if item.children|length > 0 %}
+            <ul class="jal-regmenu-submenu">
+                {% for sub_item in item.children %}
+                    {{ _self.sub_menu(sub_item) }}
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </li>
+{% endmacro %}

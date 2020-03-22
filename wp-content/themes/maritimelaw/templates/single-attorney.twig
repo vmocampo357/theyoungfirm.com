@@ -1,0 +1,92 @@
+{% extends 'base-single.twig' %}
+
+{# Leave this blank for those posts that have a different handling for the thumbnail #}
+{% block optional_banner %}{% endblock %}
+
+{# For attorneys, we want to utilize the extra page meta #}
+{% block other_page_meta %}
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org/",
+        "@type": "Person",
+        "name": "{{ post.title }}",
+        "alternateName": "{{ post.title }}",
+        "url": "{{ post.link }}",
+        "image": "{{ post.thumbnail.src }}",
+        "jobTitle": "{{ post.get_field('attorney_attorney_designation') }}",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "The Young Firm"
+        }
+    }
+    </script>
+{% endblock %}
+
+{# Some single posts won't use the Author stuff, so we make it overrideable #}
+{% block single_title_block %}
+    <div class="row jal-row-margin-bottom-20">
+        <div class="col-xs-12">
+            <div class="jal-any-element-body">
+                <h1>{{ post.title }}</h1>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{# Some single posts will/won't use a sidebar, so we define that here #}
+{% block single_body %}
+<div id="jal-any-element-primary" class="even-cols col-xs-12 jal-any-element-body">
+    <div class="row jal-row-margin-bottom-40">
+        <div class="col-md-4 col-sm-12">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="jal-any-attorney-profile">
+                        <img alt="{{ post.thumbnail.alt }}" src="{{ post.thumbnail.src }}" />
+                        <span class="jal-attorney-profile-name">{{ post.get_field('attorney_attorney_designation') }}</span>
+                    </div>
+                </div>
+            </div>
+            <br />
+            {% if post.get_field('attorney_education') %}
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 style="color:{{ colors.primary }}"><i class="fa fa-graduation-cap"></i> Education</h4>
+                    {{ post.get_field('attorney_education') }}
+                    <hr />
+                </div>
+            </div>
+            {% endif %}
+            {% if post.get_field('attorney_bar_court_admissions') %}
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 style="color:{{ colors.primary }}"><i class="fa fa-gavel"></i> Bar & Court Admissions</h4>
+                    {{ post.get_field('attorney_bar_court_admissions') }}
+                    <hr />
+                </div>
+            </div>
+            {% endif %}
+            {% if post.get_field('attorney_associations') %}
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 style="color:{{ colors.primary }}"><i class="fa fa-users"></i> Associations</h4>
+                    {{ post.get_field('attorney_associations') }}
+                    <hr />
+                </div>
+            </div>
+            {% endif %}
+            {% if post.get_field('attorney_awards_recognitions') %}
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 style="color:{{ colors.primary }}"><i class="fa fa-trophy"></i> Awards/Recognitions</h4>
+                    {{ post.get_field('attorney_awards_recognitions') }}
+                    <hr />
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        <div class="col-md-8 col-sm-12">
+            {{ post.content }}
+        </div>
+    </div>
+</div>
+{% endblock %}

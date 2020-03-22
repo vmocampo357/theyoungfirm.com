@@ -1,0 +1,33 @@
+{% extends "base-page.twig" %}
+{% block page_title %}{{ title }}{% endblock %}
+{% block page_featured_image %}{% endblock %}
+{% block small_crumbs %}{% endblock %}
+{% block small_title %}{% endblock %}
+{% block meta_canonical_href %}
+    {% if canonical %}
+        <link rel="canonical" href="{{ canonical }}" />
+    {% endif %}
+    {% if noindex %}
+        <meta name="robots" content="noindex">
+    {% endif %}
+{% endblock %}
+{% block page_body %}
+
+    <div id="jal-any-element-primary" class="even-cols col-xs-12 jal-any-element-body">
+        {% if category[0].description %}
+            <div class="row">
+                <div class="col-xs-12">
+                    {{ category[0].description }}
+                </div>
+            </div>
+            <br />
+            <br />
+        {% endif %}
+        {% import 'loops/basic-post-loop.twig' as looper %}
+        {{ looper.basic_post_loop(posts,_context) }}
+        {% if posts|length > 0 %}
+            <div data-current-page="1" data-category="{{ category[0].slug|default('') }}" data-post-type="{{ posts[0].type.slug }}" id="infinite-loop"></div>
+        {% endif %}
+    </div>
+
+{% endblock %}

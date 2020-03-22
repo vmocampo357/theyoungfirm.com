@@ -1,0 +1,67 @@
+{% extends 'base.twig' %}
+{% block content %}
+<div class="container">
+
+    <!-- OPTIONAL BANNER !-->
+    {% block optional_banner %}
+    {% if post.thumbnail.src %}
+    <div class="row">
+        <div class="col-md-12">
+            <div id="jal-div-element-optional-banner">
+                <img alt="{{ post.thumbnail.alt }}" src="{{ post.thumbnail.src }}" />
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endblock %}
+
+    <!-- BREADCRUBS !-->
+    {% block single_breadcrumbs %}
+        {% if function('function_exists', 'bcn_display') %}
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="jal-div-element-breadcrumbs">
+                        <div id="jal-ul-element-breadcrubs">
+                            {{ function('bcn_display') }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endblock %}
+
+    <!-- CONTENT, OPENING !-->
+    {% block single_title_block %}
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="jal-any-element-body">
+                    <h1>{{ post.title }}</h1>
+                    <ul class="jal-wp-author-items">
+                        <li class="jal-wp-author-date"><span>{{ post.date }}</span></li>
+                        <li class="jal-wp-author-author"><span>{{ post.author.name|default('Jones Act Law') }}</span></li>
+                        {% if post.categories|length > 0 %}
+                        <li class="jal-wp-author-category">
+                            <span>
+                            {% for term in post.categories %}
+                                <a href="{{ term.link }}">{{ term.name }}</a>
+                            {% endfor %}
+                            </span>
+                        </li>
+                        {% endif %}
+                    </ul>
+                    {% if post.get_field('page_summary')|length > 0 %}
+                    <span id="jal-any-element-summary">{{ post.get_field('page_summary') }}</span>
+                    {% else %}
+                    <br />
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+    <!-- CONTENT, BODY !-->
+    <div class="row" id="jal-row-element-primary-body">
+        {% block single_body %}{% endblock %}
+    </div>
+</div>
+{% endblock %}

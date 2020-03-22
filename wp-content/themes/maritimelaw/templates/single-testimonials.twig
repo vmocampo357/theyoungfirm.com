@@ -1,0 +1,32 @@
+{% extends "base-single.twig" %}
+{% block optional_banner %}{% endblock %}
+{% block single_body %}
+    <div id="jal-any-element-primary" class="even-cols col-lg-9 col-md-8 col-xs-12 jal-any-element-body content">
+
+        <!-- BODY !-->
+        {{ post.content }}
+
+        {% if other_testimonials|length > 0 %}
+        <hr />
+        <h4>Other articles to help you</h4><br />
+        <div class="">
+            <div>
+                <ul class="jal-any-card-list">
+                    {% import 'loops/testimonial-post-loop.twig' as looper %}
+                    {{ looper.testimonial_post_loop(other_testimonials,_context) }}
+                </ul>
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+    <div class="even-cols col-lg-2 col-md-4 visible-lg visible-md">
+        <!-- STICKY BAR !-->
+        <div id="jal-any-sticky-bar">
+            {% include 'partial/social.twig' %}
+            <div id="jal-any-sticky-bar-get-help-with">
+                {{ primary_sidebar }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

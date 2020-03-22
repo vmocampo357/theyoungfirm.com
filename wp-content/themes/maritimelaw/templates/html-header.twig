@@ -1,0 +1,112 @@
+<style>
+    #jal-search-container
+    {
+        background-color:rgba(0,0,0,0.2);
+        padding:6px 0px;
+    }
+    #jal-search-container .container-fluid
+    {
+        /*width:81%;*/
+    }
+    #jal-search-menu
+    {
+        position:relative;
+        top:-2px;
+        /*left:-60px;*/
+        text-align: right;
+    }
+    #jal-search-menu li
+    {
+        display:inline-block;
+        margin-right:10px;
+    }
+    #jal-search-menu li a
+    {
+        color:rgba(255,255,255,0.8);
+        font-size:14px;
+        text-decoration: none;
+    }
+    #jal-search-container .search-box-container
+    {
+        position:relative;
+    }
+    #jal-search-container .search-box-container i
+    {
+        position:absolute;
+        top:4px;
+        left:24px;
+        color:rgba(0,0,0,0.35);
+    }
+    #jal-search-container .search-box
+    {
+        border-radius:15px !important;
+        padding-left:35px;
+        font-size:14px;
+    }
+</style>
+<div id="jal-row-element-header-container">
+    {#<div id="jal-search-container" class="hidden-xs hidden-sm">
+        <div class="container-fluid">
+            #}{#<div class="col-md-8">
+                <ul id="jal-search-menu">
+                    <li><a href="javascript:void(0);">Sitemap</a></li>
+                    <li><a href="javascript:void(0);">Search Site</a></li>
+                </ul>
+            </div>#}{#
+            <div style="position:relative;" class="col-md-6 col-md-push-6 search-box-container">
+                #}{#<i class="fa fa-search"></i>
+                <input placeholder="Search our site" class="search-box form-control input-sm" type="search" />#}{#
+                <ul id="jal-search-menu">
+                    <li>
+                        <a style="font-size:18px;font-weight:bold;color:white;display:inline-block" href="tel:{{ primary_phone }}">{{ primary_phone }} {{ cta_header_title|default("Contact us today!") }}</a>
+                    </li>
+                    <li id="jal-desktop-search-list">
+                        #}{#<a id="open-desktop-search" href="javascript:void(0);"><span class="fa fa-search"></span> Search Site</a>#}{#
+                        #}{#<div id="hidden-desktop-search-bar">#}{#
+                            <div class="jal-search-box">
+                                <form method="get" action="{{ home_link }}">
+                                    <button class="jal-search-icon fa fa-search btn btn-default"></button>
+                                    <input placeholder="Search for answers" type="text" class="form-control" value="{{ term|default('') }}" name="s" />
+                                    <label style="display: none" for="s">Search for answers</label>
+                                </form>
+                            </div>
+                        #}{#</div>#}{#
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>#}
+    <div id="jal-div-element-header" class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-xs-6">
+                <a href="{{ home_link }}"><img alt="{{ seo_image_alt_tag|default('Jones Act Law Maritime Law') }}" id="jal-img-element-logo" src="{{ primary_logo }}" /></a>
+            </div>
+            <div id="jal-col-element-main-menu" class="hidden-xs hidden-sm col-md-8">
+                {% include 'partial/regular-menu.twig' %}
+                {#{% if post.id|default(0) == 2013 %}
+                    {% include 'partial/regular-menu.twig' %}
+                {% else %}
+                    {% include 'partial/mega-menu.twig' %}
+                {% endif %}#}
+            </div>
+            <div class="col-md-2 hidden-sm hidden-xs">
+                {% include 'partial/cta.twig' %}
+            </div>
+            <!-- RESPONSIVE MENU !-->
+            <div class="col-xs-6 hidden-lg hidden-md visible-sm visible-xs jal-responsive-menu-container">
+                {% include 'partial/responsive-menu.twig' %}
+            </div>
+            <!-- RESPONSIVE MENU !-->
+        </div>
+        <div class="row" id="responsive-search-box">
+            <div class="col-md-12">
+                <div class="jal-search-box">
+                    <form method="get" action="{{ home_link }}">
+                        <button class="jal-search-icon fa fa-search btn btn-default"></button>
+                        <input type="text" class="form-control" value="{{ term|default('') }}" name="s" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

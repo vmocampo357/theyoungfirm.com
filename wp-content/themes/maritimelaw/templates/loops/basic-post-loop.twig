@@ -1,0 +1,47 @@
+{% macro basic_post_loop(posts,ctx) %}
+    {% for row in posts|batch(2,'') %}
+        <div class="row" style="margin-bottom:40px;">
+            {% for post in row %}
+                {% if post|length > 0 %}
+                    <div class="col-sm-6">
+                        {% set bg_image = ctx.img_dir ~ "/sample-post-image.jpg" %}
+                        {% if post.thumbnail.src|length > 0 %}
+                            {% set bg_image = post.thumbnail.src %}
+                        {% endif %}
+                        <div class="jal-div-post-card-image" style="background-image:url('{{ bg_image }}')"></div>
+                        <div class="jal-div-post-card-content">
+                            <div class="jal-div-post-card-header">
+                                <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
+                                <ul class="jal-wp-author-items">
+                                    <li class="jal-wp-author-date"><span>{{ post.date }}</span></li>
+                                    <li class="jal-wp-author-author"><span>{{ post.author.name|default('Jones Act Law') }}</span></li>
+                                    {% if post.categories|length > 0 %}
+                                        <li class="jal-wp-author-category">
+                                            <span>
+                                            {% for term in post.categories %}
+                                                <a href="{{ term.link }}">{{ term.name }}</a>
+                                            {% endfor %}
+                                            </span>
+                                        </li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                            <div class="jal-div-post-card-body">
+                                {% if post.get_field('page_summary') %}
+                                    <p>{{ post.get_field('page_summary') }}</p>
+                                {% else %}
+                                    <p>{{ post.excerpt }}</p>
+                                {% endif %}
+                                <a href="{{ post.link }}" class="btn btn-primary">Read this Post</a>
+                                <br class="hidden-lg hidden-md hidden-sm visible-xs">
+                                <br class="hidden-lg hidden-md hidden-sm visible-xs">
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="col-md-6"></div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endfor %}
+{% endmacro %}

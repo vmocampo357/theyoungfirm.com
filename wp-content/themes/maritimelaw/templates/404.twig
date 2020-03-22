@@ -1,0 +1,25 @@
+{% extends 'base-page.twig' %}
+
+{% block page_featured_image %}
+    <img alt="404 - Page could not be found" src="{{ img_dir }}/404-Page.jpg" />
+{% endblock %}
+
+{% block page_title %}
+    Feeling lost? Page not found!
+{% endblock %}
+
+{% block page_summary %}
+    <span id="jal-any-element-summary">Let's help you get back on course. What do you need help with?</span>
+{% endblock %}
+
+{% block page_body %}
+    <div id="jal-any-element-primary" class="even-cols col-xs-12 jal-any-element-body content">
+
+        <div class="row">
+            <div class="col-xs-12">
+                {{ function('do_shortcode','[faq_tabs]') }}
+            </div>
+        </div>
+        <hr />
+    </div>
+{% endblock %}

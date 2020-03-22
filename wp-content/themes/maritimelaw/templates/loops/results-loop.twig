@@ -1,0 +1,12 @@
+{% macro search_loop(posts,ctx) %}
+
+    <ul id="jal-page-search-results">
+        {% for post in posts %}
+            <li>
+                <span class="jpsr-title"><a href="{{ post.link }}">{{ post.title }}</a></span>
+                <p class="jpsr-content">{{ post.preview }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endmacro %}

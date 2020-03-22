@@ -1,0 +1,357 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <!-- HOMEPAGE, BLOCK A !-->
+        {% if is_mobile %}
+            <div class="row homepage-first-block" style="background-color:gray;background-image:url('{{ post.get_field('homepage_head_block_background_image') }}');background-position:center;background-size:cover;">
+                <div class="container">
+                    <div class="row">
+                        <div id="homepage-attorneys-cont" style="position:relative;z-index:1;" class="col-md-6 col-sm-12">
+                            <div id="homepage-attorneys">
+                                {% if post.get_field('homepage_head_block_featured_image')|length > 0 %}
+                                    <img src="{{ post.get_field('homepage_head_block_featured_image') }}" style="position:absolute;bottom:0px;" />
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div id="no-padding-smol" class="col-md-6 col-sm-12 col-md-push-1">
+                            <div id="homepage-attorney-text">
+                                {{ post.get_field('homepage_head_block_title') }}
+                                <p style="color:white;padding-right:82px">{{ post.get_field('homepage_head_block_summary') }}</p>
+                                {% if post.get_field('homepage_call_to_action_label')|length > 0 %}
+                                    <a href="{{ post.get_field('homepage_call_to_action_link')|default('#') }}" class="btn btn-danger">{{ post.get_field('homepage_call_to_action_label') }}</a>
+                                {% endif %}
+                                <p class="hidden-lg hidden-md visible-sm visible-xs">&nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <div class="row homepage-first-block" style="background-color:gray;">
+                <div class="container">
+                    <div class="row">
+                        <div id="no-padding-smol" class="col-md-6 col-sm-12 col-md-push-1">
+                            <div id="homepage-attorney-text">
+                                {{ post.get_field('homepage_head_block_title') }}
+                                <p style="color:white;padding-right:82px">{{ post.get_field('homepage_head_block_summary') }}</p>
+                                {% if post.get_field('homepage_call_to_action_label')|length > 0 %}
+                                    <a href="{{ post.get_field('homepage_call_to_action_link')|default('#') }}" class="btn btn-danger">{{ post.get_field('homepage_call_to_action_label') }}</a>
+                                {% endif %}
+                                <p class="hidden-lg hidden-md visible-sm visible-xs">&nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        <!-- HOMEPAGE, SNIPPET SECTION: banner !-->
+        {% if below_banner_snippets|length > 0 %}
+            {% for snip in below_banner_snippets %}
+                {% set bg_color = '#FEFEFE' %}
+                {% if snip.get_field('cs_bg_color')|length > 0 %}
+                    {% set bg_color = snip.get_field('cs_bg_color') %}
+                {% endif %}
+                <div class="row wp-snippet-tyf" style="background-color:{{ bg_color }};padding:60px 0px 60px 0px;">
+                    <div class="container">
+                        {% if snip.get_field('cs_show_title') %}
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3 style="margin-top:-30px;font-size:40px;text-align: center;font-weight:700;">{{ snip.title }}</h3>
+                                </div>
+                            </div>
+                        {% endif %}
+                        <div class="row">
+                            <div class="col-md-12">
+                                {{ snip.content }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+        <!-- /BLOCK !-->
+        <!-- HOMEPAGE, BLOCK B !-->
+        <div class="row homepage-block-row" style="background-color:white;padding:60px 0px;">
+            <div class="container">
+                <div class="row">
+                    {% if post.get_field('homepage_second_block_title_a')|length > 0 %}
+                    <div class="col-md-3 col-sm-6">
+                        <div class="homepage-block-row-icons" style="text-align:center">
+                            <a class="homepage-icon-link" href="{{ post.get_field('hp_far_left')|default("#") }}"><i class="fa {{ post.get_field('homepage_second_block_icon_class_a')|default('fa-home') }}"></i></a>
+                            <h3><strong>{{ post.get_field('homepage_second_block_title_a') }}</strong></h3>
+                            <div style="height:70px;">
+                                {{ post.get_field('homepage_second_block_summary_a') }}
+                            </div>
+                            {{ post.get_field('homepage_second_block_link_a') }}
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if post.get_field('homepage_second_block_title_b')|length > 0 %}
+                        <div class="col-md-3 col-sm-6">
+                            <div class="homepage-block-row-icons" style="text-align:center">
+                                <a class="homepage-icon-link" href="{{ post.get_field('hp_center_left')|default("#") }}"><i class="fa {{ post.get_field('homepage_second_block_icon_class_b')|default('fa-home') }}"></i></a>
+                                <h3><strong>{{ post.get_field('homepage_second_block_title_b') }}</strong></h3>
+                                <div style="height:70px;">
+                                    {{ post.get_field('homepage_second_block_summary_b') }}
+                                </div>
+                                {{ post.get_field('homepage_second_block_link_b') }}
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% if post.get_field('homepage_second_block_title_c')|length > 0 %}
+                        <div class="col-md-3 col-sm-6">
+                            <div class="homepage-block-row-icons" style="text-align:center">
+                                <a class="homepage-icon-link" href="{{ post.get_field('hp_center_right')|default("#") }}"><i class="fa {{ post.get_field('homepage_second_block_icon_class_c')|default('fa-home') }}"></i></a>
+                                <h3><strong>{{ post.get_field('homepage_second_block_title_c') }}</strong></h3>
+                                <div style="height:70px;">
+                                    {{ post.get_field('homepage_second_block_summary_c') }}
+                                </div>
+                                {{ post.get_field('homepage_second_block_link_c') }}
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% if post.get_field('homepage_second_block_title_d')|length > 0 %}
+                        <div class="col-md-3 col-sm-6">
+                            <div class="homepage-block-row-icons" style="text-align:center">
+                                <a class="homepage-icon-link" href="{{ post.get_field('hp_far_right')|default("#") }}"><i class="fa {{ post.get_field('homepage_second_block_icon_class_d')|default('fa-home') }}"></i></a>
+                                <h3><strong>{{ post.get_field('homepage_second_block_title_d') }}</strong></h3>
+                                <div style="height:70px;">
+                                    {{ post.get_field('homepage_second_block_summary_d') }}
+                                </div>
+                                {{ post.get_field('homepage_second_block_link_d') }}
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <!-- /BLOCK !-->
+        <!-- HOMEPAGE, SNIPPET SECTION: menu !-->
+        {% if menu_snippets|length > 0 %}
+            {% for snip in menu_snippets %}
+                {% set bg_color = '#FEFEFE' %}
+                {% if snip.get_field('cs_bg_color')|length > 0 %}
+                    {% set bg_color = snip.get_field('cs_bg_color') %}
+                {% endif %}
+                <div class="row wp-snippet-tyf" style="background-color:{{ bg_color }};padding:60px 0px 60px 0px;">
+                    <div class="container">
+                        {% if snip.get_field('cs_show_title') %}
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3 style="margin-top:-30px;font-size:40px;text-align: center;font-weight:700;">{{ snip.title }}</h3>
+                                </div>
+                            </div>
+                        {% endif %}
+                        <div class="row">
+                            <div class="col-md-12">
+                                {{ snip.content }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+        <!-- /BLOCK !-->
+        <!-- HOMEPAGE, BLOCK C !-->
+        {#{% if testimonial_found %}
+        <div class="row" style="background-color:#6b7b8b;padding:0px 0px 60px 0px;">
+            <div class="container">
+                {% if post.get_field("hp_testimonials_block_optional_title")|length > 0 %}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 style="color:white;font-size:40px;text-align: center;font-weight:700;">{{ post.get_field("hp_testimonials_block_optional_title") }}</h3>
+                        </div>
+                    </div>
+                {% endif %}
+                <div class="row">
+                    <div class="col-md-12">
+                        {% if testimonials|length > 0 %}
+                        {% set testimonial = testimonials[0] %}
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="jal-responsive-video">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ testimonial.get_field('tst_testimonial_video')|youtube_id }}?rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <h2 id="homepage-testimonial-title" style="color:white;font-weight:700;">{{ testimonial.title }}</h2>
+                                    #}{#<p class="homepage-testimonial-preview" style="">{{ testimonial.get_preview(50,true,'Read Testimonial') }}</p>#}{#
+                                    <div class="homepage-testimonial-preview" style="color:white;">
+                                        {{ testimonial.get_field('page_summary')|default('Read about what our clients say about us!') }}
+                                        <a href="{{ testimonial.link }}" class="read-more">Read Testimonial</a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                        #}{#{% if testimonials|length > 0 %}
+                            <ul class="jal-ul-video-slick">
+                            {% for testimonial in testimonials %}
+                                <li class="jal-div-video-slick-item">
+                                    <a href="https://www.youtube.com/watch?v={{ testimonial.get_field('tst_testimonial_video')|youtube_id }}&rel=0" style="background-image:url('https://img.youtube.com/vi/{{ testimonial.get_field('tst_testimonial_video')|youtube_id }}/0.jpg');" class="jal-div-video-single-thumb"></a>
+                                    <div class="jal-div-video-single-content">
+                                        <span style="color:white">{{ testimonial.title }} <br /> {{ testimonial.excerpt }}</span>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        {% endif %}#}{#
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}#}
+        <!-- /BLOCK !-->
+        <!-- HOMEPAGE, SNIPPET SECTION: default !-->
+        {% if default_snippets|length > 0 %}
+            {% for snip in default_snippets %}
+                {% set bg_color = '#FEFEFE' %}
+                {% if snip.get_field('cs_bg_color')|length > 0 %}
+                    {% set bg_color = snip.get_field('cs_bg_color') %}
+                {% endif %}
+                <div class="row wp-snippet-tyf" style="background-color:{{ bg_color }};padding:60px 0px 60px 0px;">
+                    <div class="container">
+                        {% if snip.get_field('cs_show_title') %}
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3 style="margin-top:-30px;font-size:40px;text-align: center;font-weight:700;">{{ snip.title }}</h3>
+                                </div>
+                            </div>
+                        {% endif %}
+                        <div class="row">
+                            <div class="col-md-12">
+                                {{ snip.content }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+        <!-- /BLOCK !-->
+        <!-- HOMEPAGE, BLOCK D [WIDGET] !-->
+        {% if is_mobile %}
+            <div class="row" style="padding:60px 0px;background-image: url('{{ img_dir }}/maritime-injury-cases-blue-water-banner.jpg');background-size:cover;background-position: center center;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3 style="color:white;font-size:40px;text-align: center;font-weight:700;">{{ post.get_field('mid_block_post_title')|default("No title set") }}</h3>
+                            <ul id="jal-homepage-cases">
+                                {% for item in homepage_menu.items %}
+                                    {% set classes = item.classes %}
+                                    <li class="{{ classes|join(" ") }}"><a href="{{ item.link }}">{{ item.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                            <h3 style="text-align: center">
+                                <a class="btn btn-primary btn-lg" href="{{ post.get_field("hp_practice_areas_link")|default("#") }}">See All Here</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <div class="row" style="padding:60px 0px;background-color:darkblue;background-size:cover;background-position: center center;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3 style="color:white;font-size:40px;text-align: center;font-weight:700;">{{ post.get_field('mid_block_post_title')|default("No title set") }}</h3>
+                            <ul id="jal-homepage-cases">
+                                {% for item in homepage_menu.items %}
+                                    {% set classes = item.classes %}
+                                    <li class="{{ classes|join(" ") }}"><a href="{{ item.link }}">{{ item.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                            <h3 style="text-align: center">
+                                <a class="btn btn-primary btn-lg" href="{{ post.get_field("hp_practice_areas_link")|default("#") }}">See All Here</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        <!-- /BLOCK !-->
+        <!-- HOMEPAGE, SNIPPET SECTION: cases !-->
+        {% if cases_snippets|length > 0 %}
+            {% for snip in cases_snippets %}
+                {% set bg_color = '#FEFEFE' %}
+                {% if snip.get_field('cs_bg_color')|length > 0 %}
+                    {% set bg_color = snip.get_field('cs_bg_color') %}
+                {% endif %}
+                <div class="row wp-snippet-tyf" style="background-color:{{ bg_color }};padding:60px 0px 60px 0px;">
+                    <div class="container">
+                        {% if snip.get_field('cs_show_title') %}
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3 style="margin-top:-30px;font-size:40px;text-align: center;font-weight:700;">{{ snip.title }}</h3>
+                                </div>
+                            </div>
+                        {% endif %}
+                        <div class="row">
+                            <div class="col-md-12">
+                                {{ snip.content }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+        <!-- /BLOCK !-->
+        <!-- HOMEPAGE, BLOCK E [WIDGET, FORM] !-->
+        <div class="row" style="padding:60px 0px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-push-12">
+                        <h2 style="text-align: center;"><strong>{{ post.get_field('homepage_contact_block_title')|default('Contact Us!') }}</strong></h2>
+                        <hr >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-md-push-6">
+                        <p>{{ post.get_field('homepage_contact_block_summary')|default('Use the form on the left to send us a note!') }}</p>
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-md-pull-6">
+                        <h3>Submit a Question</h3>
+                        {#<form accept-charset="UTF-8" action="" class="infusion-form" id="inf_form_872fb9419f21bca8bf05c05d626ff062" method="POST">#}
+                        <form data-alt="https://tschedule.infusionsoft.com/app/form/process/872fb9419f21bca8bf05c05d626ff062" accept-charset="UTF-8" action="https://tyf.jonesactlaw.com/formCapture.php" class="infusion-form" id="" method="POST">
+                            <input name="inf_form_xid" type="hidden" value="872fb9419f21bca8bf05c05d626ff062" />
+                            <input name="inf_form_name" type="hidden" value="Have a Question Form" />
+                            <input name="infusionsoft_version" type="hidden" value="1.69.0.47575" />
+                            <div class="infusion-field">
+                                <label for="inf_field_FirstName">Your Name *</label>
+                                <input class="infusion-field-input" id="inf_field_FirstName" name="inf_field_FirstName" placeholder="Your Name *" type="text" />
+                            </div>
+                            <div class="infusion-field">
+                                <label for="inf_field_Phone1">Phone</label>
+                                <input class="infusion-field-input" id="inf_field_Phone1" name="inf_field_Phone1" placeholder="Phone" type="text" />
+                            </div>
+                            <div class="infusion-field">
+                                <label for="inf_field_Email">Email *</label>
+                                <input class="infusion-field-input" id="inf_field_Email" name="inf_field_Email" placeholder="Email *" type="text" />
+                            </div>
+                            <div class="infusion-field">
+                                <label for="inf_misc_Commentsquestionsorconcerns">Comments, questions, or concerns *</label>
+                                <textarea cols="24" id="inf_misc_Commentsquestionsorconcerns" name="inf_misc_Commentsquestionsorconcerns" placeholder="Comments, questions, or concerns *" rows="5"></textarea></div>
+                            <div style='position:fixed;top:-999999px;left:-99999px;z-index:1'>
+                                <input type='text' name='infusion-address-x' value='' />
+                            </div>
+                            <div>
+                                <div>&nbsp;</div>
+                            </div>
+                            <div class="infusion-submit">
+                                <button class="infusion-recaptcha" {#id="recaptcha_872fb9419f21bca8bf05c05d626ff062"#} type="submit">Submit</button>
+                            </div>
+                        </form>
+                        {#<script src="https://tschedule.infusionsoft.com/app/webTracking/getTrackingCode"></script>#}
+                        {#<script src="https://tschedule.infusionsoft.com/resources/external/recaptcha/production/recaptcha.js?b=1.69.0.47575-hf-201805221634"></script>
+                        <script src="https://www.google.com/recaptcha/api.js?onload=onloadInfusionRecaptchaCallback&render=explicit" async="async" defer="defer"></script>#}
+                        {#<script src="https://tschedule.infusionsoft.com/app/timezone/timezoneInputJs?xid=872fb9419f21bca8bf05c05d626ff062"></script>#}
+                    </div>
+                </div>
+                <br />
+            </div>
+        </div>
+        <!-- /BLOCK !-->
+    </div>
+
+{% endblock %}

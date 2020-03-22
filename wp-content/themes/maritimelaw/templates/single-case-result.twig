@@ -1,0 +1,47 @@
+{% extends "base-single.twig" %}
+
+{% block optional_banner %}{% endblock %}
+
+{% block single_body %}
+    <div id="jal-any-element-primary" class="even-cols col-lg-9 col-md-8 col-xs-12 jal-any-element-body content">
+
+        <!-- BODY !-->
+        {{ post.content }}
+
+        <br/>
+        <h3>Quick Case Facts</h3>
+        <br />
+        <div class="row">
+            <div class="col-xs-12">
+                <ul>
+                    <li><strong>Settlement Amount:</strong> {{ post.get_field('cr_settlement_amount')|default('Not Available') }}</li>
+                    <li><strong>Claim Type:</strong> {{ post.get_field('cr_claim_type')|default('Not Available') }}</li>
+                    <li><strong>Injury Type:</strong> {{ post.get_field('cr_injury_type')|default('Not Available') }}</li>
+                    <li><strong>Age:</strong> {{ post.get_field('cr_age')|default('Not Available') }}</li>
+                    <li><strong>Job Position:</strong> {{ post.get_field('cr_job_position')|default('Not Available') }}</li>
+                    <li><strong>Accident Location:</strong> {{ post.get_field('cr_accident_location')|default('Not Available') }}</li>
+                    <li><strong>Vessel Type:</strong> {{ post.get_field('cr_vessel_type')|default('Not Available') }}</li>
+                    <li><strong>Company:</strong> {{ post.get_field('cr_company')|default('Not Available') }}</li>
+                </ul>
+            </div>
+        </div>
+        <br />
+        <hr />
+
+        <!-- OTHER CASE RESULTS !-->
+        {% if terms|length > 0 %}
+            {% import 'loops/case-results-tag-loop.twig' as looper %}
+            {{ looper.case_results_tag_loop(case_results,terms,_context) }}
+        {% endif %}
+
+    </div>
+    <div class="even-cols col-lg-2 col-md-4 visible-lg visible-md">
+        <!-- STICKY BAR !-->
+        <div id="jal-any-sticky-bar">
+            {% include 'partial/social.twig' %}
+            <div id="jal-any-sticky-bar-get-help-with">
+                {{ primary_sidebar }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

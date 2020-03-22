@@ -1,0 +1,136 @@
+/*! JonesActLaw.com v2.0.0 | MIT License | https://jonesactlaw.com/ */
+
+/*
+ * This is the official, and only site stylesheet for the new JonesActLaw.com website.
+ * For the menu, at least.
+ *
+ * Author: Victor HMO
+ */
+
+/* ==========================================================================
+   RESPONSIVE MENU
+   ========================================================================== */
+.jal-responsive-menu-container
+{
+    text-align:right;
+}
+.trigger-responsive-menu-toggle
+{
+    display:inline-block;
+}
+.jal-responsive-menu
+{
+    position:fixed;
+    background-color:rgba(0,0,0,0.5);
+    width:100%;
+    height:100%;
+    top:55px;
+    left:0px;
+    z-index:999;
+    display:none;
+}
+.jal-responsive-menu-open
+{
+    display:block;
+}
+
+.jal-responsive-menu-div
+{
+    width:50%;
+    position:absolute;
+    top:0px;
+    right:0px;
+    background-color:white;
+    height:100%;
+}
+
+.jal-responsive-menu-div ul
+{
+    overflow-y: scroll;
+    height:80%;
+}
+.jal-responsive-menu-div ul li a
+{
+    color:black;
+}
+.jal-responsive-menu-div ul li
+{
+    text-align: left;
+    padding:10px 0px 10px 37px;
+    width:100%;
+    box-shadow:0px -1px 0px 0px rgba(0,0,0,0.1);
+    position:relative;
+}
+.jal-responsive-menu-div ul li:hover
+{
+    background-color:rgba(0,0,0,0.1);
+}
+.jal-responsive-menu-div ul li.menu-item-has-children:before
+{
+    content:"+";
+    font-weight:600;
+    position:absolute;
+    left:10px;
+    top:0px;
+    font-size:30px;
+}
+.jal-responsive-menu-div ul li.menu-item-has-children ul{
+    display:none;
+}
+
+/* ==========================================================================
+   MEDIA SCREEN
+   ========================================================================== */
+
+/** NOTES: FIX UNDER 1180 CUZ IT LOOKS LIKE SHIT **/
+
+@media screen and (max-width: 1177px)
+{
+    /** This is when the page breaks the search icon first **/
+    #jal-ul-element-main-menu li a{
+        font-size:12px;
+        padding:17px 5px;
+    }
+}
+@media screen and (max-width: 1069px)
+{
+    #jal-img-element-logo
+    {
+        width:100%;
+        height:auto;
+        top:11px;
+    }
+}
+@media screen and (max-width: 1057px)
+{
+    #jal-img-element-logo
+    {
+        width:150px;
+        height:auto;
+        top:10px;
+        transition: 0.1s all;
+    }
+    #jal-div-element-call-to-action span:last-child
+    {
+        font-size:18px;
+        bottom:-3px;
+    }
+    #jal-div-element-call-to-action span:first-child
+    {
+        font-size:12px;
+    }
+    #jal-ul-element-main-menu
+    {
+        text-align:left;
+    }
+    #jal-ul-element-main-menu li a
+    {
+        font-size:10px;
+    }
+}
+@media screen and (max-width:468px)
+{
+    .jal-responsive-menu-div{
+        width:80%;
+    }
+}

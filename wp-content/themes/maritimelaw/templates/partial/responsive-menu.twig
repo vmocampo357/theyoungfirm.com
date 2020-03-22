@@ -1,0 +1,40 @@
+<div class="btn-group hidden-sm" style="position:relative;top:10px;">
+    <a href="javascript:void(0);" class="toggle-mobile-search-form btn btn-md btn-primary"><i class="fa fa-search"></i></a>
+    {#<a href="javascript:void(0);" class="btn btn-md btn-default"><i class="fa fa-phone"></i></a>#}
+    <a href="javascript:void(0);" class="trigger-responsive-menu-toggle btn btn-md btn-primary">Menu <i class="fa fa-bars"></i></a>
+</div>
+<div class="btn-group hidden-xs" style="position:relative;top:3px;">
+    <a href="javascript:void(0);" class="toggle-mobile-search-form btn btn-lg btn-primary"><i class="fa fa-search"></i></a>
+    {#<a href="javascript:void(0);" class="btn btn-lg btn-default"><i class="fa fa-phone"></i></a>#}
+    <a href="javascript:void(0);" class="trigger-responsive-menu-toggle btn btn-lg btn-primary">Menu <i class="fa fa-bars"></i></a>
+</div>
+<div class="jal-responsive-menu">
+    <div class="jal-responsive-menu-div">
+        <div class="jal-responsive-close-box">
+            <a style="text-decoration: none;" href="javascript:void(0);">Close Menu <span class="fa fa-close"></span></a>
+        </div>
+        <ul class="jal-responsive-menu-first-level">
+            {% for item in main_mobile_menu.items %}
+                <li class="{{ item.classes|join(" ") }}">
+                    <a href="{{ item.link }}">{{ item.title }}</a>
+                    {% if item.children|length > 0 %}
+                        <ul class="jal-responsive-menu-second-level">
+                            {% for child in item.children %}
+                                <li class="{{ child.classes|join(" ") }}">
+                                    <a href="{{ child.link }}">{{ child.title }}</a>
+                                    {% if child.children|length > 0 %}
+                                        <ul class="jal-responsive-menu-third-level">
+                                            {% for grandchild in child.children %}
+                                                <a class="grandchild-responsive-link" href="{{ grandchild.link }}">{{ grandchild.title }}</a>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

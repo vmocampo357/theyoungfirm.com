@@ -1,0 +1,52 @@
+{% extends "base-page.twig" %}
+
+{% block meta_description_override %}
+    <meta name="description" content="Hundreds of injured workers have trusted our law firm to stand by them & fight for their future. Find hope after your accident, read about their triumphs." />
+{% endblock %}
+
+{% block meta_canonical_href %}
+    {% if canonical %}
+        <link rel="canonical" href="{{ canonical }}" />
+    {% endif %}
+{% endblock %}
+
+{% block page_title %}
+    Client Success Stories & Testimonials
+{% endblock %}
+
+{% block page_featured_image %}
+    <img src="{{ img_dir }}/testimonial-library.jpg" />
+{% endblock %}
+
+{% block page_summary %}
+    <span id="jal-any-element-summary">From Captains to Deckhands to Crane Operators, our clients come from diverse backgrounds but all have one thing in common: they made tough choices, weathered hard times, & won a better future for themselves & their families. </span>
+{% endblock %}
+
+{% block page_body %}
+    <div id="jal-any-element-primary" class="col-xs-12 jal-any-element-body">
+        <div class="force-780">
+            <p><em>*Disclaimer: The following results do not predict the results you will receive in your case. Each case has its own challenges and therefore settlements will differ from case to case.</em></p>
+            <h2>Featured Client Success Stories</h2>
+            <p>"The Young Firm did a great job for me and I would highly recommend them. The office staff was courteous and knowledgeable, (the industry specific professional consultants) are some of the best in their fields, and Tim’s courtroom savvy is an art form. The Young Firm allowed me to focus on my recovery by limiting the times I had to travel to New Orleans by bunching depositions, consultant visits, etc. together."
+        -Wade G.</p>
+        <p>"After having a head-on collision and sustaining injuries to my hand we were not sure where to turn. After many pointless conversations with the insurance company and many calls not returned we knew we needed an attorney. A friend of mine from Alabama knew of Mr. Young. She knew of someone who had had him represent them and she was adamant about me calling him. Aside from the fact that I was well represented and received a settlement far beyond my expectations, I felt as though I had someone who cared and understood. I know I was not easy to deal with yet my calls were always taken or returned promptly. Everyone in the office was so respectful and genuine. Mr. Young and his entire staff made me feel like I was their only client. If I needed anything, all I had to do was ask. Robin Klibert was so understanding and she was so patient with me and I will forever be grateful. There is no questions as to who would represent me should the need arise again. It's funny because it has been a couple of years but when I speak of him in conversation, I still refer to Mr. Young as "my attorney". There is so much knowledge and expertise in this office I do not know why anyone would go elsewhere for representation. With an injury and in a time of uncertainty it was so nice to be pampered and spoiled and to have my needs met and that's what you get when The Young Firm represents you."
+        -Rosalie C.</p>
+        <p>"I just wanted to thank you for a job well done. Any time someone mentions a need for legal services I give them your name and number along with how you and your staff professionally handled my case to my complete satisfaction. Once again you have surprised and delighted me with your skills as an attorney. Thank you once again for a job well done. If anyone ever has any questions about you or your staff’s ability to represent them feel free to give them my name and number."
+        -Robert H.</p>
+
+            <?php include('components/testimonial-video-list.php'); ?>
+            <h3>More Testimonials</h3>
+            {{ post.content }}
+            <hr />
+            <div class="">
+                <div>
+                    <ul class="jal-any-card-list">
+                        {% import 'loops/testimonial-post-loop.twig' as looper %}
+                        {{ looper.testimonial_post_loop(posts) }}
+                        <div data-current-page="1" data-post-type="{{ posts[0].type.slug }}" id="infinite-loop"></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

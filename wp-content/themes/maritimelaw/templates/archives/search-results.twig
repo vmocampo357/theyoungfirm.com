@@ -1,0 +1,29 @@
+{% extends "base-page.twig" %}
+{% block page_title %}Search results for '{{ term }}'{% endblock %}
+{% block page_featured_image %}{% endblock %}
+{% block page_body %}
+
+    <div id="jal-any-element-primary" class="even-cols col-xs-12 jal-any-element-body">
+
+        <h5>Make a new search</h5>
+        <div class="jal-search-box">
+            <form method="get" action="{{ home_link }}">
+                <button class="jal-search-icon fa fa-search btn btn-default"></button>
+                <input type="text" class="form-control" value="{{ term }}" name="s" />
+            </form>
+        </div>
+
+        <input type="hidden" value="{{ term }}" id="jal-search-results-term" />
+
+        <hr /><br />
+
+        {% import 'loops/results-loop.twig' as looper %}
+
+        {% if results|length > 0 %}
+            {{ looper.search_loop(results,_context) }}
+        {% else %}
+            <p>There were no results for this search!</p>
+        {% endif %}
+    </div>
+
+{% endblock %}

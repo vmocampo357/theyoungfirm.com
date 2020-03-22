@@ -1,0 +1,17 @@
+{% extends 'base-page.twig' %}
+
+{% block page_body %}
+    <div id="jal-any-element-primary" class="even-cols col-xs-12 jal-any-element-body content">
+
+        <div class="row">
+            {{ function('do_shortcode','[maritime_claim_calculator 1]') }}
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                {{ post.content }}
+            </div>
+        </div>
+
+        <hr />
+    </div>
+{% endblock %}

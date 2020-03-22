@@ -1,0 +1,51 @@
+{% extends "base-page.twig" %}
+{% block page_title %}Frequently Asked Questions{% endblock %}
+{% block page_featured_image %}{% endblock %}
+{% block page_tabs %}
+    <!-- FAQ TABBED SECTION !-->
+    <div class="row" style="position:relative;z-index:9999">
+        <div id="faq-main-links" class="col-xs-12">
+            <div class="btn-group">
+                {% if terms|length > 0 %}
+                    {% for term in terms %}
+                        <a class="btn btn-primary" href="#target-{{ term.slug }}">{{ term.name }}</a>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <hr />
+        </div>
+    </div>
+{% endblock %}
+{% block page_body %}
+    <div id="jal-any-element-primary" class="even-cols col-md-8 col-lg-9 col-xs-12 jal-any-element-body">
+        <div id="faq-questions">
+            {% if terms|length > 0 %}
+                {% for term in terms %}
+                    <h2 class="faq-title-target" id="target-{{ term.slug }}">{{ term.name }}</h2>
+                    {% if posts[term.slug]|length > 0 %}
+                        <ul class="faq-question-group">
+                        {% for post in posts[term.slug] %}
+                            <li>
+                                <h3>{{ post.title }}</h3>
+                                <p>{{ post.get_field('faq_answer_preview')|default(post.preview(50,true,'Read Mores')) }} {#<a href="{{ post.link }}">Read more</a>#}</p>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                        <hr />
+                    {% else %}
+                        <p>There are no FAQs yet for this category.</p>
+                    {% endif%}
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+    <div class="col-md-4 col-lg-3 even-cols visible-lg visible-md">
+        <div id="jal-any-sticky-bar" class="faq-floating-sticky-bar">
+            {% if terms|length > 0 %}
+                {% for term in terms %}
+                    <a class="btn btn-lg btn-block btn-default" href="#target-{{ term.slug }}">{{ term.name }}</a>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

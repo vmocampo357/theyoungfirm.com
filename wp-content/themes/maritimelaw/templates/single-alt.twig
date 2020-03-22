@@ -1,0 +1,52 @@
+{% extends "base-single.twig" %}
+
+{% block single_title_block %}
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="jal-any-element-body">
+				<h1>{{ post.title }}</h1>
+				{% if post.get_field('page_summary')|length > 0 %}
+					<span id="jal-any-element-summary">{{ post.get_field('page_summary') }}</span>
+				{% else %}
+					{#<br />#}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block single_body %}
+	<div id="jal-any-element-primary" class="even-cols col-md-8 jal-any-element-body content">
+
+		<!-- BODY !-->
+		{{ post.content }}
+
+		<!-- OTHER ARTICLES !-->
+		{% if related|length > 0 %}
+		<div class="row jal-silo-row">
+			<div class="jal-silo-col col-xs-12">
+				<strong><i class="fa fa-file"></i>&nbsp;&nbsp;Related Articles</strong>
+				<div class="jal-silo-summary-content">
+					<ul>
+						{% for related_post in related %}
+							<li><a href="{{ related_post.link }}">{{ related_post.title }}</a></li>
+						{% endfor %}
+						{#<li><a style="margin-top:10px;" class="" href="javascript:void(0);">See All Related Articles</a></li>#}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<br /><br />
+		{% endif %}
+
+	</div>
+	<div class="even-cols col-md-4 visible-lg visible-md">
+		<!-- STICKY BAR !-->
+		<div id="jal-any-sticky-bar">
+			{% include 'partial/social.twig' %}
+			<div id="jal-any-sticky-bar-get-help-with">
+				{{ secondary_sidebar }}
+			</div>
+		</div>
+	</div>
+{% endblock %}

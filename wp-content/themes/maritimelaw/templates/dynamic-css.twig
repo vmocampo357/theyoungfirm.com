@@ -1,0 +1,88 @@
+{# Dynamic CSS for the site colors #}
+<style>
+
+    /** BACKGROUND, BODY **/
+    body
+    {
+        background-color: {{ colors.background }};
+        color:{{ colors.body_font_color }};
+    }
+
+    /** FONT COLORS **/
+    p,
+    #jal-any-sticky-bar-get-help-with ul li a,
+    .webinar-content-body p,
+    .jal-any-form-title,
+    .jal-any-tab-content .faq-any-ul li span,
+    .jal-any-tab-content .faq-any-ul li a
+    {
+        color: {{ colors.body_font_color }};
+    }
+
+    /** LINKS COLORS **/
+    a
+    {
+        color: {{ colors.links }};
+    }
+    #jal-ul-element-breadcrubs span a span
+    {
+        color: {{ colors.links }};
+    }
+    .jal-any-element-body a:visited
+    {
+        color:{{ colors.visited_links }} !important;
+        text-decoration-color:{{ colors.visited_links }} !important;
+    }
+
+    /** PRIMARY BACKGROUND (color) **/
+    .jal-any-attorney-profile span.jal-attorney-profile-name
+    {
+        color: {{ colors.primary }};
+    }
+    #jal-compass-up{
+        background-color:{{ colors.primary }};
+    }
+    .jal-responsive-menu-div ul.jal-responsive-menu-first-level li
+    {
+        background-color:{{ colors.primary }};
+    }
+    .jal-responsive-menu-div ul.jal-responsive-menu-first-level
+    {
+        background-color:{{ colors.primary }};
+    }
+
+
+    /** PRIMARY BACKGROUND (background-color) **/
+    #jal-row-element-header-container,
+    #jal-ul-element-filters li:hover,
+    #jal-ul-element-filters li input:checked ~ span,
+    .related-webinars-ul li a:hover,
+    .jal-silo-col h4,
+    #nbb-footer-banner
+    {
+        background-color: {{ colors.primary }};
+    }
+
+    /** PRIMARY COLOR (border, box-shadow) **/
+    .jal-div-video-set-title span
+    {
+        border-bottom:5px solid {{ colors.primary }};
+    }
+    .jal-any-attorney-profile
+    {
+        box-shadow:0px -5px 0px 0px {{ colors.primary }};
+    }
+
+    /** FOOTER PRIMARY **/
+    #jal-div-element-logos-container
+    {
+        background-color: {{ colors.footer_primary }};
+    }
+
+    /** FOOTER SECONDARY **/
+    #jal-div-element-footer-container,
+    .jal-any-footer-social-bar li a
+    {
+        background-color: {{ colors.footer_secondary }};
+    }
+</style>

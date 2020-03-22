@@ -1,0 +1,18 @@
+{% extends "base-page.twig" %}
+{% block page_body %}
+    <div id="jal-any-element-primary" class="even-cols col-xs-12 jal-any-element-body content">
+        <div class="row">
+            <div class="col-xs-12">
+                {{ post.content }}
+                {% if terms|length > 0 %}
+                    <hr style="clear:both;" />
+                {% endif %}
+                {% if terms|length > 0 %}
+                    {% import 'loops/case-results-post-loop.twig' as looper %}
+                    {{ looper.case_results_post_loop(case_results,terms,_context) }}
+                {% endif %}
+            </div>
+        </div>
+        <hr />
+    </div>
+{% endblock %}

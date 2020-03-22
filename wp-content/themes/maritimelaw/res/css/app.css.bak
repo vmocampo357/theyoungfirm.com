@@ -1,0 +1,1802 @@
+/*! JonesActLaw.com v2.0.0 | MIT License | https://jonesactlaw.com/ */
+
+/*
+ * This is the official, and only site stylesheet for the new JonesActLaw.com website.
+ * Author: Victor HMO
+ */
+
+/* ==========================================================================
+   Base styles: Body, HTML, Containers
+   ========================================================================== */
+body img, html img
+{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+body
+{
+    font-family:"Open Sans", "Helvetica", sans-serif;
+    /*background-color: #f7f7f7;*/
+    background-color:white;
+    font-size:20px;
+}
+a
+{
+    color:#31b9c2;
+}
+ul, ol
+{
+    padding:0px;
+    margin:0px;
+}
+ul li, ol li
+{
+    list-style-type:none;
+    padding:0px;
+    margin:0px;
+}
+p
+{
+    font-size:20px;
+    /*font-size:16px;*/
+    /*font-size:18px;*/
+    color:black;
+    margin-bottom:20px;
+}
+hr{
+    border-bottom:1px solid #e4ecee;
+}
+input::placeholder,
+textarea::placeholder
+{
+    font-style: italic;
+}
+body blockquote
+{
+    font-size:21px;
+}
+
+/* ==========================================================================
+   Universal/All Content
+   ========================================================================== */
+hr.jal-hr-colored
+{
+    margin:40px 0px;
+    border-bottom:5px solid #e4ecee;
+}
+#jal-any-element-primary
+{
+    position:relative;
+    padding-bottom:100px;
+}
+.jal-any-element-body *:not(blockquote)
+{
+    font-size:20px;
+}
+.jal-any-element-body h1, h2, h3, h4
+{
+
+}
+.jal-any-element-body h1
+{
+    letter-spacing:-1px;
+    font-size:44px;
+    font-weight:bold;
+}
+.jal-any-element-body h2
+{
+    font-size:33px;
+    font-weight:300;
+}
+.jal-any-element-body h3
+{
+    font-size:24px;
+    font-weight:700;
+}
+.jal-any-element-body h4
+{
+    font-weight:600;
+    font-size:20px;
+}
+.jal-any-element-body p
+{
+
+}
+.jal-any-element-body ul
+{
+    /*margin-left:15px;*/
+}
+.jal-any-element-body ul li
+{
+    list-style: square;
+    list-style-position: inside;
+}
+.jal-any-button
+{
+    border-radius:5px;
+    box-shadow:inset 0px 3px 0px 0px white;
+    display:inline-block;
+    padding:10px 20px;
+    text-align: center;
+    min-width:300px;
+    text-transform: uppercase;
+    font-weight:700;
+    border:1px solid white;
+    color:black;
+    cursor:pointer;
+    transition: all 0.1s;
+}
+.jal-any-button:hover
+{
+    text-decoration: none;
+    color:black;
+}
+.jal-any-gray-button:hover
+{
+    color:#656565;
+    background-color:white;
+}
+.jal-any-gray-button
+{
+    background-color:#ededed;
+    box-shadow:inset 0px 3px 0px 0px white, 0px 4px 0px 0px #afafaf;
+    border:1px solid #afafaf;
+    color:#656565;
+    text-shadow:2px 2px 0px white;
+}
+#jal-compass-up:before
+{
+}
+#jal-compass-up
+{
+    display:none;
+    font-size:24px;
+    color:#27597c;
+    position:fixed;
+    bottom:35px;
+    right:40px;
+    padding:20px;
+}
+#jal-compass-up i
+{
+    font-size:64px;
+}
+
+/* ==========================================================================
+   Header styles
+   ========================================================================== */
+#jal-row-element-header-container-sticky-wrapper
+{
+    z-index:999999;
+}
+#jal-row-element-header-container
+{
+    background-color:#27597c;
+    padding:0px;
+    margin:0px;
+    /*height:72px;*/
+    height:82px;
+    width:100%;
+    z-index:99999 !important;
+    box-shadow:inset 0px -3px 0px 0px rgba(0,0,0,0.2);
+    /*    position:fixed;*/
+}
+#jal-div-element-header
+{
+    width:81%;
+}
+#jal-img-element-logo{
+    height:60px;
+    position:relative;
+    /*top:5px;*/
+    top:10px;
+    left:-50px;
+}
+#jal-ul-element-main-menu
+{
+    padding:0px;
+    margin:0px;
+    text-align:center;
+}
+#jal-ul-element-main-menu li
+{
+    display: inline-block;
+    margin:0px;
+    position:relative;
+    margin:0px -2px;
+}
+#jal-ul-element-main-menu li.active,
+#jal-ul-element-main-menu li.current_page_item,
+#jal-ul-element-main-menu li.hover,
+#jal-ul-element-main-menu li:hover
+{
+    background-color:#18374d;
+}
+#jal-ul-element-main-menu li.jal-mega-li:hover:after,
+#jal-ul-element-main-menu li.jal-mega-li.hover:after
+{
+    content:"";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(0,0,0,0.8);
+    position:absolute;
+    text-align:center;
+    top:81px;
+    right:50%;
+    margin-right:-10%;
+    z-index:9999;
+}
+#jal-ul-element-main-menu li a
+{
+    display:block;
+    color:white;
+    font-weight:700;
+    text-decoration:none;
+    font-size:15px;
+    text-transform: uppercase;
+    /*text-shadow:2px 2px 2px rgba(0,0,0,0.2);*/
+    padding:30px 11px;
+}
+#jal-col-element-main-menu
+{
+    position:relative;
+    /*height:72px;*/
+    height:82px;
+}
+.jal-li-element-search-button
+{
+
+}
+.jal-li-element-search-button a
+{
+    width:72px;
+    /*height:72px;*/
+    height:82px;
+    padding:0px;
+    margin:0px;
+    text-align:center;
+}
+.jal-li-element-search-button a img{
+
+}
+#jal-div-element-call-to-action
+{
+    text-align:center;
+}
+#jal-div-element-call-to-action span
+{
+    color:white;
+    display:block;
+}
+#jal-div-element-call-to-action span:first-child
+{
+    font-weight:600;
+    font-style:italic;
+    text-transform: uppercase;
+    font-size:16px;
+    position:relative;
+    /*top:13px;*/
+    top:17px;
+}
+#jal-div-element-call-to-action span:last-child
+{
+    font-size:24px;
+    font-weight:700;
+    position:relative;
+    /*bottom:-4px;*/
+    bottom:-10px;
+}
+
+/* ==========================================================================
+   Mega Menu Styles
+   ========================================================================== */
+#jal-div-element-mega-menu-container
+{
+
+}
+#jal-div-element-mega-menu.hover
+{
+
+}
+#jal-div-element-mega-menu
+{
+    position: absolute;
+    /*top:72px;*/
+    top:82px;
+    left:15px;
+    width:98%;
+    background-color:white;
+    box-shadow: inset 0px -3px 0px #5bbbff, 0px 5px 45px 0px rgba(0,0,0,0.3);
+    z-index:9998;
+}
+ul.jal-ul-mega-menu-top
+{
+    margin:0px;
+    padding:20px 0px 20px 50px;
+    width:70%;
+    border-right:3px solid #5bbbff;
+}
+ul.jal-ul-mega-menu-top ul
+{
+    margin:0px;
+    padding:0px;
+}
+ul.jal-ul-mega-menu-top ul li
+{
+    margin:0px;
+    padding:0px;
+    list-style-type:none;
+}
+ul.jal-ul-mega-menu-top li.first-level
+{
+    float:left;
+    list-style-type:none;
+    margin-right:30px;
+    min-width:230px;
+}
+ul.jal-ul-mega-menu-top li.first-level span{
+    font-size:18px;
+    font-weight:800;
+    border-bottom:1px solid rgba(0,0,0,0.2);
+    display:block;
+    width:100%;
+    text-transform: uppercase;
+    padding-bottom:10px;
+    margin-bottom:10px;
+}
+ul.jal-ul-mega-menu-top li.first-level ul
+{
+
+}
+ul.jal-ul-mega-menu-top li.first-level ul li
+{
+    margin:15px 0px;
+}
+ul.jal-ul-mega-menu-top li.first-level ul li a
+{
+    color:black;
+    font-size:16px;
+    font-weight:600;
+}
+#jal-div-element-mega-menu-call-to-action-container{
+    width:30%;
+    position:absolute;
+    top:0px;
+    right:0px;
+}
+#jal-div-element-mega-menu-call-to-action{
+    padding:30px;
+    text-align: center;
+}
+#jal-span-element-mega-menu
+{
+    font-size:16px;
+    text-transform: uppercase;
+    color:black;
+    font-weight:700;
+    display: block;
+    margin-top:20px;
+}
+
+/* ==========================================================================
+   Single Pages/Posts
+   ========================================================================== */
+#jal-div-element-optional-banner
+{
+    width:100%;
+    box-shadow:0px 3px 0px 0px rgba(0,0,0,0.1);
+}
+#jal-div-element-optional-banner img
+{
+    width:100%;
+    display:block;
+}
+#jal-div-element-breadcrumbs
+{
+    background-color:#ebebeb;
+    padding:7px 10px;
+}
+#jal-ul-element-breadcrubs
+{
+
+}
+#jal-ul-element-breadcrubs li a:after
+{
+    content: "//";
+    display:inline-block;
+    margin-left:15px;
+    font-weight:600;
+    color: #525b5d;
+}
+#jal-ul-element-breadcrubs li
+{
+    display: inline-block;
+    color: #525b5d;
+    font-size:13px;
+    font-weight:400;
+    margin-right:15px;
+}
+#jal-ul-element-breadcrubs li a
+{
+    text-transform: uppercase;
+}
+#jal-any-element-summary
+{
+    margin:45px 0px;
+}
+#jal-div-element-other-articles
+{
+    margin:70px 0px;
+}
+#jal-div-element-other-articles ul
+{
+    padding:10px 0px;
+}
+#jal-div-element-other-articles ul li
+{
+    margin-bottom:12px;
+}
+#jal-div-element-other-articles ul li i
+{
+    margin-right:10px;
+    color:#868686;
+    display:none;
+}
+#jal-div-element-other-articles ul li a
+{
+    color:#25b6bf;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Global Footer Styles
+   ========================================================================== */
+
+#jal-div-element-logos-container
+{
+    box-shadow:0px -8px 0px 0px rgba(0,0,0,0.08);
+    background-color:#4a4a4a;
+    padding:5px 0px;
+}
+#jal-div-element-logos
+{
+    position:relative;
+    width:80%;
+    left:50%;
+    margin-left:-40%;
+}
+#jal-div-element-logos ul li
+{
+    display:inline-block;
+    /*margin-right:27px;*/
+    padding:27px 20px;
+    overflow:hidden;
+    height:170px;
+}
+#jal-div-element-logos ul
+{
+    text-align: center;
+}
+#jal-div-element-footer-container
+{
+    box-shadow:inset 0px 20px 0px 0px #232323;
+    background-color:#262626;
+    padding:40px 0px 70px 0px;
+}
+#jal-div-element-footer{
+
+}
+.jal-any-footer-sidebar
+{
+
+}
+.jal-any-footer-sidebar h4,
+.jal-any-footer-sidebar h5,
+.jal-any-footer-sidebar h6
+{
+    color:white;
+    font-weight:600;
+    margin-bottom:15px;
+}
+.jal-any-footer-sidebar p
+{
+    color:#959595;
+    font-size:14px;
+    margin-bottom:2px;
+}
+.jal-any-footer-sidebar ul
+{
+
+}
+.jal-any-footer-sidebar ul li
+{
+
+}
+.jal-any-footer-sidebar ul li a,
+.jal-any-footer-sidebar ul li a:hover,
+.jal-any-footer-sidebar ul li a:active
+{
+    color:#959595;
+    display:block;
+}
+.jal-any-footer-social-bar
+{
+    margin-top:10px;
+}
+.jal-any-footer-social-bar li
+{
+    display:inline-block;
+}
+.jal-any-footer-social-bar li a:hover
+{
+    background-color:rgba(255,255,255,0.1);
+}
+.jal-any-footer-social-bar li a
+{
+    display:block;
+    padding:4px;
+    width:30px;
+    text-align: center;
+    border-radius:20px;
+    background-color:#262626;
+    background-position: center;
+    background-size:cover;
+    background-color:rgba(0,0,0,0.2);
+    color:white;
+    transition:all 0.2s;
+}
+
+
+
+/* ==========================================================================
+   Single Post (Sidebar Plugin)
+   ========================================================================== */
+#jal-row-element-primary-body
+{
+    padding-bottom:50px;
+}
+#jal-any-sticky-bar
+{
+    /*position:absolute;
+    top:0px;
+    right:-130px;
+    text-align: center;
+    width:100px;*/
+    text-align: center;
+}
+#jal-any-sticky-bar.is_stuck
+{
+
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social
+{
+    display:inline-block;
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li
+{
+    display:inline-block;
+    margin-bottom:5px;
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a
+{
+    display:block;
+    /*padding:5px 16px;*/
+    padding-top:4px;
+    width:49px;
+    height:49px;
+    text-align: center;
+    background-color:gray;
+    color:white;
+    font-size:28px;
+    transition:all .3s;
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a.jal-anchor-sticky-twitter:hover
+{
+    background-color:rgba(43,172,234,1);
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a.jal-anchor-sticky-twitter
+{
+    background-color:rgba(43,172,234,0.5);
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a.jal-anchor-sticky-facebook:hover
+{
+    background-color:rgba(54,102,207,1);
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a.jal-anchor-sticky-facebook
+{
+    background-color:rgba(54,102,207,0.5);
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a.jal-anchor-sticky-linkedin:hover
+{
+    background-color:rgba(30,121,209,1);
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a.jal-anchor-sticky-linkedin
+{
+    background-color:rgba(30,121,209,0.5);
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a.jal-anchor-sticky-google:hover
+{
+    background-color:darkred;
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a.jal-anchor-sticky-google
+{
+    background-color:red;
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a.jal-anchor-sticky-stack:hover
+{
+    background-color:rgba(0,0,0,0.7);
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a.jal-anchor-sticky-stack
+{
+    background-color:rgba(0,0,0,0.5);
+}
+
+#jal-any-sticky-bar-get-help-with *
+{
+
+}
+#jal-any-sticky-bar-get-help-with
+{
+    margin-top: 30px;
+    padding-top:10px;
+    border-top:3px solid rgba(0,0,0,0.2);
+}
+#jal-any-sticky-bar-get-help-with span
+{
+    text-align: left;
+    display:block;
+    font-weight:600;
+    font-style:italic;
+    margin-bottom:15px;
+}
+#jal-any-sticky-bar-get-help-with span::first-letter
+{
+    text-transform: uppercase;
+}
+#jal-any-sticky-bar-get-help-with ul{}
+#jal-any-sticky-bar-get-help-with ul li
+{
+    display:block;
+    text-align: left;
+    margin-bottom:12px;
+}
+#jal-any-sticky-bar-get-help-with ul li a i
+{
+    margin-right:10px;
+    font-size:24px;
+}
+#jal-any-sticky-bar-get-help-with ul li a
+{
+    text-transform: uppercase;
+    font-weight:600;
+    color:black;
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   Form Elements
+   ========================================================================== */
+.jal-any-form-title
+{
+    color:black;
+    font-weight:300;
+    margin-bottom:20px;
+    display: block;
+}
+
+/* ==========================================================================
+   Video/Webinar Libraries [ALT]
+   ========================================================================== */
+#jal-ul-element-filters
+{
+    background-color:rgba(0,0,0,0.02);
+    box-shadow:inset 0px 0px 10px -3px rgba(0,0,0,0.2);
+    padding:10px;
+}
+#jal-ul-element-filters li:hover
+{
+    background-color:#27597c;
+    color:white;
+}
+#jal-ul-element-filters li label
+{
+}
+#jal-ul-element-filters li
+{
+    display:block;
+    padding:10px 10px 10px 35px;
+    background-color:rgba(0,0,0,0.05);
+    margin-bottom:2px;
+    display:inline-block;
+    cursor:pointer;
+    width:100%;
+    text-transform: uppercase;
+    font-size:12px;
+    font-weight:700;
+    position:relative;
+}
+#jal-ul-element-filters li span:after
+{
+    content:"";
+    position:absolute;
+    display:none;
+}
+#jal-ul-element-filters li input:checked ~ span
+{
+    background-color:#27597c;
+}
+#jal-ul-element-filters li input:checked ~ span:after
+{
+    display:block;
+}
+#jal-ul-element-filters li input
+{
+    position:absolute;
+    opacity:0;
+    cursor: pointer;
+}
+#jal-ul-element-filters li span:after
+{
+    left: 10px;
+    top: 6px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+#jal-ul-element-filters li span
+{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    cursor: pointer;
+}
+#jal-ul-element-videos
+{
+    text-align: center;
+}
+#jal-ul-element-videos li.jal-li-element-video
+{
+    display:inline-block;
+    position:relative;
+    background-image:url('../img/video-thumb.jpg');
+    background-size:cover;
+    background-position:center;
+    width:265px;
+    height:170px;
+    margin:8px;
+}
+#jal-ul-element-videos li.jal-li-element-video:after
+{
+    content:"";
+    display:block;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0px;
+    left:0px;
+    background-color:rgba(0,0,0,0.7);
+}
+#jal-ul-element-videos li.jal-li-element-video span a
+{
+    color:white;
+}
+#jal-ul-element-videos li.jal-li-element-video span
+{
+    color:white;
+    font-weight:600;
+    position: absolute;
+    top:10px;
+    left:10px;
+    z-index:300;
+}
+#jal-li-element-videos li.jal-li-element-video a.jal-a-element-link
+{
+    display:block;
+}
+.jal-ul-element-video-tags
+{
+    position:absolute;
+    bottom:7px;
+    left:10px;
+    z-index:300;
+    text-align: left;
+}
+.jal-ul-element-video-tags li
+{
+    background-color:black;
+    border-radius:5px;
+    padding:5px 8px;
+    font-size:11px;
+    display:inline-block;
+    margin-bottom:3px;
+}
+.jal-ul-element-video-tags li a
+{
+    color:white;
+}
+
+/* ==========================================================================
+   Video/Webinar Libraries [ACTIVE]
+   ========================================================================== */
+.jal-div-video-set-title
+{
+    display:block;
+    text-align:center;
+    margin-bottom:50px;
+}
+.jal-div-video-set
+{
+    margin-bottom:80px;
+}
+.jal-div-video-set-title span
+{
+    display:inline-block;
+    /*font-size:24px;*/
+    font-weight:700;
+    border-bottom:5px solid #27597c;
+    padding:0px 13px 10px 13px;
+}
+.jal-div-video-slick-item
+{
+    margin:0px 10px;
+    list-style-type: none !important;
+}
+.jal-div-video-single-thumb
+{
+    height:200px;
+    background-image:url('../img/video-thumb.jpg');
+    background-position:center;
+    background-size:cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display:block;
+}
+.jal-div-video-single-content{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /*background-color:white;*/
+    /*background-color: #f7f7f7;*/
+    padding:12px;
+}
+.jal-div-video-single-content span
+{
+    font-size:16px;
+    font-weight:700;
+}
+.jal-ul-video-single-tags
+{
+    margin:10px 0px;
+}
+.jal-ul-video-single-tags li
+{
+    display:inline-block;
+}
+.jal-ul-video-single-tags li a
+{
+    padding:3px 6px;
+    background-color:black;
+    font-size:12px;
+    color:white;
+    border-radius:5px;
+    transition: 0.1s all;
+    text-decoration: none;
+}
+.jal-ul-video-single-tags li a:hover
+{
+    opacity:0.7;
+}
+.jal-ul-video-button
+{
+    margin-top:30px;
+    text-align: center;
+}
+
+/* Arrows */
+.slick-prev-jal i,
+.slick-next-jal i{
+    font-size: 40px !important;
+}
+.slick-prev-jal,
+.slick-next-jal
+{
+    font-size: 40px !important;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: rgba(0,0,0,0.25);
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev-jal:hover,
+.slick-prev-jal:focus,
+.slick-next-jal:hover,
+.slick-next-jal:focus
+{
+    /*color: transparent;
+    outline: none;
+    background: transparent;*/
+    opacity:0.75;
+}
+.slick-prev-jal:hover:before,
+.slick-prev-jal:focus:before,
+.slick-next-jal:hover:before,
+.slick-next-jal:focus:before
+{
+    opacity: 1;
+}
+.slick-prev-jal.slick-disabled:before,
+.slick-next-jal.slick-disabled:before
+{
+    opacity: .25;
+}
+
+.slick-prev-jal:before,
+.slick-next-jal:before
+{
+    /*font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;*/
+}
+.slick-prev-jal
+{
+    left: -75px;
+}
+.slick-prev-jal:before
+{
+}
+.slick-next-jal
+{
+    right: -75px;
+}
+.slick-next-jal:before
+{
+}
+.slick-slide {
+    margin: 0 27px;
+}
+/* the parent */
+.slick-list {
+    margin: 0 -27px;
+}
+
+/* ==========================================================================
+   Responsive Video Stuff
+   ========================================================================== */
+
+.jal-responsive-video
+{
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.jal-responsive-video iframe
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ==========================================================================
+   Legacy Webinar Styles
+   ========================================================================== */
+
+.webinar-content{
+
+}
+.webinar-content h3{
+    padding-bottom:13px;
+    font-size:2.15em;
+    font-weight:bold;
+    border-bottom:16px solid #39b6ec;
+    color:#344056;
+    width:62%;
+    letter-spacing: -1px !important;
+    margin-bottom:20px;
+}
+
+#webinar-video-wrapper{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    margin-bottom:20px;
+}
+#webinar-video-wrapper iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#webinar-tabbed-menu{
+    width:100%;
+    border-bottom:4px solid #d8d8d8;
+    margin-bottom:50px;
+}
+#webinar-tabbed-menu ul{
+    padding:0px;
+    margin:0px;
+}
+#webinar-tabbed-menu ul li{
+    display:inline-block;
+    padding:0px;
+    margin:0px 0px 0px 0px;
+}
+#webinar-tabbed-menu ul li a{
+    display: block;
+    font-size:20px;
+    padding:10px 11px 8px 11px;
+    position:relative;
+    bottom:-4px;
+    text-decoration: none;
+    color:#737478;
+}
+#webinar-tabbed-menu ul li a.active,
+#webinar-tabbed-menu ul li a:hover{
+    border-bottom:4px solid #39b6ec;
+    color:black;
+}
+.webinar-content-section-wide{
+    background:white;
+    padding:40px 0px;
+}
+.webinar-gray{
+    /*background-color:#dedede;*/
+}
+.webinar-content-body p{
+    color:black;
+    /*font-weight:700;*/
+    margin-bottom:17px;
+    line-height:30px;
+}
+#webinar-video{
+    width:560px;
+    display:inline-block
+}
+.webinar-content-title{
+    font-weight:bold;
+    margin-bottom:20px;
+    display: block;
+}
+#webinar-files{
+    margin-bottom:40px;
+}
+#webinar-files ul{
+    padding:0px;
+    margin:0px;
+    list-style-type: none;
+}
+#webinar-files ul li{
+    /*padding:0px 0px 0px 50px;*/
+    margin:0px;
+    list-style: none;
+    position:relative;
+}
+#webinar-files ul li p{
+    margin-top:-10px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+#webinar-files ul li a{
+    /*display:inline-block;
+    background-color: #b62025;
+    font-size:13px;
+    color:white;
+    text-align: center;
+    text-transform: capitalize;
+    padding:10px;
+    max-width:190px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius: 5px;
+    border:1px solid rgba(0,0,0,0.2);
+    box-shadow:
+            inset -2px 2px 2px rgba(255,255,255,0.2),
+            inset 2px -2px 2px rgba(0,0,0,0.2),
+            -2px 2px 5px rgba(0,0,0,0.2);*/
+}
+#webinar-files ul li img{
+    float:left;
+    width:75px;
+    display: block;
+    margin-right:20px;
+    margin-bottom:20px;
+}
+.similar-videos-title{
+    font-size:28px;
+    margin-left:0px;
+    font-weight:100;
+    padding-bottom:10px;
+    margin-bottom:10px;
+    border-bottom:1px solid #0ab1f0;
+    margin-top:30px;
+}
+.related-webinars-ul{
+    list-style-type: none;
+    padding-left:0px;
+    margin-left:0px;
+}
+.related-webinars-ul li{
+    display:inline-block;
+    padding:0px;
+}
+.related-webinars-ul li a{
+    display:block;
+    padding:4px 8px;
+    background-color:#1978BA;
+    color:white;
+    border-radius:5px;
+    text-decoration: none;
+}
+.related-webinars-ul li a:hover
+{
+    background-color:#27597c;
+}
+.related-webinars-ul li a span{
+    color:white;
+}
+
+@media screen and (max-width:1100px)
+{
+    #webinar-video, .webinar-content h3{
+        width:100%;
+        display:block;
+    }
+}
+@media screen and (max-width:769px)
+{
+    #webinar-tabbed-menu ul li a{
+        font-size:14px;
+    }
+    #related-videos-on-webinar{
+        width:90%;
+        margin:0px 5%;
+    }
+}
+
+#left_area_img1{
+    display: none;
+}
+
+
+/* ==========================================================================
+   Attorney Individual Pages/Profile Pictures
+   ========================================================================== */
+.jal-any-attorney-profile
+{
+    text-align:center;
+    padding:15px 0px;
+    /*background-color:white;*/
+    background-color: #f7f7f7;
+    border:1px solid rgba(0,0,0,0.1);
+    box-shadow:0px -5px 0px 0px #27597c;
+    margin-top:5px;
+    width:280px;
+    margin-left:-140px;
+    position:relative;
+    left:50%;
+}
+.jal-any-attorney-profile img
+{
+    display:inline-block;
+}
+.jal-any-attorney-profile span.jal-attorney-profile-name
+{
+    font-size:24px;
+    color:#27597c;
+    display:block;
+    margin-bottom:8px;
+    margin-top:10px;
+}
+
+.jal-any-attorney-profile span.jal-attorney-profile-title
+{
+    display:block;
+    width:90%;
+    position:relative;
+    left:5%;
+}
+.jal-any-attorney-profile span.jal-attorney-profile-title,
+.jal-any-attorney-profile p
+{
+    display:block;
+}
+
+/* ==========================================================================
+   FAQ Desktop Version
+   ========================================================================== */
+#faq-questions h2.faq-title-target
+{
+    font-weight:700;
+    pointer-events: none;
+}
+.faq-title-target:before
+{
+    display: block;
+    content: " ";
+    margin-top: -100px;
+    height: 100px;
+    visibility: hidden;
+    position:relative;
+    pointer-events: none;
+}
+#faq-questions
+{
+
+}
+#faq-questions ul.faq-question-group
+{
+    margin:20px 0px;
+}
+
+#faq-questions ul.faq-question-group li
+{
+    list-style-type: none;
+    /*padding:5px 0px;*/
+    padding-bottom:40px;
+}
+
+#faq-questions ul.faq-question-group li span,
+#faq-questions ul.faq-question-group li h3
+{
+    margin-bottom:20px;
+}
+
+#faq-questions ul.faq-question-group li a
+{
+    display:block;
+}
+
+/* ==========================================================================
+   FAQ/Tabbed Content Areas
+   ========================================================================== */
+.jal-any-tab-container
+{
+    background-color:white;
+    padding:30px;
+    box-shadow:0px 0px 0px 1px #ddd;
+}
+.jal-any-tab-content
+{
+    display:none;
+}
+.jal-any-tab-content.open
+{
+    display:block;
+}
+.jal-any-tab-content .faq-any-ul
+{
+    padding:0px;
+    margin:0px;
+}
+.jal-any-tab-content .faq-any-ul li
+{
+    list-style-type: none;
+    display: block;
+    width:100%;
+    background-color:rgba(0,0,0,0.05);
+    padding:10px 15px;
+    margin-bottom:5px;
+    cursor:pointer;
+    position:relative;
+    height:50px;
+    overflow:hidden;
+    transition: all 0.1s;
+}
+.jal-any-tab-content .faq-any-ul li.open
+{
+    height:auto;
+    box-shadow:inset 0px 0px 0px 1px rgba(0,0,0,0.2);
+}
+.jal-any-tab-content .faq-any-ul li i
+{
+    position:absolute;
+    top:10px;
+    right:10px;
+}
+.jal-any-tab-content .faq-any-ul li.open span
+{
+    white-space: normal;
+}
+.jal-any-tab-content .faq-any-ul li span,
+.jal-any-tab-content .faq-any-ul li a
+{
+    font-weight:600;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    white-space: nowrap;
+    display:block;
+    width:90%;
+    color:black;
+}
+.jal-any-tab-content .faq-any-ul li div
+{
+    padding:10px;
+}
+#faq-any-ul-target-list
+{
+    padding:25px 0px;
+    margin:0px;
+}
+#faq-any-ul-target-list li
+{
+    list-style-type: none;
+    margin-bottom:30px;
+    padding-bottom:30px;
+    border-bottom:1px solid rgba(0,0,0,.1);
+}
+#faq-any-ul-target-list li:before
+{
+    display: block;
+    content: " ";
+    margin-top: -100px;
+    height: 100px;
+    visibility: hidden;
+}
+#faq-any-ul-target-list li span
+{
+    font-size:24px;
+    margin-bottom:10px;
+    display:block;
+}
+#faq-any-ul-target-list li a
+{
+    display:block;
+}
+
+.jal-any-card-list
+{
+
+}
+
+.jal-any-card-list .jal-any-card
+{
+    display:inline-block;
+    box-shadow:0px 0px 1px 0px black;
+    width:47%;
+    margin:0px 1% 20px 1%;
+}
+
+.jal-any-card-list .jal-any-card div.jal-any-card-container
+{
+    padding:25px;
+}
+
+/* ==========================================================================
+   Settlement Cards (possibly all POSTS on Category filters)
+   ========================================================================== */
+
+.jal-silo-row
+{
+    margin-top:40px;
+}
+.jal-silo-col h4
+{
+    background-color:#27597c;
+}
+.jal-silo-col h4
+{
+    padding:10px 20px;
+    margin:0px;
+    color:white;
+}
+.jal-silo-summary-content
+{
+    padding:14px;
+    background-color:rgba(0,0,0,0.02);
+}
+.jal-silo-summary-content ul li
+{
+    margin-bottom:10px;
+    padding-bottom:10px;
+    list-style-type: square;
+}
+.jal-silo-summary-content ul li:not(:last-child)
+{
+    border-bottom:1px solid rgba(0,0,0,.1);
+}
+
+.jal-ul-settlement-cards
+{
+
+}
+
+.jal-li-settlement-card,
+.jal-any-card
+{
+    position:relative;
+}
+
+.jal-li-settlement-card
+{
+    list-style-type:none !important;
+    padding:10px 30px;
+    border:1px solid rgba(0,0,0,0.2);
+    margin-bottom:20px;
+}
+
+.jal-li-settlement-card span.jal-span-settlement-dollar
+{
+    font-size:32px;
+    color:#5bc0de;
+    font-weight:700;
+    display: block;
+    margin-bottom:10px;
+}
+
+.jal-li-settlement-card a,
+.jal-any-card a
+{
+    display:block;
+    position:absolute;
+    bottom:15px;
+    right:15px;
+}
+
+.jal-li-settlement-card a div,
+.jal-any-card a div
+{
+    border-radius:20px;
+    padding:2px 7px;
+    background-color:lightgrey;
+    display:inline-block;
+}
+.jal-any-fullsize-cards .jal-any-card-list .jal-any-card
+{
+    width:80%;
+}
+
+.jal-ul-posts
+{
+    margin-top:50px;
+}
+.jal-ul-posts li.jal-li-post
+{
+    display: inline-block;
+    width:47%;
+    margin:0px 1% 40px 1%;
+}
+.jal-ul-posts li.jal-li-post div.jal-div-post-card-header
+{
+    margin-bottom:20px;
+}
+.jal-ul-posts li.jal-li-post div.jal-div-post-card-content
+{
+    /*padding:15px;*/
+}
+.jal-ul-posts li.jal-li-post div.jal-div-post-card-image img
+{
+    width:100%;
+}
+
+/* ==========================================================================
+   TABLE STYLES
+   ========================================================================== */
+
+.jal-table-any th
+{
+    text-align: right;
+}
+.jal-table-any
+{
+
+}
+
+#jal-homepage-cases
+{
+    margin-top:30px;
+}
+#jal-homepage-cases li
+{
+    display:inline-block;
+    width:31%;
+    margin-bottom:2%;
+    margin-right:1%;
+    margin-left:1%;
+}
+#jal-homepage-cases li a:hover
+{
+    background-color:rgba(49, 185, 194,0.5);
+}
+#jal-homepage-cases li a
+{
+    display:block;
+    padding:10px 20px;
+    text-transform: uppercase;
+    font-weight:600;
+    color:black;
+    background-color:rgba(255,255,255,0.8);
+    font-size:24px;
+    text-decoration:none;
+    text-align: center;
+}
+
+.jal-li-testimonial-video
+{
+    text-align: center;
+}
+#jal-any-testimonial-video-library
+{
+    margin:40px 0px;
+}
+
+/* ==========================================================================
+   WORDPRESS DEFAULTS
+   ========================================================================== */
+
+.entry-content img
+{
+
+}
+.alignleft, img.alignleft
+{
+    float:left;
+    margin-right:20px;
+    margin-bottom:6px;
+}
+.alignright, img.alignright
+{
+    float:right;
+}
+.aligncenter, img.aligncenter
+{
+
+}
+.alignnone, img.alignnone
+{
+
+}
+
+.jal-wp-author-items
+{
+    margin-top:-10px;
+}
+.jal-wp-author-items li{
+    display:inline-block;
+}
+.jal-wp-author-items li span,
+.jal-wp-author-items li span a
+{
+    font-size:12px;
+    letter-spacing: 1px;
+    font-weight:100;
+}
+.jal-wp-author-items li span
+{
+    color:gray;
+    text-transform:uppercase;
+}
+.jal-wp-author-items li:not(:last-child):after
+{
+    content:"/";
+    display:inline-block;
+    margin-left:5px;
+    color:lightgray;
+}
+.jal-wp-author-category span:before
+{
+    content:"IN ";
+}
+.jal-wp-author-author span:before
+{
+    content:"BY ";
+}
+
+/* ==========================================================================
+   Bootstrap Overrides
+   ========================================================================== */
+blockquote
+{
+    font-style:italic;
+    color:gray;
+}
+.row.jal-row-margin-bottom-100
+{
+    margin-bottom:100px;
+}
+.row.jal-row-margin-bottom-40
+{
+    margin-bottom:40px;
+}
+.row.jal-row-margin-bottom-20
+{
+    margin-bottom:20px;
+}
+
+/* ==========================================================================
+   LEGACY CODE (DO NOT ADD NEW LINES, ONLY OLD)
+   ========================================================================== */
+
+#nbb-footer-banner{ display:block; background-color:#27597c; height:43px; position:fixed; bottom:0px; left:0px; width:100%; z-index:800000 }
+#nbb-fb-left{ float:left; width:70%; }
+#nbb-fb-right{ float:right; }
+#nbb-footer-banner ul{ padding-left:20px; }
+#nbb-footer-banner ul li{ margin:0px; padding:0px;display:inline-block; }
+#nbb-footer-banner ul li a{ display:block;padding:10px 15px;transition:all 0.1s;color:white;text-decoration:none; }
+#nbb-footer-banner ul li a:hover, #nbb-footer-banner ul li a.active{ background-color:#b50f1e;color:white; }
+#nbb-fb-quiet ul{ padding-left:0px !important; }
+#nbb-fb-quiet ul li{}
+#nbb-fb-quiet ul li a{ padding:10px 4px; }
+#nbb-fb-quiet ul li a i{ font-size:25px }
+#nbb-fb-quiet ul li.priority a{  }
+#nbb-fb-quiet ul li.priority a i{}
+#nbb-fb-quiet ul li.le-book a{ padding:10px; color:black !important; background-color:#D9EDF7; }
+
+
+/* ==========================================================================
+   RESPONSIVE SITE
+   ========================================================================== */
+@media screen and (max-width: 1739px)
+{
+    #jal-div-element-header
+    {
+        width:88%;
+    }
+    #jal-img-element-logo{
+        left:0px;
+        height:50px;
+        top:10px
+    }
+}
+
+@media screen and (max-width: 1603px)
+{
+    #jal-div-element-header
+    {
+        width:100%;
+    }
+    #jal-img-element-logo{
+        left:0px;
+        height:50px;
+        top:10px
+    }
+    #jal-div-element-call-to-action{
+
+    }
+}
+
+@media screen and (max-width: 1409px)
+{
+    #jal-div-element-logos
+    {
+        position:relative;
+        width:100%;
+        left:50%;
+        margin-left:-50%;
+    }
+    #jal-div-element-logos ul li
+    {
+        margin:0px;
+    }
+    #jal-div-element-header
+    {
+        width:100%;
+    }
+    #jal-img-element-logo{
+        left:0px;
+        height:40px;
+        top:7px
+    }
+    #jal-div-element-call-to-action{
+
+    }
+    #jal-ul-element-main-menu li a{
+        font-size:12px;
+        padding:17px 11px;
+    }
+    .jal-li-element-search-button a{
+        width:55px;
+        height:55px;
+    }
+    #jal-row-element-header-container{
+        height:55px;
+    }
+    #jal-ul-element-main-menu li:hover:after, #jal-ul-element-main-menu li.hover:after{
+        top:54px !important;
+    }
+    #jal-div-element-mega-menu{
+        top:55px;
+    }
+    #jal-div-element-call-to-action span:first-child{
+        font-size:13px;
+        top:9px;
+    }
+    #jal-div-element-call-to-action span:last-child{
+        font-size:21px;
+        bottom:0px;
+    }
+    #jal-ul-element-filters li{
+        width:auto;
+        margin:5px;
+    }
+}
+
+@media screen and (max-width: 989px) {
+    .jal-any-card-list .jal-any-card,
+    .jal-ul-posts li.jal-li-post
+    {
+        width:100%;
+        margin-right:0px;
+        margin-left:0px;
+    }
+}
+
+@media screen and (max-width:973px)
+{
+    #jal-homepage-cases li
+    {
+        width:47%;
+    }
+}
+
+@media screen and (max-width: 769px)
+{
+    #jal-row-element-header-container
+    {
+        position:static;
+    }
+    .jal-any-element-body h1,
+    .jal-any-element-body h2,
+    .jal-any-element-body h3,
+    .jal-any-element-body h4,
+    .jal-any-element-body p,
+    .jal-any-button,
+    .jal-wp-author-items
+    {
+        text-align: center;
+    }
+    #jal-homepage-cases li
+    {
+        width:98%;
+    }
+}
+
+/* ==========================================================================
+   LEGACY RESPONSIVE
+   ========================================================================== */
+@media screen and (max-width:1220px){
+    #nbb-fb-left{ width:52%; }
+}
+@media screen and (max-width:862px){
+    #nbb-footer-banner ul li a{ padding:10px 5px }
+}
+@media screen and (max-width:720px){
+    #nbb-fb-left, #nbb-fb-right{ display:none; }
+    /* #nbb-fb-right{ float:left;width:100%; } */
+}
+@media screen and (min-width:720px){
+    #nbb-fb-quiet{ display:none; }
+}
+@media screen and (max-width:380px){
+    #nbb-fb-right span{ display:none; }
+}

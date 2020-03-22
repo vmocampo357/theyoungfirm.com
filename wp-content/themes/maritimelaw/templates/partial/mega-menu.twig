@@ -1,0 +1,41 @@
+<div id="jal-div-element-mega-menu" style="display: none;">
+    <div id="jal-div-element-mega-menu-container">
+        {% for item in main_header_menu.items %}
+            {% if item.children|length > 0 %}
+                <div class="mega-menu-content" id="mega-menu-content-id-{{ item.id }}">
+                    <ul class="jal-ul-mega-menu-top clearfix">
+                        {% for first_level_item in item.children %}
+                            <li class="first-level"><span>{{ first_level_item.title }}</span>
+                                {% if first_level_item.children|length %}
+                                    <ul>
+                                        {% for third_level_item in first_level_item.children %}
+                                            <li><a href="{{ third_level_item.link }}">{{ third_level_item.title }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        {% endfor %}
+        <div id="jal-div-element-mega-menu-call-to-action-container">
+            <div id="jal-div-element-mega-menu-call-to-action">
+                {{ mega_menu_sidebar }}
+            </div>
+        </div>
+    </div>
+</div>
+<ul id="jal-ul-element-main-menu">
+    {% for item in main_header_menu.items %}
+        {% if item.title == "Home" %}
+            <li><a href="{{ home_link }}"><i class="fa fa-home"></i></a></li>
+        {% else %}
+            {% set classes = item.classes %}
+            {% if item.children|length > 0 %}
+                {% set classes = item.classes|merge(['jal-mega-li']) %}
+            {% endif %}
+            <li data-mega-menu-id="{{ item.id }}" class="{{ classes|join(" ") }}"><a href="{{ item.link }}">{{ item.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+</ul>

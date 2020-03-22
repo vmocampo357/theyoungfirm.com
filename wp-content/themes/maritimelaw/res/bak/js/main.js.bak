@@ -1,0 +1,295 @@
+$(document).ready(function(){
+    console.log('Maritime Law Firm JS Active ...');
+
+    /**
+     * This will make every anchor link be a little bit offset for better targeting
+     */
+    $('a[href^="#"]').click(function(e){
+        e.preventDefault();
+        var element = $($(this).attr("href"));
+        console.log(element);
+        if(element.length > 0)
+        {
+            $(window).scrollTo(element.offset().top - 110);
+        }
+    });
+
+    /**
+     * This will open the page form on any 'single' page that includes a contact form
+     * @returns {boolean}
+     */
+    function showPageForm()
+    {
+        var element = $("#jal-this-page-comment-form");
+        var element_state = element.attr('data-state');
+        if(element_state == "closed"){
+            element.slideDown();
+            element.attr('data-state',"opened");
+            $(window).scrollTo($("#jal-this-page-comment-form"),"slow");
+            return false;
+        }
+    }
+
+    /**
+     * This will hide the page form on any 'single' page that includes a contact form
+     */
+    function hidePageForm()
+    {
+        var element = $("#jal-this-page-comment-form");
+        var element_state = element.attr('data-state');
+        if(element_state == "opened"){
+            element.slideUp();
+            element.attr('data-state',"closed");
+        }
+    }
+
+    /**
+     * This will toggle the page form on any 'single' page that includes a contact form
+     */
+    function togglePageForm()
+    {
+        var element = $("#jal-this-page-comment-form");
+        var element_state = element.attr('data-state');
+        if(element_state == "opened"){
+            hidePageForm();
+        }else{
+            showPageForm();
+        }
+    }
+
+    /**
+     * This will show the MegaMenu for the given menu-parent ID
+     * @param id
+     */
+    function showMegaMenu(id)
+    {
+        $(".mega-menu-content").hide();
+        $("#mega-menu-content-id-"+id).show();
+        $("#jal-div-element-mega-menu").show();
+    }
+
+    /**
+     * This will hide the active mega menu
+     */
+    function hideMegaMenu()
+    {
+        $("#jal-div-element-mega-menu").hide();
+    }
+
+    /**
+     * This will remove the 'hover' from all active list items
+     */
+    function resetHoverActions()
+    {
+        $("#jal-ul-element-main-menu li").removeClass('hover');
+    }
+
+    /**
+     * This initial run will start the menu off as 'hidden'
+     */
+    hideMegaMenu();
+
+    /**
+     * DOCUMENT CLICK HANDLERS
+     * ---
+     * This section carries all event handlers (namely, clicks) sitewide
+     *
+     */
+
+    /**
+     * This will open the responsive menu, when enabled
+     */
+    $(document).on("click",".trigger-responsive-menu-toggle",function(){
+       $(".jal-responsive-menu").toggleClass("jal-responsive-menu-open");
+    });
+
+    /**
+     * This will open any children that the main menu may have
+     */
+    $(document).on("click",".menu-item-has-children",function(e){
+        e.stopPropagation();
+        $(this).children("ul").toggle();
+    });
+
+    /**
+     * When we mouseover the mega menu, we want to show the correct menu
+     */
+    $(document).on('mouseover','#jal-div-element-mega-menu',function(){
+        console.log('Inside menu!');
+        showMegaMenu( last_menu_id );
+        $(this).addClass('hover');
+    });
+
+    /**
+     * On the main menu, we want to show the mega menu when we hover
+     */
+    $(document).on('mouseover','#jal-ul-element-main-menu li.jal-mega-li',function(){
+        last_menu_id = $(this).attr("data-mega-menu-id");
+        showMegaMenu( last_menu_id );
+        resetHoverActions();
+        $(this).addClass('hover');
+    });
+
+    /**
+     * When our mouse leaves the mega menu, we want it to close
+     */
+    $(document).on('mouseleave','#jal-div-element-mega-menu',function(){
+        console.log('Outside menu!');
+        hideMegaMenu();
+        resetHoverActions();
+        $(this).removeClass('hover');
+    });-
+
+    /**
+    * When we no longer hover over the top menu, we want to close the mega menu
+    */
+    $(document).on('mouseout','#jal-ul-element-main-menu li',function(){
+        hideMegaMenu();
+        _this = $(this);
+        setTimeout(function(){
+            if(!$("#jal-div-element-mega-menu").hasClass('hover')){
+                _this.removeClass('hover');
+            }
+        },100);
+    });
+
+    /**
+     * This will stick the nav bar to the top of the page
+     */
+    $("#jal-row-element-header-container").sticky({topSpacing:0});
+
+    /**
+     * If our page has a form active, we want to start it off toggled
+     */
+    if($(".trigger-this-page-comment-form-toggle").length > 0)
+    {
+        togglePageForm();
+        $(".trigger-this-page-comment-form-toggle").click(function(){
+            togglePageForm();
+        });
+    }
+
+    /**
+     * If our page has the compass up, we want to have it appear on scroll
+     */
+    if( $("#jal-compass-up").length > 0 )
+    {
+        $(window).on("scroll", function(e){
+            if( $(window).scrollTop() > 500 ){
+                $("#jal-compass-up").fadeIn();
+            }else{
+                $("#jal-compass-up").fadeOut();
+            }
+            $(document).on("click","#jal-compass-up",function(){
+                $(window).scrollTo(0,0);
+            });
+        });
+    }
+
+    /**
+     * If our page has a sticky bar, we want it to show up and scroll with us
+     */
+    if( $("#jal-any-sticky-bar").length > 0 )
+    {
+        $("#jal-any-sticky-bar").stick_in_parent({
+            parent: "#jal-row-element-primary-body",
+            offset_top:120,
+            bottoming:true
+        });
+    }
+
+    /**
+     * If our page has a testimonial video library, we initiate the Slick
+     */
+    if( $("#jal-ul-testimonial-video-library").length > 0 )
+    {
+        $("#jal-ul-testimonial-video-library").slick({
+            infinite:true,
+            slidesToShow:2,
+            slidesToScroll:1,
+            prevArrow:'<button type="button" class="slick-prev-jal"><i class="fa fa-arrow-circle-left"></i></button>',
+            nextArrow:'<button type="button" class="slick-next-jal"><i class="fa fa-arrow-circle-right"></i></button>',
+            responsive:[
+                {
+                    breakpoint:1160,
+                    settings:{
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint:860,
+                    settings:{
+                        slidesToShow:2
+                    }
+                },
+                {
+                    breakpoint:800,
+                    settings:{
+                        slidesToShow:1
+                    }
+                }
+            ]
+        });
+    }
+
+    /**
+     * If our page has any video slideshow, we add the Slick settings
+     */
+    if( $(".jal-ul-video-slick").length > 0)
+        $(".jal-ul-video-slick").slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            prevArrow:'<button type="button" class="slick-prev-jal"><i class="fa fa-arrow-circle-left"></i></button>',
+            nextArrow:'<button type="button" class="slick-next-jal"><i class="fa fa-arrow-circle-right"></i></button>',
+            responsive:[
+                {
+                    breakpoint:1160,
+                    settings:{
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint:860,
+                    settings:{
+                        slidesToShow:2
+                    }
+                },
+                {
+                    breakpoint:800,
+                    settings:{
+                        slidesToShow:1
+                    }
+                }
+            ]
+        });
+
+    /**
+     * If our page has the Navigation Tabs, we activate here
+     */
+    if( $(".nav-tabs").length > 0 )
+    {
+        $(document).on('click','.nav-tabs li',function(){
+            $(".jal-any-tab-content").removeClass('open');
+            var target = $(this).attr("data-target-tab");
+            $(".jal-any-tab-content[data-tab-name='"+target+"']").addClass('open');
+            $(".nav-tabs li").removeClass('active');
+            $(this).addClass('active');
+        });
+        $(".nav-tabs li:first-child").trigger('click');
+    }
+
+    /**
+     * If our page has the FAQ section, we activate it here
+     */
+    if( $(".faq-any-ul").length > 0 )
+    {
+        $(document).on('click','.faq-any-ul li',function(){
+            $('.faq-any-ul li').removeClass('open');
+            $(".faq-any-ul li").find("i").removeClass('fa-caret-up');
+            $(this).addClass('open');
+            $(this).find('i').addClass('fa-caret-up');
+        });
+    }
+
+});

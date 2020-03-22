@@ -1,0 +1,19 @@
+{% macro testimonial_post_loop(posts,ctx) %}
+    <style>
+        .read-more{
+            display:none !important;
+        }
+    </style>
+    {% for testimonial in posts %}
+        <li class="jal-any-card jal-testimonial-card">
+            <div class="jal-any-card-container clearfix">
+                {% if testimonial.thumbnail|length > 0 %}
+                    <img width="150" class="alignleft" src="{{ testimonial.thumbnail.src }}" />
+                {% endif %}
+                <p>{{ testimonial.get_field('page_summary')|default(testimonial.preview) }}</p>
+                <span><strong>{{ testimonial.get_field('tst_client_name')|default(testimonial.title|truncate(2)) }}</strong> | {{ testimonial.get_field('tst_client_location')|default('USA') }} | {{ testimonial.get_field('tst_client_settlement_info')|default('Testimonial') }}</span>
+                <a href="{{ testimonial.link }}"><div><i class="fa fa-plus"></i></div> Read More</a>
+            </div>
+        </li>
+    {% endfor %}
+{% endmacro %}

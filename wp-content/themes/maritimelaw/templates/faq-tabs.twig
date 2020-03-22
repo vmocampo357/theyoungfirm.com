@@ -1,0 +1,28 @@
+<div id="jal-any-element-primary" class="even-cols col-xs-12 jal-any-element-body">
+    <div id="faq-tabs-content">
+        <ul class="nav nav-tabs">
+            {% if terms|length > 0 %}
+                {% for term in terms %}
+                    <li data-target-tab="{{ term.slug }}" role="presentation" class="active"><a href="javascript:void(0);">{{ term.name }}</a></li>
+                {% endfor %}
+            {% endif %}
+        </ul>
+        <div class="jal-any-tab-container">
+            {% if terms|length > 0 %}
+                {% for term in terms %}
+                    <div class="jal-any-tab-content open" data-tab-name="{{ term.slug }}">
+                        <ul class="faq-any-ul">
+                            {% if posts[term.slug]|length > 0 %}
+                                {% for post in posts[term.slug] %}
+                                    <li><a href="{{ post.link }}">{{ post.title }}</a></li>
+                                {% endfor %}
+                            {% else %}
+                                <li>There are no FAQs yet for this category.</li>
+                            {% endif%}
+                        </ul>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>

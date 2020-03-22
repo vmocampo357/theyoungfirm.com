@@ -1,0 +1,55 @@
+{% extends 'base-page.twig' %}
+
+{% block page_title %}
+    Maritime Injury Video Resources
+{% endblock %}
+
+{% block page_featured_image %}
+    <img src="{{ img_dir }}/sample-contact-main-pic.jpg" />
+{% endblock %}
+
+{% block page_summary %}
+    <span id="jal-any-element-summary">Check out our Maritime Video Library, which features videos covering critical topics related to maritime personal injuries and protecting your future after an injury.</span>
+{% endblock %}
+
+{% block page_body %}
+    <div id="jal-any-element-primary" class="even-cols col-xs-12 jal-any-element-body">
+        <div class="row">
+            <div class="col-xs-12">
+                <p>Have a question about a certain legal issue and would like more information? Call us at 504-680-4100 or Live Chat with us to schedule your complimentary claim evaluation today. You can also visit our Resource Center to immediately download books and other helpful materials.</p>
+                {{ post.content }}
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-xs-12">
+                {% for t in terms %}
+                    <div class="jal-div-video-set">
+                        <div class="jal-div-video-set-title">
+                            <span>{{ t.name }}</span>
+                        </div>
+                        <div class="jal-div-video-slick-container">
+                            {% if posts[t.slug]|length > 0 %}
+                                <ul class="jal-ul-video-slick">
+                                {% for video in posts[t.slug] %}
+                                    <li class="jal-div-video-slick-item">
+                                        <a href="{{ video.link }}" style="background-image:url('https://img.youtube.com/vi/{{ video.get_field('vv_video_url')|youtube_id }}/0.jpg');" class="jal-div-video-single-thumb"></a>
+                                        <div class="jal-div-video-single-content">
+                                            <span>{{ video.title }} <br /> {{ video.excerpt }}</span>
+                                        </div>
+                                    </li>
+                                {% endfor %}
+                                </ul>
+                            {% else %}
+                                <h3 style="text-align: center;">No videos have been uploaded for this category yet.</h3>
+                            {% endif %}
+                            {#<div class="jal-ul-video-button">
+                                <a class="btn btn-sm btn-info" href="javascript:void(0);">See All Videos</a>
+                            </div>#}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

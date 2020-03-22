@@ -1,0 +1,423 @@
+# BEGIN W3TC Browser Cache
+<IfModule mod_mime.c>
+    AddType text/css .css
+    AddType text/x-component .htc
+    AddType application/x-javascript .js
+    AddType application/javascript .js2
+    AddType text/javascript .js3
+    AddType text/x-js .js4
+    AddType video/asf .asf .asx .wax .wmv .wmx
+    AddType video/avi .avi
+    AddType image/bmp .bmp
+    AddType application/java .class
+    AddType video/divx .divx
+    AddType application/msword .doc .docx
+    AddType application/vnd.ms-fontobject .eot
+    AddType application/x-msdownload .exe
+    AddType image/gif .gif
+    AddType application/x-gzip .gz .gzip
+    AddType image/x-icon .ico
+    AddType image/jpeg .jpg .jpeg .jpe
+    AddType image/webp .webp
+    AddType application/json .json
+    AddType application/vnd.ms-access .mdb
+    AddType audio/midi .mid .midi
+    AddType video/quicktime .mov .qt
+    AddType audio/mpeg .mp3 .m4a
+    AddType video/mp4 .mp4 .m4v
+    AddType video/mpeg .mpeg .mpg .mpe
+    AddType video/webm .webm
+    AddType application/vnd.ms-project .mpp
+    AddType application/x-font-otf .otf
+    AddType application/vnd.ms-opentype ._otf
+    AddType application/vnd.oasis.opendocument.database .odb
+    AddType application/vnd.oasis.opendocument.chart .odc
+    AddType application/vnd.oasis.opendocument.formula .odf
+    AddType application/vnd.oasis.opendocument.graphics .odg
+    AddType application/vnd.oasis.opendocument.presentation .odp
+    AddType application/vnd.oasis.opendocument.spreadsheet .ods
+    AddType application/vnd.oasis.opendocument.text .odt
+    AddType audio/ogg .ogg
+    AddType application/pdf .pdf
+    AddType image/png .png
+    AddType application/vnd.ms-powerpoint .pot .pps .ppt .pptx
+    AddType audio/x-realaudio .ra .ram
+    AddType image/svg+xml .svg .svgz
+    AddType application/x-shockwave-flash .swf
+    AddType application/x-tar .tar
+    AddType image/tiff .tif .tiff
+    AddType application/x-font-ttf .ttf .ttc
+    AddType application/vnd.ms-opentype ._ttf
+    AddType audio/wav .wav
+    AddType audio/wma .wma
+    AddType application/vnd.ms-write .wri
+    AddType application/font-woff .woff
+    AddType application/font-woff2 .woff2
+    AddType application/vnd.ms-excel .xla .xls .xlsx .xlt .xlw
+    AddType application/zip .zip
+</IfModule>
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css A31536000
+    ExpiresByType text/x-component A31536000
+    ExpiresByType application/x-javascript A31536000
+    ExpiresByType application/javascript A31536000
+    ExpiresByType text/javascript A31536000
+    ExpiresByType text/x-js A31536000
+    ExpiresByType video/asf A31536000
+    ExpiresByType video/avi A31536000
+    ExpiresByType image/bmp A31536000
+    ExpiresByType application/java A31536000
+    ExpiresByType video/divx A31536000
+    ExpiresByType application/msword A31536000
+    ExpiresByType application/vnd.ms-fontobject A31536000
+    ExpiresByType application/x-msdownload A31536000
+    ExpiresByType image/gif A31536000
+    ExpiresByType application/x-gzip A31536000
+    ExpiresByType image/x-icon A31536000
+    ExpiresByType image/jpeg A31536000
+    ExpiresByType image/webp A31536000
+    ExpiresByType application/json A31536000
+    ExpiresByType application/vnd.ms-access A31536000
+    ExpiresByType audio/midi A31536000
+    ExpiresByType video/quicktime A31536000
+    ExpiresByType audio/mpeg A31536000
+    ExpiresByType video/mp4 A31536000
+    ExpiresByType video/mpeg A31536000
+    ExpiresByType video/webm A31536000
+    ExpiresByType application/vnd.ms-project A31536000
+    ExpiresByType application/x-font-otf A31536000
+    ExpiresByType application/vnd.ms-opentype A31536000
+    ExpiresByType application/vnd.oasis.opendocument.database A31536000
+    ExpiresByType application/vnd.oasis.opendocument.chart A31536000
+    ExpiresByType application/vnd.oasis.opendocument.formula A31536000
+    ExpiresByType application/vnd.oasis.opendocument.graphics A31536000
+    ExpiresByType application/vnd.oasis.opendocument.presentation A31536000
+    ExpiresByType application/vnd.oasis.opendocument.spreadsheet A31536000
+    ExpiresByType application/vnd.oasis.opendocument.text A31536000
+    ExpiresByType audio/ogg A31536000
+    ExpiresByType application/pdf A31536000
+    ExpiresByType image/png A31536000
+    ExpiresByType application/vnd.ms-powerpoint A31536000
+    ExpiresByType audio/x-realaudio A31536000
+    ExpiresByType image/svg+xml A31536000
+    ExpiresByType application/x-shockwave-flash A31536000
+    ExpiresByType application/x-tar A31536000
+    ExpiresByType image/tiff A31536000
+    ExpiresByType application/x-font-ttf A31536000
+    ExpiresByType application/vnd.ms-opentype A31536000
+    ExpiresByType audio/wav A31536000
+    ExpiresByType audio/wma A31536000
+    ExpiresByType application/vnd.ms-write A31536000
+    ExpiresByType application/font-woff A31536000
+    ExpiresByType application/font-woff2 A31536000
+    ExpiresByType application/vnd.ms-excel A31536000
+    ExpiresByType application/zip A31536000
+</IfModule>
+<IfModule mod_deflate.c>
+        AddOutputFilterByType DEFLATE text/css text/x-component application/x-javascript application/javascript text/javascript text/x-js text/html text/richtext text/plain text/xsd text/xsl text/xml image/bmp application/java application/msword application/vnd.ms-fontobject application/x-msdownload image/x-icon application/json application/vnd.ms-access video/webm application/vnd.ms-project application/x-font-otf application/vnd.ms-opentype application/vnd.oasis.opendocument.database application/vnd.oasis.opendocument.chart application/vnd.oasis.opendocument.formula application/vnd.oasis.opendocument.graphics application/vnd.oasis.opendocument.presentation application/vnd.oasis.opendocument.spreadsheet application/vnd.oasis.opendocument.text audio/ogg application/pdf application/vnd.ms-powerpoint image/svg+xml application/x-shockwave-flash image/tiff application/x-font-ttf application/vnd.ms-opentype audio/wav application/vnd.ms-write application/font-woff application/font-woff2 application/vnd.ms-excel
+    <IfModule mod_mime.c>
+        # DEFLATE by extension
+        AddOutputFilter DEFLATE js css htm html xml
+    </IfModule>
+</IfModule>
+<FilesMatch "\.(css|htc|less|js|js2|js3|js4|CSS|HTC|LESS|JS|JS2|JS3|JS4)$">
+    FileETag MTime Size
+    <IfModule mod_headers.c>
+         Header unset Set-Cookie
+    </IfModule>
+</FilesMatch>
+<FilesMatch "\.(html|htm|rtf|rtx|txt|xsd|xsl|xml|HTML|HTM|RTF|RTX|TXT|XSD|XSL|XML)$">
+    FileETag MTime Size
+</FilesMatch>
+<FilesMatch "\.(asf|asx|wax|wmv|wmx|avi|bmp|class|divx|doc|docx|eot|exe|gif|gz|gzip|ico|jpg|jpeg|jpe|webp|json|mdb|mid|midi|mov|qt|mp3|m4a|mp4|m4v|mpeg|mpg|mpe|webm|mpp|otf|_otf|odb|odc|odf|odg|odp|ods|odt|ogg|pdf|png|pot|pps|ppt|pptx|ra|ram|svg|svgz|swf|tar|tif|tiff|ttf|ttc|_ttf|wav|wma|wri|woff|woff2|xla|xls|xlsx|xlt|xlw|zip|ASF|ASX|WAX|WMV|WMX|AVI|BMP|CLASS|DIVX|DOC|DOCX|EOT|EXE|GIF|GZ|GZIP|ICO|JPG|JPEG|JPE|WEBP|JSON|MDB|MID|MIDI|MOV|QT|MP3|M4A|MP4|M4V|MPEG|MPG|MPE|WEBM|MPP|OTF|_OTF|ODB|ODC|ODF|ODG|ODP|ODS|ODT|OGG|PDF|PNG|POT|PPS|PPT|PPTX|RA|RAM|SVG|SVGZ|SWF|TAR|TIF|TIFF|TTF|TTC|_TTF|WAV|WMA|WRI|WOFF|WOFF2|XLA|XLS|XLSX|XLT|XLW|ZIP)$">
+    FileETag MTime Size
+    <IfModule mod_headers.c>
+         Header unset Set-Cookie
+    </IfModule>
+</FilesMatch>
+<FilesMatch "\.(bmp|class|doc|docx|eot|exe|ico|json|mdb|webm|mpp|otf|_otf|odb|odc|odf|odg|odp|ods|odt|ogg|pdf|pot|pps|ppt|pptx|svg|svgz|swf|tif|tiff|ttf|ttc|_ttf|wav|wri|woff|woff2|xla|xls|xlsx|xlt|xlw|BMP|CLASS|DOC|DOCX|EOT|EXE|ICO|JSON|MDB|WEBM|MPP|OTF|_OTF|ODB|ODC|ODF|ODG|ODP|ODS|ODT|OGG|PDF|POT|PPS|PPT|PPTX|SVG|SVGZ|SWF|TIF|TIFF|TTF|TTC|_TTF|WAV|WRI|WOFF|WOFF2|XLA|XLS|XLSX|XLT|XLW)$">
+    <IfModule mod_headers.c>
+         Header unset Last-Modified
+    </IfModule>
+</FilesMatch>
+<IfModule mod_headers.c>
+    Header set Referrer-Policy ""
+</IfModule>
+# END W3TC Browser Cache
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# BEGIN W3TC Page Cache core
+#<IfModule mod_rewrite.c>
+#    RewriteEngine On
+#    RewriteBase /
+#    RewriteCond %{HTTPS} =on
+#    RewriteRule .* - [E=W3TC_SSL:_ssl]
+#    RewriteCond %{SERVER_PORT} =443
+#    RewriteRule .* - [E=W3TC_SSL:_ssl]
+#    RewriteCond %{HTTP:X-Forwarded-Proto} =https [NC]
+#    RewriteRule .* - [E=W3TC_SSL:_ssl]
+#    RewriteCond %{HTTP:Accept-Encoding} gzip
+#    RewriteRule .* - [E=W3TC_ENC:_gzip]
+#    RewriteCond %{HTTP_COOKIE} w3tc_preview [NC]
+#    RewriteRule .* - [E=W3TC_PREVIEW:_preview]
+#    RewriteCond %{REQUEST_METHOD} !=POST
+#    RewriteCond %{QUERY_STRING} =""
+#    RewriteCond %{HTTP_COOKIE} !(comment_author|wp\-postpass|w3tc_logged_out|wordpress_logged_in|wptouch_switch_toggle) [NC]
+#    RewriteCond %{REQUEST_URI} \/$
+#    RewriteCond "%{DOCUMENT_ROOT}/wp-content/cache/page_enhanced/%{HTTP_HOST}/%{REQUEST_URI}/_index%{ENV:W3TC_SSL}%{ENV:W3TC_PREVIEW}.html%{ENV:W3TC_ENC}" -f
+#    RewriteRule .* "/wp-content/cache/page_enhanced/%{HTTP_HOST}/%{REQUEST_URI}/_index%{ENV:W3TC_SSL}%{ENV:W3TC_PREVIEW}.html%{ENV:W3TC_ENC}" [L]
+#</IfModule>
+# END W3TC Page Cache core
+# BEGIN WordPress
+# The directives (lines) between `BEGIN WordPress` and `END WordPress` are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+# SUCURI
+
+Options -Indexes
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Content-Type-Options nosniff
+
+# REDIRECTS
+
+# Redirect 301    /html/index.html    /
+# Redirect 301    /index.html /
+Redirect 301    /html/firm.html	/about-us
+Redirect 301    /html/html/firm.html	/about-us
+Redirect 301    /html/maritimeexclusiveseal.html	/about-us
+Redirect 301    /video/player/12743-welcome-to-the-young-firm	/about-us
+Redirect 301    /video/player/12746-the-young-firm-philosophy	/about-us
+Redirect 301    /html/html/lawyers.html	/attorneys
+Redirect 301    /html/html/staff.html	/attorneys
+Redirect 301    /html/lawyers.html	/attorneys
+Redirect 301    /html/staff.html	/attorneys
+Redirect 301    /video/player/12749-meet-robert-j-young-jr	/attorneys
+Redirect 301    /video/player/12752-meet-tim-j-young	/attorneys
+Redirect 301    /articles	/blog
+# Redirect 301    /blog/	/blog
+Redirect 301    /blog/2008/01/	/blog
+Redirect 301    /blog/2008/index.html	/blog
+Redirect 301    /blog/2009/01/	/blog
+Redirect 301    /blog/2009/index.html	/blog
+Redirect 301    /blog/2010/04/	/blog
+Redirect 301    /blog/2010/07/	/blog
+Redirect 301    /blog/2010/11/	/blog
+Redirect 301    /blog/2010/12/	/blog
+Redirect 301    /blog/2010/index.html	/blog
+Redirect 301    /blog/2011/01/	/blog
+Redirect 301    /blog/2011/02/	/blog
+Redirect 301    /blog/2011/index.html	/blog
+Redirect 301    /blog/2013/02/	/blog
+Redirect 301    /blog/2013/05/	/blog
+Redirect 301    /blog/2013/07/	/blog
+Redirect 301    /blog/2013/08/	/blog
+Redirect 301    /blog/2013/index.html	/blog
+Redirect 301    /blog/category/index.html	/blog
+Redirect 301    /blog/category/maritime-claims/	/blog
+Redirect 301    /blog/category/maritime-claims/page/2/	/blog
+Redirect 301    /blog/category/maritime-claims/page/3/	/blog
+Redirect 301    /blog/category/maritime-claims/page/index.html	/blog
+Redirect 301    /blog/category/personal-injury/	/blog
+Redirect 301    /blog/category/uncategorized/	/blog
+Redirect 301    /blog/comments/feed/	/blog
+Redirect 301    /blog/feed/	/blog
+Redirect 301    /blog/index.html	/blog
+Redirect 301    /blog/page/2/	/blog
+Redirect 301    /blog/page/3/	/blog
+Redirect 301    /blog/page/4/	/blog
+Redirect 301    /blog/page/index.html	/blog
+Redirect 301    /blog/the-most-important-aspect-of-a-vehicle-accident-case/	/blog
+Redirect 301    /blog/visit-our-new-louisiana-automobile-accident-injury-web-site/	/blog
+Redirect 301    /blog/when-to-file-suit-after-an-18-wheeler-accident-–-its-sooner-than-you-think/	/blog
+Redirect 301    /html/blog/	/blog
+Redirect 301    /blog/why-you-should-never-try-to-settle-your-own-maritime-jones-act-claim-without-an-attorney/	/blog/dont-settle-without-attorney
+Redirect 301    /blog/did-you-know-youre-entitled-to-time-off/	/blog/fmla-entitled-to-time-off
+Redirect 301    /blog/why-your-insurance-adjuster-may-not-be-your-friend/	/blog/insurance-adjuster-not-friend
+Redirect 301    /blog/why-a-pre-employment-physical-can-help-your-case/	/blog/preemployment-physical-help-case
+Redirect 301    /blog/research-maritime-attorneys-online/	/blog/researching-maritime-attorneys
+Redirect 301    /video/player/12761-what-should-i-look-for-in-an-attorney	/blog/researching-maritime-attorneys
+Redirect 301    /html/contact.html	/contact-us
+Redirect 301    /html/html/contact.html	/contact-us
+Redirect 301    /blog/our-most-rewarding-cases/	/injury-settlements
+Redirect 301    /html/html/results.html	/injury-settlements
+Redirect 301    /html/results.html	/injury-settlements
+Redirect 301    /blog/“featherweight”-burden-of-proof-the-jones-act-works-in-favor-of-injured-seamen/	/jones-act-cases
+Redirect 301    /blog/do-i-have-to-provide-a-recorded-statement-under-the-jones-act-if-i-am-hurt-offshore/	/jones-act-cases
+Redirect 301    /blog/where-do-i-file-my-jones-act-claim/	/jones-act-cases
+Redirect 301    /html/html/jones-act-claims.html	/jones-act-cases
+Redirect 301    /html/html/jones-act.html	/jones-act-cases
+Redirect 301    /html/html/seamen.html	/jones-act-cases
+Redirect 301    /html/jones-act-claims.html	/jones-act-cases
+Redirect 301    /html/jones-act.html	/jones-act-cases
+Redirect 301    /html/seamen.html	/jones-act-cases
+Redirect 301    /video/player/12764-what-is-the-jones-act	/jones-act-cases
+Redirect 301    /video/player/12773-what-is-a-seaman	/jones-act-cases
+Redirect 301    /video/player/12782-filing-a-maritime-or-jones-act-claim	/jones-act-cases
+Redirect 301    /blog/5-tricks-your-company-will-use-to-fight-your-offshore-injury-claim/	/jones-act-cases/5-company-legal-tactics
+Redirect 301    /blog/what-you-should-know-maritime-companies’-five-most-common-legal-tactics/	/jones-act-cases/5-company-legal-tactics
+Redirect 301    /blog/what-damages-can-i-collect-under-the-jones-act/	/jones-act-cases/damages
+Redirect 301    /blog/the-jones-act-and-safety-are-you-at-risk/	/jones-act-cases/safety-rules
+Redirect 301    /blog/maritime-claims-get-settled-by-fear/	/maritime-injury-law
+Redirect 301    /blog/the-most-frequantly-asked-questions-by-injured-maritime-workers/	/maritime-injury-law
+Redirect 301    /html/admiralty.html	/maritime-injury-law
+Redirect 301    /html/html/admiralty.html	/maritime-injury-law
+Redirect 301    /html/html/maritime.html	/maritime-injury-law
+Redirect 301    /html/maritime.html	/maritime-injury-law
+Redirect 301    /video/player/12767-what-is-maritime-law	/maritime-injury-law
+Redirect 301    /video/player/12779-what-if-i-have-a-maritime-injury	/maritime-injury-law
+Redirect 301    /html/dosha.html	/maritime-injury-law/dosha
+Redirect 301    /html/html/dosha.html	/maritime-injury-law/dosha
+Redirect 301    /html/html/longshore.html	/maritime-injury-law/longshore-act
+Redirect 301    /html/longshore.html	/maritime-injury-law/longshore-act
+Redirect 301    /video/player/12776-what-is-the-longshore-act	/maritime-injury-law/longshore-act
+Redirect 301    /blog/maintenance-and-cure-are-you-getting-all-you-deserve/	/maritime-injury-law/maintenance-cure
+Redirect 301    /html/html/maintenance.html	/maritime-injury-law/maintenance-cure
+Redirect 301    /html/html/right.html	/maritime-injury-law/maintenance-cure
+Redirect 301    /html/maintenance.html	/maritime-injury-law/maintenance-cure
+Redirect 301    /html/maintenanceandcure.html	/maritime-injury-law/maintenance-cure
+Redirect 301    /html/right.html	/maritime-injury-law/maintenance-cure
+Redirect 301    /video/player/12770-maintenance-and-cure-rights	/maritime-injury-law/maintenance-cure
+Redirect 301    /blog/medical-treatment-while-working-offshore/	/maritime-injury-law/medical-treatment
+Redirect 301    /html/choice.html	/maritime-injury-law/medical-treatment
+Redirect 301    /html/html/choice.html	/maritime-injury-law/medical-treatment
+Redirect 301    /html/html/improper.html	/maritime-injury-law/medical-treatment
+Redirect 301    /html/html/treatment.html	/maritime-injury-law/medical-treatment
+Redirect 301    /html/improper.html	/maritime-injury-law/medical-treatment
+Redirect 301    /html/treatment.html	/maritime-injury-law/medical-treatment
+Redirect 301    /blog/negligence-under-maritime-law/	/maritime-injury-law/negligence
+Redirect 301    /html/auto-faq.html	/personal-injury
+Redirect 301    /html/auto.html	/personal-injury
+Redirect 301    /html/birth-injury.html	/personal-injury
+Redirect 301    /html/cruise-ship.html	/personal-injury
+Redirect 301    /html/html/cruise-ship.html	/personal-injury
+Redirect 301    /html/html/injury-faq.html	/personal-injury
+Redirect 301    /html/html/personal-injury.html	/personal-injury
+Redirect 301    /html/html/premises-liability.html	/personal-injury
+Redirect 301    /html/html/product-liability.html	/personal-injury
+Redirect 301    /html/html/recreational-boating.html	/personal-injury
+Redirect 301    /html/injury-faq.html	/personal-injury
+Redirect 301    /html/medical-malpractice.html	/personal-injury
+Redirect 301    /html/medmal-faq.html	/personal-injury
+Redirect 301    /html/misdiagnosis.html	/personal-injury
+Redirect 301    /html/motorcycle.html	/personal-injury
+Redirect 301    /html/pedestrian.html	/personal-injury
+Redirect 301    /html/personal-injury.html	/personal-injury
+Redirect 301    /html/premises-liability.html	/personal-injury
+Redirect 301    /html/product-liability.html	/personal-injury
+Redirect 301    /html/railroad.html	/personal-injury
+Redirect 301    /html/recreational-boating.html	/personal-injury
+Redirect 301    /html/surgical-error.html	/personal-injury
+Redirect 301    /html/truck.html	/personal-injury
+Redirect 301    /html/html/spinal-cord.html	/personal-injury/back-injury
+Redirect 301    /html/spinal-cord.html	/personal-injury/back-injury
+Redirect 301    /html/boating-faq.html	/personal-injury/boating-accidents
+Redirect 301    /html/html/boating-faq.html	/personal-injury/boating-accidents
+Redirect 301    /html/brain-injury.html	/personal-injury/brain-injury
+Redirect 301    /html/html/brain-injury.html	/personal-injury/brain-injury
+Redirect 301    /html/burn-injury.html	/personal-injury/burn-injury
+Redirect 301    /html/html/burn-injury.html	/personal-injury/burn-injury
+Redirect 301    /html/diving-accidents.html	/personal-injury/diving-accidents
+Redirect 301    /html/html/diving-accidents.html	/personal-injury/diving-accidents
+Redirect 301    /blog/why-accidents-and-injuries-can-happen-on-an-offshore-oil-rig-floor/	/personal-injury/offshore-injury
+Redirect 301    /blog/why-should-i-work-offshore/	/personal-injury/offshore-injury
+Redirect 301    /html/html/offshore-injury.html	/personal-injury/offshore-injury
+Redirect 301    /html/offshore-injury.html	/personal-injury/offshore-injury
+Redirect 301    /html/html/oil-rig.html	/personal-injury/oil-rig-accidents
+Redirect 301    /html/oil-rig.html	/personal-injury/oil-rig-accidents
+Redirect 301    /html/html/workers-comp.html	/personal-injury/workers-comp
+Redirect 301    /html/workers-comp.html	/personal-injury/workers-comp
+Redirect 301    /blog/a-quick-test-to-tell-if-you-have-maritime-work-related-hearing-loss/	/personal-injury/workplace-accidents
+Redirect 301    /blog/asbestos-in-drilling-mud-–-hazard-that-causes-serious-injuries/	/personal-injury/workplace-accidents
+Redirect 301    /blog/dangerous-asbestos-used-on-oil-rigs-and-in-drilling-mud/	/personal-injury/workplace-accidents
+Redirect 301    /blog/did-you-know-that-the-jones-act-and-maritime-law-provides-significant-protections-to-seamen-who-were-previously-exposed-to-asbestos-while-working-offshore/	/personal-injury/workplace-accidents
+Redirect 301    /blog/free-asbestos-lung-screening-exam/	/personal-injury/workplace-accidents
+Redirect 301    /blog/what-type-of-equipment-causes-work-related-hearing-loss-offshore-or-on-a-vessel/	/personal-injury/workplace-accidents
+Redirect 301    /blog/when-do-you-have-to-file-a-maritime-jones-act-hearing-loss-claim/	/personal-injury/workplace-accidents
+Redirect 301    /blog/work-related-hearing-loss-offshore-and-on-vessels/	/personal-injury/workplace-accidents
+Redirect 301    /html/html/workplace.html	/personal-injury/workplace-accidents
+Redirect 301    /html/workplace.html	/personal-injury/workplace-accidents
+Redirect 301    /html/html/wrongful-death.html	/personal-injury/wrongful-death
+Redirect 301    /html/wrongful-death.html	/personal-injury/wrongful-death
+Redirect 301    /blog/maritime-publications-now-available/	/resources
+Redirect 301    /html/6secrets.html	/resources
+Redirect 301    /html/employeesguide.html	/resources
+Redirect 301    /html/html/publications.html	/resources
+Redirect 301    /html/medicalsecrets.html	/resources
+Redirect 301    /html/publications.html	/resources
+Redirect 301    /html/stcw.html	/resources
+Redirect 301    /blog/learn-how-we-can-help-if-you-need-an-alabama-maritime-or-jones-act-lawyer/	/service-areas
+Redirect 301    /blog/need-a-florida-jones-act-lawyer-our-office-may-be-your-best-bet-learn-why-here/	/service-areas
+Redirect 301    /blog/need-a-mississippi-maritime-jones-act-injury-lawyer/	/service-areas
+Redirect 301    /html/html/sitemap.html	/sitemap
+Redirect 301    /html/sitemap.html	/sitemap
+Redirect 301    /html/html/stories.html	/testimonials
+Redirect 301    /html/stories.html	/testimonials
+Redirect 301    /video/	/testimonials
+Redirect 301    /video/12761-c1-v7	/testimonials
+Redirect 301    /video/12797-c3-v5	/testimonials
+Redirect 301    /video/javascripts/accordion.js	/testimonials
+Redirect 301    /video/javascripts/application.js	/testimonials
+Redirect 301    /video/javascripts/builder.js	/testimonials
+Redirect 301    /video/javascripts/client_bootstrap.js	/testimonials
+Redirect 301    /video/javascripts/controls.js	/testimonials
+Redirect 301    /video/javascripts/dragdrop.js	/testimonials
+Redirect 301    /video/javascripts/effects.js	/testimonials
+Redirect 301    /video/javascripts/eii.js	/testimonials
+Redirect 301    /video/javascripts/modalbox.js	/testimonials
+Redirect 301    /video/javascripts/player.js	/testimonials
+Redirect 301    /video/javascripts/prototype.js	/testimonials
+Redirect 301    /video/javascripts/slider.js	/testimonials
+Redirect 301    /video/javascripts/supplements.js	/testimonials
+Redirect 301    /video/javascripts/swfobject.js	/testimonials
+Redirect 301    /video/player?category_id=2621	/testimonials
+Redirect 301    /video/player?category_id=2624	/testimonials
+Redirect 301    /video/player?category_id=2636	/testimonials
+Redirect 301    /video/player/12743-c1-v1	/testimonials
+Redirect 301    /video/player/12746-c1-v2	/testimonials
+Redirect 301    /video/player/12761-c1-v7	/testimonials
+Redirect 301    /video/player/12764-c2-v1	/testimonials
+Redirect 301    /video/player/12767-c2-v2	/testimonials
+Redirect 301    /video/player/12773-c2-v4	/testimonials
+Redirect 301    /video/player/12776-c2-v5	/testimonials
+Redirect 301    /video/player/12779-c2-v6	/testimonials
+Redirect 301    /video/player/12782-c2-v7	/testimonials
+Redirect 301    /video/player/12785-c3-v1	/testimonials
+Redirect 301    /video/player/12788-c3-v2	/testimonials
+Redirect 301    /video/player/12794-c3-v4	/testimonials
+Redirect 301    /video/player/12800-c4-v1	/testimonials
+Redirect 301    /video/player/12803-c4-v2	/testimonials
+Redirect 301    /video/player/12806-c4-v3	/testimonials
+Redirect 301    /video/player/12809-c5-v1	/testimonials
+Redirect 301    /video/player/12812-c5-v2	/testimonials
+Redirect 301    /video/player/12815-c5-v3	/testimonials
+Redirect 301    /video/player/12818-c6-v1	/testimonials
+Redirect 301    /video/player/12818-mike	/testimonials
+Redirect 301    /video/player/12821-c6-v2	/testimonials
+Redirect 301    /video/player/12821-charles	/testimonials
+Redirect 301    /video/player/12824-c6-v3	/testimonials
+Redirect 301    /video/player/12824-phillippi	/testimonials
+Redirect 301    /video/player/12827-c6-v4	/testimonials
+Redirect 301    /video/player/12827-david	/testimonials
+Redirect 301    /video/stylesheets/locales/en_US.css	/testimonials
+Redirect 301    /video/stylesheets/modalbox.css	/testimonials
+Redirect 301    /video/stylesheets/player_blue.css	/testimonials
+Redirect 301    /video/stylesheets/player_core.css	/testimonials
+Redirect 301    /video/stylesheets/player.css  /testimonials
+Redirect 301    /library/  https://www.jonesactlaw.com/sign-up/thank-you/maritime-ebooks/

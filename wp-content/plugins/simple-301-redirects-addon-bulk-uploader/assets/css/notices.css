@@ -1,0 +1,80 @@
+.wbcr-s301bu-notice-wrapper {
+    padding: 0 !important;
+    border: 0;
+    box-shadow: none;
+}
+
+.wbcr-s301bu-notice {
+    padding-right: 15px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.wbcr-s301bu-leftcol, .wbcr-s301bu-rightcol {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.wbcr-s301bu-leftcol {
+    padding-right: 14px;
+}
+
+.wbcr-s301bu-description {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding-right: 40px;
+    color: #6c7961;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.wbcr-s301bu-plugin-ico {
+    margin: 0 auto;
+    display: block;
+
+}
+
+.wbcr-s301bu-title {
+    color: #617055;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.wbcr-s301bu-install-btn, .wbcr-s301bu-install-btn:hover, .wbcr-s301bu-install-btn:active, .wbcr-s301bu-install-btn:focus {
+    display: block;
+    background: #74c523;
+    color: #ffffff;
+    padding: 10px 17px;
+    border-bottom: 2px solid #5ea21a;
+    border-radius: 3px;
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 14px;
+    -webkit-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
+}
+
+.wbcr-s301bu-install-btn:hover {
+    background: #5dc007;
+}
+
+@media screen and (max-width: 1700px) {
+    .wbcr-s301bu-notice {
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .wbcr-s301bu-text-cols, .wbcr-s301bu-notice {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}

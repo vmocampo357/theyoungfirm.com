@@ -1,0 +1,74 @@
+{% extends "base-page.twig" %}
+
+{% block small_title %}{% endblock %}
+{% block small_crumbs %}{% endblock %}
+{% block page_body %}
+    <div id="jal-any-element-primary" class="even-cols col-xs-12 jal-any-element-body content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-12">
+                        {{ post.content }}
+                    </div>
+                </div>
+                <hr />
+                {% if attorneys|length > 0 %}
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4>Our Maritime Attorneys</h4>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        {% for attorney in attorneys %}
+                            <div class="col-xs-12 col-sm-6 col-md-3">
+                                <div class="jal-any-attorney-profile">
+                                    <img alt="{{ attorney.thumbnail.alt }}"  src="{{ attorney.thumbnail.src }}" />
+                                    <span class="jal-attorney-profile-name">{{ attorney.title }}</span>
+                <span class="jal-attorney-profile-title">
+                    <a href="{{ attorney.link }}" class="btn-block btn btn-info">View Profile</a>
+                </span>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <hr />
+                {% endif %}
+                {% if post.get_field('sec_content_block') %}
+                    {% if post.get_field('sec_content_heading') %}
+                        <h2>{{ post.get_field('sec_content_heading') }}</h2>
+                    {% endif %}
+                    <div class="row">
+                        <div class="col-xs-12">
+                            {{ post.get_field('sec_content_block') }}
+                        </div>
+                    </div>
+                {% endif %}
+                {% if staff|length > 0 %}
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4>Our Staff</h4>
+                        </div>
+                    </div>
+                    <br />
+                    {% for member in staff %}
+                        <div class="row jal-row-margin-bottom-40">
+                            <div class="col-md-3">
+                                <div class="jal-any-attorney-profile">
+                                    <img alt="{{ member.thumbnail.alt }}"  src="{{ member.thumbnail.src }}" />
+                                    <span class="jal-attorney-profile-name">{{ member.get_field('staff_member_full_name') }}</span>
+                                    <span class="jal-attorney-profile-title">{{ member.get_field('staff_member_title') }}</span>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <p>&nbsp;</p>
+                                {{ member.content }}
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        <hr />
+    </div>
+{% endblock %}

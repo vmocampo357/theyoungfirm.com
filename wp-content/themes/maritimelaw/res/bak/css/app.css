@@ -1,0 +1,3318 @@
+/*! JonesActLaw.com v2.0.0 | MIT License | https://jonesactlaw.com/ */
+
+/*
+ * Plugin CSS files
+ */
+.slick-slider{position:relative;display:block;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}.slick-list{position:relative;display:block;overflow:hidden;margin:0;padding:0}.slick-list:focus{outline:0}.slick-list.dragging{cursor:pointer;cursor:default}.slick-slider .slick-list,.slick-slider .slick-track{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.slick-track{position:relative;top:0;left:0;display:block;margin-left:auto;margin-right:auto}.slick-track:after,.slick-track:before{display:table;content:''}.slick-track:after{clear:both}.slick-loading .slick-track{visibility:hidden}.slick-slide{display:none;float:left;height:100%;min-height:1px}[dir=rtl] .slick-slide{float:right}.slick-slide img{display:block}.slick-slide.slick-loading img{display:none}.slick-slide.dragging img{pointer-events:none}.slick-initialized .slick-slide{display:block}.slick-loading .slick-slide{visibility:hidden}.slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}.slick-arrow.slick-hidden{display:none}
+/*# sourceMappingURL=slick.min.css.map */
+
+.slick-loading .slick-list{background:#fff url(ajax-loader.gif) center center no-repeat}@font-face{font-family:slick;font-weight:400;font-style:normal;src:url(fonts/slick.eot);src:url(fonts/slick.eot?#iefix) format('embedded-opentype'),url(fonts/slick.woff) format('woff'),url(fonts/slick.ttf) format('truetype'),url(fonts/slick.svg#slick) format('svg')}.slick-next,.slick-prev{font-size:0;line-height:0;position:absolute;top:50%;display:block;width:20px;height:20px;padding:0;-webkit-transform:translate(0,-50%);-ms-transform:translate(0,-50%);transform:translate(0,-50%);cursor:pointer;color:transparent;border:none;outline:0;background:0 0}.slick-next:focus,.slick-next:hover,.slick-prev:focus,.slick-prev:hover{color:transparent;outline:0;background:0 0}.slick-next:focus:before,.slick-next:hover:before,.slick-prev:focus:before,.slick-prev:hover:before{opacity:1}.slick-next.slick-disabled:before,.slick-prev.slick-disabled:before{opacity:.25}.slick-next:before,.slick-prev:before{font-family:slick;font-size:20px;line-height:1;opacity:.75;color:#fff;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.slick-prev{left:-25px}[dir=rtl] .slick-prev{right:-25px;left:auto}.slick-prev:before{content:'â†'}[dir=rtl] .slick-prev:before{content:'â†’'}.slick-next{right:-25px}[dir=rtl] .slick-next{right:auto;left:-25px}.slick-next:before{content:'â†’'}[dir=rtl] .slick-next:before{content:'â†'}.slick-dotted.slick-slider{margin-bottom:30px}.slick-dots{position:absolute;bottom:-25px;display:block;width:100%;padding:0;margin:0;list-style:none;text-align:center}.slick-dots li{position:relative;display:inline-block;width:20px;height:20px;margin:0 5px;padding:0;cursor:pointer}.slick-dots li button{font-size:0;line-height:0;display:block;width:20px;height:20px;padding:5px;cursor:pointer;color:transparent;border:0;outline:0;background:0 0}.slick-dots li button:focus,.slick-dots li button:hover{outline:0}.slick-dots li button:focus:before,.slick-dots li button:hover:before{opacity:1}.slick-dots li button:before{font-family:slick;font-size:6px;line-height:20px;position:absolute;top:0;left:0;width:20px;height:20px;content:'â€¢';text-align:center;opacity:.25;color:#000;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.slick-dots li.slick-active button:before{opacity:.75;color:#000}
+/*# sourceMappingURL=slick-theme.min.css.map */
+
+/*
+ * This is the official, and only site stylesheet for the new JonesActLaw.com website.
+ * Author: Victor HMO
+ */
+
+/* ==========================================================================
+   Base styles: Body, HTML, Containers
+   ========================================================================== */
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+video {
+    width: 100%    !important;
+    height: auto   !important;
+}
+body img, html img
+{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+body
+{
+    font-family:"Open Sans", "Helvetica", sans-serif;
+    /*background-color: #f7f7f7;*/
+    background-color:white;
+    font-size:20px;
+}
+a
+{
+    /*color:#31b9c2;*/
+    color:#1978BA;
+}
+.btn-primary, .btn-info
+{
+    background-color:#1978BA;
+}
+ul, ol
+{
+    padding:0px;
+    margin:0px;
+}
+ul li, ol li
+{
+    list-style-type:none;
+    padding:0px;
+    margin:0px;
+}
+p
+{
+    font-size:20px;
+    /*font-size:16px;*/
+    /*font-size:18px;*/
+    color:black;
+    margin-bottom:20px;
+}
+hr{
+    border-bottom:1px solid #e4ecee;
+}
+input::placeholder,
+textarea::placeholder
+{
+    font-style: italic;
+}
+body blockquote
+{
+    font-size:21px;
+}
+
+#ngageMobileInvite
+{
+    display:none !important;
+    opacity:0 !important;
+}
+
+.highlight, mark {
+    font-weight: bold;
+    /*background-color:yellow;*/
+    color:black;
+    font-size:inherit !important;
+    background-color:transparent !important;
+}
+
+#jal-page-search-results
+{
+
+}
+#jal-page-search-results li .jpsr-title a
+{
+    font-size:24px;
+    font-weight:200;
+    margin-bottom:15px;
+    display:block;
+}
+#jal-page-search-results li .jpsr-content .read-more
+{
+    display: block;
+    max-width:120px;
+    text-align:center;
+    padding:10px;
+    box-shadow:0px 0px 1px 0px rgba(0,0,0,0.7);
+    font-size:14px;
+    margin-top:15px;
+}
+#jal-page-search-results li
+{
+    list-style-type: none;
+    margin-bottom:60px;
+}
+.jal-search-box
+{
+    position:relative;
+}
+.jal-search-icon
+{
+    font-size:14px !important;
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+.jal-search-box input.form-control
+{
+    padding-left:45px;
+}
+
+.grecaptcha-badge
+{
+    display:none !important;
+    opacity:0 !important;
+    visibility:  hidden !important;
+    height:0px !important;
+}
+#click-load-more
+{
+    margin:20px auto;
+    width:280px;
+    display:block;
+}
+
+/* ==========================================================================
+   Universal/All Content
+   ========================================================================== */
+hr.jal-hr-colored
+{
+    margin:40px 0px;
+    border-bottom:5px solid #e4ecee;
+}
+#jal-any-element-primary
+{
+    position:relative;
+    padding-bottom:100px;
+}
+.jal-any-element-body *:not(blockquote)
+{
+    /*font-size:20px;*/
+    font-size:18px;
+    line-height:150%;
+}
+.jal-any-element-body table tr
+{
+
+}
+.jal-any-element-body table tr td,
+.jal-any-element-body table tr th
+{
+    padding:8px 10px;
+    border:1px solid rgba(0,0,0,0.3);
+}
+.jal-any-element-body table
+{
+    max-width:90%;
+}
+.jal-any-element-body h2, h3, h4, h5, h6
+{
+    margin-top:30px;
+    margin-bottom:20px;
+}
+.jal-any-element-body h1, h2, h3, h4
+{
+
+}
+.jal-any-element-body h1
+{
+    letter-spacing:-1px;
+    font-size:44px;
+    font-weight:bold;
+}
+.jal-any-element-body h2,
+.jal-any-element-body h2 *
+{
+    font-size:36px;
+    /*font-weight:300;*/
+    font-weight:700;
+}
+.jal-any-element-body h3,
+.jal-any-element-body h3 *
+{
+    font-size:24px;
+    font-weight:600;
+}
+.jal-any-element-body h4,
+.jal-any-element-body h4 *
+{
+    font-weight:600;
+    font-size:22px;
+}
+.jal-any-element-body h5,
+.jal-any-element-body h5 *
+{
+    font-weight:600;
+    font-size:20px;
+}
+.jal-any-element-body h6,
+.jal-any-element-body h6 *
+{
+    font-weight:300;
+    font-size:18px;
+}
+.jal-any-element-body p
+{
+    /*text-align: justify;*/
+    text-align:left;
+    text-align-last: left;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+.jal-any-element-body img
+{
+    max-width:100%;
+    height:auto;
+}
+.jal-any-element-body ul
+{
+    /*margin-left:15px;*/
+}
+.jal-any-element-body ul li
+{
+    list-style: square;
+}
+
+.content ol li
+{
+    list-style: decimal;
+    list-style-position: outside;
+    margin-left:1.4em;
+}
+
+.content ul li
+{
+    list-style: square;
+    list-style-position: outside;
+    margin-left:1.4em;
+}
+
+#faq-tabs-content li
+{
+    margin-left:0px !important;
+}
+
+.jal-any-button
+{
+    border-radius:5px;
+    box-shadow:inset 0px 3px 0px 0px white;
+    display:inline-block;
+    padding:10px 20px;
+    text-align: center;
+    min-width:300px;
+    text-transform: uppercase;
+    font-weight:700;
+    border:1px solid white;
+    color:black;
+    cursor:pointer;
+    transition: all 0.1s;
+}
+.jal-any-button:hover
+{
+    text-decoration: none;
+    color:black;
+}
+.jal-any-gray-button:hover
+{
+    color:#656565;
+    background-color:white;
+}
+.jal-any-gray-button
+{
+    background-color:#ededed;
+    box-shadow:inset 0px 3px 0px 0px white, 0px 4px 0px 0px #afafaf;
+    border:1px solid #afafaf;
+    color:#656565;
+    text-shadow:2px 2px 0px white;
+}
+#jal-compass-up:before
+{
+}
+#jal-compass-up
+{
+    display:none;
+    background-color:#27597c;
+    border-radius:30px;
+    color:white;
+    position:fixed;
+    bottom:60px;
+    right:15px;
+    padding:10px 13px;
+    z-index:999999;
+}
+#jal-compass-up i
+{
+    /*font-size:64px;*/
+    font-size:42px;
+}
+
+#infinite-loop
+{
+    position:relative;
+}
+
+#infinite-loop.loading
+{
+    opacity:0.2;
+}
+
+#jal-looper-loading-element
+{
+    text-align:center;
+    padding:20px 0px;
+    display:none;
+    font-size:18px;
+    position:absolute;
+    bottom:0px;
+    width:100%;
+}
+#jal-looper-loading-element.loading
+{
+    display:block;
+}
+
+.crf-filter
+{
+
+}
+
+.crf-filter.active-filter
+{
+    background-color:red !important;
+}
+
+#jal-desktop-search-list
+{
+    position:relative;
+}
+
+#hidden-desktop-search-bar
+{
+    /*display:none;*/
+    position:absolute;
+    /*padding:10px;
+    background-color:black;*/
+    right:0px;
+    top:-2px;
+    transition:all 0.5s;
+    width:0px;
+    opacity:0;
+}
+
+#hidden-desktop-search-bar.open
+{
+    display:block;
+    width:300px;
+    opacity:1;
+}
+
+#open-desktop-search
+{
+    position:relative;
+    overflow:hidden;
+    white-space: nowrap;
+    display:inline-block;
+    transition: all 0.5s;
+}
+
+#open-desktop-search.open
+{
+    left:-310px;
+    width:16px;
+}
+
+.homepage-testimonial-preview,
+.homepage-testimonial-preview p
+{
+    color:white;
+}
+.homepage-testimonial-preview a
+{
+    color:#15181b;
+    display:block;
+    margin-top:10px;
+}
+.homepage-testimonial-preview a:hover
+{
+    color:white;
+}
+#homepage-attorneys-cont
+{
+    height:465px;
+}
+
+/* ==========================================================================
+   Header styles
+   ========================================================================== */
+#jal-row-element-header-container-sticky-wrapper
+{
+    z-index:99999;
+    position:relative;
+}
+#jal-row-element-header-container
+{
+    background-color:#27597c;
+    padding:0px;
+    margin:0px;
+    /*height:72px;*/
+    /*height:82px;*/
+    width:100%;
+    z-index:99999 !important;
+    box-shadow:inset 0px -3px 0px 0px rgba(0,0,0,0.2);
+/*    position:fixed;*/
+}
+#jal-div-element-header
+{
+    /*width:81%;*/
+    position:relative;
+}
+#jal-img-element-logo{
+    /*height:60px;*/
+    position:relative;
+    top:5px;
+    /*top:10px;*/
+    /*left:-50px;*/
+}
+#jal-ul-element-main-menu
+{
+    padding:0px;
+    margin:0px;
+    white-space: nowrap;
+    /*text-align:center;*/
+}
+#jal-ul-element-main-menu li
+{
+    display: inline-block;
+    margin:0px;
+    position:relative;
+    margin:0px -2px;
+}
+#jal-ul-element-main-menu li.active,
+#jal-ul-element-main-menu li.current_page_item,
+#jal-ul-element-main-menu li.hover,
+#jal-ul-element-main-menu li:hover
+{
+    background-color:#18374d;
+}
+#jal-ul-element-main-menu li.jal-mega-li:hover:after,
+#jal-ul-element-main-menu li.jal-mega-li.hover:after
+{
+    content:"";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(0,0,0,0.8);
+    position:absolute;
+    text-align:center;
+    top:81px;
+    right:50%;
+    margin-right:-10%;
+    z-index:9999;
+}
+#jal-ul-element-main-menu li a
+{
+    display:block;
+    color:white;
+    font-weight:700;
+    text-decoration:none;
+    font-size:15px;
+    /*font-size:18px;*/
+    text-transform: uppercase;
+    /*text-shadow:2px 2px 2px rgba(0,0,0,0.2);*/
+    /*padding:28px 20px;*/
+    padding:30px 20px;
+}
+#jal-col-element-main-menu
+{
+    /*position:relative;*/
+    position:static;
+    /*height:72px;*/
+    height:82px;
+}
+.jal-li-element-search-button
+{
+
+}
+.jal-li-element-search-button a
+{
+    width:72px;
+    /*height:72px;*/
+    height:82px;
+    padding:0px;
+    margin:0px;
+    text-align:center;
+}
+.jal-li-element-search-button a img{
+
+}
+#jal-div-element-call-to-action
+{
+    text-align:center;
+}
+#jal-div-element-call-to-action span
+{
+    color:white;
+    display:block;
+    white-space: nowrap;
+}
+#jal-div-element-call-to-action span:first-child
+{
+    font-weight:600;
+    font-style:italic;
+    text-transform: uppercase;
+    font-size:16px;
+    position:relative;
+    /*top:13px;*/
+    top:17px;
+}
+#jal-div-element-call-to-action span:last-child
+{
+    font-size:24px;
+    font-weight:700;
+    position:relative;
+    /*bottom:-4px;*/
+    bottom:-10px;
+}
+
+/* ==========================================================================
+   Reg Menu Styles
+   ========================================================================== */
+.jal-regmenu-submenu
+{
+
+    background-color:white;
+    /*position:absolute;
+    left:248px;
+    top:-10px;*/
+    width:250px;
+    padding:0px;
+    white-space: normal;
+
+}
+.jal-regmenu-submenu.jal-regmenu-submenu-alpha
+{
+    white-space: normal;
+    /*left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);*/
+    position:absolute;
+    display:none;
+    left:0;
+    top:auto;
+    box-shadow:0px 0px 12px 0px rgba(0,0,0,0.3);
+}
+#jal-ul-element-main-menu .jal-regmenu-submenu li.menu-item-has-children > a{
+    border-bottom:1px solid black;
+}
+#jal-ul-element-main-menu .jal-regmenu-submenu li.menu-item-has-children .jal-regmenu-submenu{
+    background:#eff2f7;
+}
+#jal-ul-element-main-menu .jal-regmenu-submenu li.menu-item-has-children .jal-regmenu-submenu a{
+    font-size:12px;
+    text-transform: none;
+}
+#jal-ul-element-main-menu .jal-regmenu-submenu li{
+    width:100%;
+    padding:0px;
+    box-shadow:0px 1px 0px 0px rgba(0,0,0,0.1);
+}
+#jal-ul-element-main-menu .jal-regmenu-submenu li:last-child
+{
+    box-shadow:none !important;
+}
+#jal-ul-element-main-menu.regmenu > li:hover:after,
+#jal-ul-element-main-menu.regmenu > li.hover:after
+{
+    content:"";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgba(0,0,0,0.8);
+    position:absolute;
+    text-align:center;
+    top:81px;
+    right:50%;
+    margin-right:-10%;
+    z-index:9999;
+}
+#jal-ul-element-main-menu .jal-regmenu-submenu li.active > a,
+#jal-ul-element-main-menu .jal-regmenu-submenu li.current_page_item > a,
+#jal-ul-element-main-menu .jal-regmenu-submenu li.hover > a,
+#jal-ul-element-main-menu .jal-regmenu-submenu li:hover > a
+{
+    color:white;
+}
+#jal-ul-element-main-menu .jal-regmenu-submenu li a
+{
+    display:block;
+    color:black;
+    padding:10px 15px;
+    text-align: left;
+    font-weight:400;
+    text-decoration:none;
+    font-size:14px;
+    text-transform: uppercase;
+    /*text-shadow:2px 2px 2px rgba(0,0,0,0.2);*/
+    /*padding:30px 11px;*/
+}
+#jal-ul-element-main-menu li.menu-item-has-children:hover > .jal-regmenu-submenu
+{
+    display:block;
+}
+
+/* ==========================================================================
+   Mega Menu Styles
+   ========================================================================== */
+#jal-div-element-mega-menu-container
+{
+    width:69%;
+    position:relative;
+    margin:auto;
+}
+#jal-div-element-mega-menu.hover
+{
+
+}
+#jal-div-element-mega-menu
+{
+    position: absolute;
+    /*top:72px;*/
+    top:82px;
+    /*left:15px;*/
+    left:0px;
+    /*width:98%;*/
+    width:100%;
+    background-color:white;
+    box-shadow: inset 0px -3px 0px #27597c, 0px 5px 45px 0px rgba(0,0,0,0.3);
+    z-index:9998;
+}
+ul.jal-ul-mega-menu-top
+{
+    margin:0px;
+    padding: 20px 0px 20px 25px;
+    width:70%;
+    min-height:270px;
+    border-right:3px solid #27597c;
+}
+ul.jal-ul-mega-menu-top ul
+{
+    margin:0px;
+    padding:0px;
+}
+ul.jal-ul-mega-menu-top ul li
+{
+    margin:0px;
+    padding:0px;
+    list-style-type:none;
+}
+ul.jal-ul-mega-menu-top li.first-level
+{
+    float:left;
+    list-style-type:none;
+    /*margin-right:30px;
+    min-width:230px;*/
+    width:31%;
+    margin-right:1%;
+}
+ul.jal-ul-mega-menu-top li.first-level span{
+    font-size:14px;
+    font-weight:800;
+    border-bottom:1px solid rgba(0,0,0,0.2);
+    display:block;
+    width:100%;
+    text-transform: uppercase;
+    padding-bottom:10px;
+    margin-bottom:10px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+ul.jal-ul-mega-menu-top li.first-level ul
+{
+
+}
+ul.jal-ul-mega-menu-top li.first-level ul li
+{
+    margin:8px 0px;
+}
+ul.jal-ul-mega-menu-top li.first-level ul li a
+{
+    color:black;
+    font-size:12px;
+    font-weight:600;
+}
+#jal-div-element-mega-menu-call-to-action-container{
+    width:30%;
+    position:absolute;
+    top:0px;
+    right:0px;
+}
+#jal-div-element-mega-menu-call-to-action{
+    padding:30px;
+    text-align: center;
+}
+#jal-span-element-mega-menu
+{
+    font-size:16px;
+    text-transform: uppercase;
+    color:black;
+    font-weight:700;
+    display: block;
+    margin-top:20px;
+}
+
+/* ==========================================================================
+   Single Pages/Posts
+   ========================================================================== */
+#jal-div-element-optional-banner
+{
+    width:100%;
+    box-shadow:0px 3px 0px 0px rgba(0,0,0,0.1);
+}
+#jal-div-element-optional-banner img
+{
+    width:100%;
+    display:block;
+}
+#jal-div-element-breadcrumbs
+{
+    /*background-color:#ebebeb;*/
+    padding:7px 0px;
+}
+#jal-div-element-breadcrumbs.force-780{
+    padding:7px 0px;
+}
+#jal-ul-element-breadcrubs
+{
+
+}
+#jal-ul-element-breadcrubs *:hover
+{
+    text-decoration: underline;
+}
+#jal-ul-element-breadcrubs li a:after,
+#jal-ul-element-breadcrubs span a:after
+{
+    content: ">>";
+    display:inline-block;
+    margin-left:15px;
+    font-weight:600;
+    color: #525b5d;
+}
+#jal-ul-element-breadcrubs li,
+#jal-ul-element-breadcrubs span
+{
+    display: inline-block;
+    color: #525b5d;
+    font-size:13px;
+    font-weight:400;
+    margin-right:15px;
+}
+#jal-ul-element-breadcrubs span a span
+{
+    margin-right:0px;
+}
+#jal-ul-element-breadcrubs li a,
+#jal-ul-element-breadcrubs span a
+{
+    text-transform: uppercase;
+}
+#jal-any-element-summary
+{
+    margin:45px 0px;
+    font-size:33px;
+    font-weight:300;
+    display: block;
+}
+
+#jal-any-element-summary *
+{
+    font-size:33px;
+    font-weight:300;
+    display: block;
+}
+
+#jal-div-element-other-articles
+{
+    margin:70px 0px;
+}
+#jal-div-element-other-articles ul
+{
+    padding:10px 0px;
+}
+#jal-div-element-other-articles ul li
+{
+    margin-bottom:12px;
+}
+#jal-div-element-other-articles ul li i
+{
+    margin-right:10px;
+    color:#868686;
+    display:none;
+}
+#jal-div-element-other-articles ul li a
+{
+    color:#1978BA;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Global Footer Styles
+   ========================================================================== */
+
+#jal-div-element-logos-container
+{
+    /*box-shadow:0px -8px 0px 0px rgba(0,0,0,0.08);*/
+    background-color:#4a4a4a;
+    padding:5px 0px;
+}
+#jal-div-element-logos
+{
+    position:relative;
+    width:80%;
+    left:50%;
+    margin-left:-40%;
+}
+#jal-div-element-logos ul li
+{
+    display:inline-block;
+    /*margin-right:27px;*/
+    padding:27px 20px;
+    overflow:hidden;
+    height:170px;
+}
+#jal-div-element-logos ul
+{
+    text-align: center;
+}
+#jal-div-element-footer-container
+{
+    box-shadow:inset 0px 20px 0px 0px #232323;
+    background-color:#262626;
+    padding:40px 0px 70px 0px;
+}
+#jal-div-element-footer{
+
+}
+.jal-any-footer-sidebar
+{
+
+}
+.jal-any-footer-sidebar h4,
+.jal-any-footer-sidebar .widgettitle,
+.jal-any-footer-sidebar h6
+{
+    color:white;
+    font-weight:600;
+    margin-bottom:15px;
+    display:block;
+    font-size:14px;
+}
+.jal-any-footer-sidebar p
+{
+    color:#959595;
+    font-size:14px;
+    margin-bottom:2px;
+}
+.jal-any-footer-sidebar ul
+{
+
+}
+.jal-any-footer-sidebar ul li
+{
+
+}
+.jal-any-footer-sidebar ul li a,
+.jal-any-footer-sidebar ul li a:hover,
+.jal-any-footer-sidebar ul li a:active
+{
+    color:#959595;
+    display:block;
+    font-size:14px;
+}
+.jal-any-footer-social-bar
+{
+    margin-top:10px;
+}
+.jal-any-footer-social-bar li
+{
+    display:inline-block;
+}
+.jal-any-footer-social-bar li a:hover
+{
+    background-color:rgba(255,255,255,0.1);
+}
+.jal-any-footer-social-bar li a
+{
+    display:block;
+    padding:4px;
+    width:30px;
+    text-align: center;
+    border-radius:20px;
+    background-color:#262626;
+    background-position: center;
+    background-size:cover;
+    background-color:rgba(0,0,0,0.2);
+    color:white;
+    transition:all 0.2s;
+}
+
+
+
+/* ==========================================================================
+   Single Post (Sidebar Plugin)
+   ========================================================================== */
+#jal-row-element-primary-body
+{
+    padding-bottom:50px;
+    /*padding-left:15px;
+    padding-right:15px;*/
+}
+#jal-any-sticky-bar
+{
+    /*position:absolute;
+    top:0px;
+    right:-130px;
+    text-align: center;
+    width:100px;*/
+    text-align: center;
+}
+#jal-any-sticky-bar.is_stuck
+{
+
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social
+{
+    display:inline-block;
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li
+{
+    display:inline-block;
+    margin-bottom:5px;
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a
+{
+    display:block;
+    /*padding:5px 16px;*/
+    padding-top:4px;
+    /*width:49px;
+    height:49px;*/
+    /*width:25px;
+    height:25px;*/
+    width:36px;
+    height:36px;
+    position:relative;
+    text-align: center;
+    background-color:gray;
+    color:white;
+    /*font-size:13px;*/
+    font-size:19px;
+    transition:all .3s;
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a.jal-anchor-sticky-twitter:hover
+{
+    background-color:rgba(43,172,234,1);
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a.jal-anchor-sticky-twitter
+{
+    background-color:rgba(43,172,234,0.5);
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a.jal-anchor-sticky-facebook:hover
+{
+    background-color:rgba(54,102,207,1);
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a.jal-anchor-sticky-facebook
+{
+    background-color:rgba(54,102,207,0.5);
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a.jal-anchor-sticky-linkedin:hover
+{
+    background-color:rgba(30,121,209,1);
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a.jal-anchor-sticky-linkedin
+{
+    background-color:rgba(30,121,209,0.5);
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a.jal-anchor-sticky-google:hover
+{
+    background-color:darkred;
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a.jal-anchor-sticky-google
+{
+    background-color:red;
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a.jal-anchor-sticky-stack:hover
+{
+    background-color:rgba(0,0,0,0.7);
+}
+#jal-any-sticky-bar ul#jal-any-sticky-bar-social li a.jal-anchor-sticky-stack
+{
+    background-color:rgba(0,0,0,0.5);
+}
+
+#jal-any-sticky-bar-get-help-with *
+{
+
+}
+#jal-any-sticky-bar-get-help-with
+{
+    margin-top: 30px;
+    padding-top:10px;
+    border-top:3px solid rgba(0,0,0,0.2);
+}
+#jal-any-sticky-bar-get-help-with span
+{
+    text-align: left;
+    display:block;
+    font-weight:600;
+    font-style:italic;
+    margin-bottom:15px;
+}
+#jal-any-sticky-bar-get-help-with span::first-letter
+{
+    text-transform: uppercase;
+}
+#jal-any-sticky-bar-get-help-with ul{}
+#jal-any-sticky-bar-get-help-with ul li
+{
+    display:block;
+    text-align: left;
+    margin-bottom:12px;
+}
+#jal-any-sticky-bar-get-help-with ul li a i
+{
+    margin-right:10px;
+    font-size:24px;
+}
+#jal-any-sticky-bar-get-help-with ul li a
+{
+    text-transform: uppercase;
+    font-weight:600;
+    color:black;
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   Form Elements
+   ========================================================================== */
+.jal-any-form-title
+{
+    color:black;
+    font-weight:300;
+    margin-bottom:20px;
+    display: block;
+}
+
+/* ==========================================================================
+   Video/Webinar Libraries [ALT]
+   ========================================================================== */
+#jal-ul-element-filters
+{
+    background-color:rgba(0,0,0,0.02);
+    box-shadow:inset 0px 0px 10px -3px rgba(0,0,0,0.2);
+    padding:10px;
+}
+#jal-ul-element-filters li:hover
+{
+    background-color:#27597c;
+    color:white;
+}
+#jal-ul-element-filters li label
+{
+}
+#jal-ul-element-filters li
+{
+    display:block;
+    padding:10px 10px 10px 35px;
+    background-color:rgba(0,0,0,0.05);
+    margin-bottom:2px;
+    display:inline-block;
+    cursor:pointer;
+    width:100%;
+    text-transform: uppercase;
+    font-size:12px;
+    font-weight:700;
+    position:relative;
+}
+#jal-ul-element-filters li span:after
+{
+    content:"";
+    position:absolute;
+    display:none;
+}
+#jal-ul-element-filters li input:checked ~ span
+{
+    background-color:#27597c;
+}
+#jal-ul-element-filters li input:checked ~ span:after
+{
+    display:block;
+}
+#jal-ul-element-filters li input
+{
+    position:absolute;
+    opacity:0;
+    cursor: pointer;
+}
+#jal-ul-element-filters li span:after
+{
+    left: 10px;
+    top: 6px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+#jal-ul-element-filters li span
+{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    cursor: pointer;
+}
+#jal-ul-element-videos
+{
+    text-align: center;
+}
+#jal-ul-element-videos li.jal-li-element-video
+{
+    display:inline-block;
+    position:relative;
+    background-image:url('../img/video-thumb.jpg');
+    background-size:cover;
+    background-position:center;
+    width:265px;
+    height:170px;
+    margin:8px;
+}
+#jal-ul-element-videos li.jal-li-element-video:after
+{
+    content:"";
+    display:block;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0px;
+    left:0px;
+    background-color:rgba(0,0,0,0.7);
+}
+#jal-ul-element-videos li.jal-li-element-video span a
+{
+    color:white;
+}
+#jal-ul-element-videos li.jal-li-element-video span
+{
+    color:white;
+    font-weight:600;
+    position: absolute;
+    top:10px;
+    left:10px;
+    z-index:300;
+}
+#jal-li-element-videos li.jal-li-element-video a.jal-a-element-link
+{
+    display:block;
+}
+.jal-ul-element-video-tags
+{
+    position:absolute;
+    bottom:7px;
+    left:10px;
+    z-index:300;
+    text-align: left;
+}
+.jal-ul-element-video-tags li
+{
+    background-color:black;
+    border-radius:5px;
+    padding:5px 8px;
+    font-size:11px;
+    display:inline-block;
+    margin-bottom:3px;
+}
+.jal-ul-element-video-tags li a
+{
+    color:white;
+}
+
+/* ==========================================================================
+   Video/Webinar Libraries [ACTIVE]
+   ========================================================================== */
+.jal-div-video-set-title
+{
+    display:block;
+    text-align:center;
+    margin-bottom:50px;
+}
+.jal-div-video-set
+{
+    margin-bottom:80px;
+}
+.jal-div-video-set-title span
+{
+    display:inline-block;
+    /*font-size:24px;*/
+    font-weight:700;
+    border-bottom:5px solid #27597c;
+    padding:0px 13px 10px 13px;
+}
+.jal-div-video-slick-item
+{
+    margin:0px 10px !important;
+    list-style-type: none !important;
+}
+.jal-div-video-single-thumb
+{
+    height:200px;
+    background-image:url('../img/video-thumb.jpg');
+    box-shadow:inset 0px 2px 0px 0px rgba(0,0,0,0.05);
+    background-color:black;
+    background-position:center;
+    background-size:cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display:block;
+}
+.jal-div-video-single-content{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /*background-color:white;*/
+    /*background-color: #f7f7f7;*/
+    padding:12px;
+}
+.jal-div-video-single-content span
+{
+    font-size:16px;
+    font-weight:700;
+}
+.jal-ul-video-single-tags
+{
+    margin:10px 0px;
+}
+.jal-ul-video-single-tags li
+{
+    display:inline-block;
+}
+.jal-ul-video-single-tags li a
+{
+    padding:3px 6px;
+    background-color:black;
+    font-size:12px;
+    color:white;
+    border-radius:5px;
+    transition: 0.1s all;
+    text-decoration: none;
+}
+.jal-ul-video-single-tags li a:hover
+{
+    opacity:0.7;
+}
+.jal-ul-video-button
+{
+    margin-top:30px;
+    text-align: center;
+}
+
+/* Arrows */
+.slick-prev-jal i,
+.slick-next-jal i{
+    font-size: 40px !important;
+}
+.slick-prev-jal,
+.slick-next-jal
+{
+    font-size: 40px !important;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: rgba(0,0,0,0.25);
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev-jal:hover,
+.slick-prev-jal:focus,
+.slick-next-jal:hover,
+.slick-next-jal:focus
+{
+    /*color: transparent;
+    outline: none;
+    background: transparent;*/
+    opacity:0.75;
+}
+.slick-prev-jal:hover:before,
+.slick-prev-jal:focus:before,
+.slick-next-jal:hover:before,
+.slick-next-jal:focus:before
+{
+    opacity: 1;
+}
+.slick-prev-jal.slick-disabled:before,
+.slick-next-jal.slick-disabled:before
+{
+    opacity: .25;
+}
+
+.slick-prev-jal:before,
+.slick-next-jal:before
+{
+    /*font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;*/
+}
+.slick-prev-jal
+{
+    left: -75px;
+}
+.slick-prev-jal:before
+{
+}
+.slick-next-jal
+{
+    right: -75px;
+}
+.slick-next-jal:before
+{
+}
+.slick-slide {
+    margin: 0 27px;
+}
+/* the parent */
+.slick-list {
+    margin: 0 -27px;
+}
+
+/* ==========================================================================
+   Responsive Video Stuff
+   ========================================================================== */
+
+.jal-responsive-video
+{
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    min-width:380px;
+}
+.jal-responsive-video iframe
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ==========================================================================
+   Legacy Webinar Styles
+   ========================================================================== */
+
+.webinar-content{
+
+}
+.webinar-content h3{
+    padding-bottom:13px;
+    font-size:2.15em;
+    font-weight:bold;
+    border-bottom:16px solid #39b6ec;
+    color:#344056;
+    width:62%;
+    letter-spacing: -1px !important;
+    margin-bottom:20px;
+}
+
+#webinar-video-wrapper{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    margin-bottom:20px;
+}
+#webinar-video-wrapper iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#webinar-tabbed-menu{
+    width:100%;
+    border-bottom:4px solid #d8d8d8;
+    margin-bottom:50px;
+}
+#webinar-tabbed-menu ul{
+    padding:0px;
+    margin:0px;
+}
+#webinar-tabbed-menu ul li{
+    display:inline-block;
+    padding:0px;
+    margin:0px 0px 0px 0px;
+}
+#webinar-tabbed-menu ul li a{
+    display: block;
+    font-size:20px;
+    padding:10px 11px 8px 11px;
+    position:relative;
+    bottom:-4px;
+    text-decoration: none;
+    color:#737478;
+}
+#webinar-tabbed-menu ul li a.active,
+#webinar-tabbed-menu ul li a:hover{
+    border-bottom:4px solid #39b6ec;
+    color:black;
+}
+.webinar-content-section-wide{
+    background:white;
+    padding:40px 0px;
+}
+.webinar-gray{
+    /*background-color:#dedede;*/
+}
+.webinar-content-body p{
+    color:black;
+    /*font-weight:700;*/
+    margin-bottom:17px;
+    line-height:30px;
+}
+#webinar-video{
+    width:560px;
+    display:inline-block
+}
+.webinar-content-title{
+    font-weight:bold;
+    margin-bottom:20px;
+    display: block;
+}
+#webinar-files{
+    margin-bottom:40px;
+}
+#webinar-files ul{
+    padding:0px;
+    margin:0px;
+    list-style-type: none;
+}
+#webinar-files ul li{
+    /*padding:0px 0px 0px 50px;*/
+    margin:0px;
+    list-style: none;
+    position:relative;
+}
+#webinar-files ul li p{
+    margin-top:-10px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+#webinar-files ul li a{
+    /*display:inline-block;
+    background-color: #b62025;
+    font-size:13px;
+    color:white;
+    text-align: center;
+    text-transform: capitalize;
+    padding:10px;
+    max-width:190px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius: 5px;
+    border:1px solid rgba(0,0,0,0.2);
+    box-shadow:
+            inset -2px 2px 2px rgba(255,255,255,0.2),
+            inset 2px -2px 2px rgba(0,0,0,0.2),
+            -2px 2px 5px rgba(0,0,0,0.2);*/
+}
+#webinar-files ul li img{
+    float:left;
+    width:75px;
+    display: block;
+    margin-right:20px;
+    margin-bottom:20px;
+}
+.similar-videos-title{
+    font-size:28px;
+    margin-left:0px;
+    font-weight:100;
+    padding-bottom:10px;
+    margin-bottom:10px;
+    border-bottom:1px solid #0ab1f0;
+    margin-top:30px;
+}
+.related-webinars-ul{
+    list-style-type: none;
+    padding-left:0px;
+    margin-left:0px;
+}
+.related-webinars-ul li{
+    display:inline-block;
+    padding:0px;
+}
+.related-webinars-ul li a{
+    display:block;
+    padding:4px 8px;
+    background-color:#1978BA;
+    color:white;
+    border-radius:5px;
+    text-decoration: none;
+}
+.related-webinars-ul li a:hover
+{
+    background-color:#27597c;
+}
+.related-webinars-ul li a span{
+    color:white;
+}
+
+@media screen and (max-width:1100px)
+{
+    #webinar-video, .webinar-content h3{
+        width:100%;
+        display:block;
+    }
+}
+@media screen and (max-width:769px)
+{
+    #webinar-tabbed-menu ul li a{
+        font-size:14px;
+    }
+    #related-videos-on-webinar{
+        width:90%;
+        margin:0px 5%;
+    }
+}
+
+#left_area_img1{
+    display: none;
+}
+
+
+/* ==========================================================================
+   Attorney Individual Pages/Profile Pictures
+   ========================================================================== */
+.jal-any-attorney-profile
+{
+    text-align:center;
+    padding:15px 0px;
+    /*background-color:white;*/
+    background-color: #f7f7f7;
+    border:1px solid rgba(0,0,0,0.1);
+    box-shadow:0px -5px 0px 0px #27597c;
+    margin:5px auto 0px;
+    width:280px;
+    /*margin-top:5px;
+    width:280px;
+    margin-left:-140px;
+    position:relative;
+    left:50%;*/
+}
+.jal-any-attorney-profile img
+{
+    display:inline-block;
+}
+.jal-any-attorney-profile span.jal-attorney-profile-name
+{
+    font-size:20px;
+    color:#27597c;
+    display:block;
+    margin-bottom:8px;
+    margin-top:10px;
+}
+
+.jal-any-attorney-profile span.jal-attorney-profile-title
+{
+    display:block;
+    width:90%;
+    position:relative;
+    left:5%;
+}
+.jal-any-attorney-profile span.jal-attorney-profile-title,
+.jal-any-attorney-profile p
+{
+    display:block;
+    text-align: center;
+    -ms-text-align-last: center;
+    text-align-last: center;
+}
+
+/* ==========================================================================
+   FAQ Desktop Version
+   ========================================================================== */
+#faq-questions h2.faq-title-target
+{
+    font-weight:700;
+    pointer-events: none;
+}
+.faq-title-target:before
+{
+    display: block;
+    content: " ";
+    margin-top: -100px;
+    height: 100px;
+    visibility: hidden;
+    position:relative;
+    pointer-events: none;
+}
+#faq-questions
+{
+
+}
+#faq-questions ul.faq-question-group
+{
+    margin:20px 0px;
+}
+
+#faq-questions ul.faq-question-group li
+{
+    list-style-type: none;
+    /*padding:5px 0px;*/
+    padding-bottom:40px;
+}
+
+#faq-questions ul.faq-question-group li span,
+#faq-questions ul.faq-question-group li h3
+{
+    margin-bottom:20px;
+}
+
+#faq-questions ul.faq-question-group li a
+{
+    display:block;
+}
+
+/* ==========================================================================
+   FAQ/Tabbed Content Areas
+   ========================================================================== */
+.jal-any-tab-container
+{
+    background-color:white;
+    padding:30px;
+    box-shadow:0px 0px 0px 1px #ddd;
+}
+.jal-any-tab-content
+{
+    display:none;
+}
+.jal-any-tab-content.open
+{
+    display:block;
+}
+.jal-any-tab-content .faq-any-ul
+{
+    padding:0px;
+    margin:0px;
+}
+.jal-any-tab-content .faq-any-ul li
+{
+    list-style-type: none;
+    display: block;
+    width:100%;
+    background-color:rgba(0,0,0,0.05);
+    padding:10px 15px;
+    margin-bottom:5px;
+    cursor:pointer;
+    position:relative;
+    height:50px;
+    overflow:hidden;
+    transition: all 0.1s;
+}
+.jal-any-tab-content .faq-any-ul li.open
+{
+    height:auto;
+    box-shadow:inset 0px 0px 0px 1px rgba(0,0,0,0.2);
+}
+.jal-any-tab-content .faq-any-ul li i
+{
+    position:absolute;
+    top:10px;
+    right:10px;
+}
+.jal-any-tab-content .faq-any-ul li.open span
+{
+    white-space: normal;
+}
+.jal-any-tab-content .faq-any-ul li span,
+.jal-any-tab-content .faq-any-ul li a
+{
+    font-weight:600;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    white-space: nowrap;
+    display:block;
+    width:90%;
+    color:black;
+}
+.jal-any-tab-content .faq-any-ul li div
+{
+    padding:10px;
+}
+#faq-any-ul-target-list
+{
+    padding:25px 0px;
+    margin:0px;
+}
+#faq-any-ul-target-list li
+{
+    list-style-type: none;
+    margin-bottom:30px;
+    padding-bottom:30px;
+    border-bottom:1px solid rgba(0,0,0,.1);
+}
+#faq-any-ul-target-list li:before
+{
+    display: block;
+    content: " ";
+    margin-top: -100px;
+    height: 100px;
+    visibility: hidden;
+}
+#faq-any-ul-target-list li span
+{
+    font-size:24px;
+    margin-bottom:10px;
+    display:block;
+}
+#faq-any-ul-target-list li a
+{
+    display:block;
+}
+
+.jal-any-card-list
+{
+
+}
+
+.jal-any-card-list .jal-any-card
+{
+    display:inline-block;
+    border:1px solid rgba(0,0,0,0.2);
+    width:100%;
+    margin:0px 0px 20px 0px !important;
+}
+
+.jal-any-card-list .jal-any-card div.jal-any-card-container
+{
+    padding:25px;
+}
+
+/* ==========================================================================
+   Settlement Cards (possibly all POSTS on Category filters)
+   ========================================================================== */
+
+.jal-silo-row
+{
+    margin-top:40px;
+}
+.jal-silo-col strong
+{
+    background-color:#27597c;
+}
+.jal-silo-col strong
+{
+    padding:10px 20px;
+    margin:0px;
+    color:white;
+    display: block;
+}
+.jal-silo-summary-content
+{
+    padding:14px;
+    background-color:rgba(0,0,0,0.02);
+}
+.jal-silo-summary-content ul li
+{
+    margin-bottom:10px;
+    padding-bottom:10px;
+    /*list-style-type: square;
+    text-indent:-1.4em;
+    margin-left:1.4em;*/
+}
+.jal-silo-summary-content ul li:not(:last-child)
+{
+    border-bottom:1px solid rgba(0,0,0,.1);
+}
+
+.jal-ul-settlement-cards
+{
+
+}
+
+.jal-li-settlement-card,
+.jal-any-card
+{
+    position:relative;
+}
+
+.jal-li-settlement-card
+{
+    list-style-type:none !important;
+    padding:10px 30px;
+    border:1px solid rgba(0,0,0,0.2);
+    margin:0px 0px 20px 0px !important;
+}
+
+.jal-li-settlement-card span.jal-span-settlement-dollar
+{
+    font-size:32px;
+    color:#1978BA;
+    font-weight:700;
+    display: block;
+    margin-bottom:10px;
+}
+
+.jal-li-settlement-card a,
+.jal-any-card a
+{
+    display:block;
+    position:absolute;
+    bottom:15px;
+    right:15px;
+}
+
+.jal-li-settlement-card a div,
+.jal-any-card a div
+{
+    border-radius:20px;
+    padding:2px 7px;
+    background-color:lightgrey;
+    display:inline-block;
+}
+.jal-any-fullsize-cards .jal-any-card-list .jal-any-card
+{
+    width:80%;
+}
+
+.jal-ul-posts
+{
+    margin-top:50px;
+}
+.jal-ul-posts li.jal-li-post
+{
+    display: inline-block;
+    width:47%;
+    margin:0px 1% 40px 1%;
+}
+.jal-ul-posts li.jal-li-post div.jal-div-post-card-header
+{
+    margin-bottom:20px;
+}
+.jal-ul-posts li.jal-li-post div.jal-div-post-card-content
+{
+    /*padding:15px;*/
+}
+div.jal-div-post-card-image
+{
+    max-width:500px;
+    height:200px;
+    background-position: center center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+/* ==========================================================================
+   TABLE STYLES
+   ========================================================================== */
+
+.jal-table-any th
+{
+    text-align: right;
+}
+.jal-table-any
+{
+
+}
+
+.homepage-first-block h1
+{
+    margin-top:100px;
+}
+
+.homepage-block-row a:hover
+{
+    color:#EBEBEB !important;
+}
+
+#jal-homepage-cases
+{
+    margin-top:30px;
+    text-align: center;
+}
+#jal-homepage-cases li
+{
+    display:inline-block;
+    width:31%;
+    margin-bottom:2%;
+    margin-right:1%;
+    margin-left:1%;
+}
+#jal-homepage-cases li a:hover
+{
+    background-color:rgba(25, 120, 186,0.5);
+}
+#jal-homepage-cases li a
+{
+    display:block;
+    padding:10px 20px;
+    text-transform: uppercase;
+    font-weight:600;
+    color:black;
+    background-color:rgba(255,255,255,0.8);
+    font-size:17px;
+    text-decoration:none;
+    text-align: center;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+
+.jal-li-testimonial-video
+{
+    text-align: center;
+}
+#jal-any-testimonial-video-library
+{
+    margin:40px 0px;
+}
+
+.homepage-block-row-icons
+{
+    font-size:48px;
+}
+
+/* ==========================================================================
+   WORDPRESS DEFAULTS
+   ========================================================================== */
+
+.entry-content img
+{
+
+}
+.effect-shadow, img.effect-shadow
+{
+    -webkit-box-shadow: 1px 1px 0px white, 0px 3px 13px rgba(0,0,0,0.3);
+    -moz-box-shadow:  1px 1px 0px white, 0px 3px 13px rgba(0,0,0,0.3);
+    box-shadow:  1px 1px 0px white, 0px 3px 13px rgba(0,0,0,0.3);
+}
+.alignleft, img.alignleft
+{
+    float:left;
+    margin-right:20px;
+    margin-bottom:20px;
+    padding:10px;
+}
+.alignright, img.alignright
+{
+    float:right;
+    margin-left:20px;
+    margin-bottom:20px;
+    padding:10px;
+}
+.aligncenter, img.aligncenter
+{
+
+}
+.alignnone, img.alignnone
+{
+
+}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+    background-color: #eee;
+    clip: auto !important;
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
+}
+
+
+.jal-wp-author-items
+{
+    margin-top:-10px;
+}
+.jal-wp-author-items li{
+    display:inline-block;
+}
+.jal-wp-author-items li span,
+.jal-wp-author-items li span a
+{
+    font-size:14px;
+    letter-spacing: 1px;
+    font-weight:600;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+.jal-wp-author-items li span
+{
+    color:gray;
+    text-transform:uppercase;
+}
+.jal-wp-author-items li:not(:last-child):after
+{
+    content:"/";
+    display:inline-block;
+    margin-left:5px;
+    color:lightgray;
+}
+.jal-wp-author-category span:before
+{
+    content:"IN ";
+}
+.jal-wp-author-author span:before
+{
+    content:"BY ";
+}
+
+/* ==========================================================================
+   Bootstrap Overrides
+   ========================================================================== */
+blockquote
+{
+    font-style:italic;
+    color:gray;
+}
+.row.jal-row-margin-bottom-100
+{
+    margin-bottom:100px;
+}
+.row.jal-row-margin-bottom-40
+{
+    margin-bottom:40px;
+}
+.row.jal-row-margin-bottom-20
+{
+    margin-bottom:20px;
+}
+
+/* ==========================================================================
+   LEGACY CODE (DO NOT ADD NEW LINES, ONLY OLD)
+   ========================================================================== */
+
+#nbb-footer-banner{ display:block; background-color:#27597c; height:43px; position:fixed; bottom:0px; left:0px; width:100%; z-index:800000 }
+#nbb-fb-left{ float:left; width:70%; }
+#nbb-fb-right{ float:right; }
+#nbb-footer-banner ul{ padding-left:20px; }
+#nbb-footer-banner ul li{ margin:0px; padding:0px;display:inline-block; }
+#nbb-footer-banner ul li a{ display:block;padding:10px 15px;transition:all 0.1s;color:white;text-decoration:none;font-size:16px; }
+#nbb-footer-banner ul li a:hover, #nbb-footer-banner ul li a.active{ background-color:#b50f1e;color:white; }
+#nbb-fb-quiet ul{ padding-left:0px !important; }
+#nbb-fb-quiet ul li{}
+#nbb-fb-quiet ul li a{ padding:10px 4px; }
+#nbb-fb-quiet ul li a i{ font-size:25px }
+#nbb-fb-quiet ul li.priority a{  }
+#nbb-fb-quiet ul li.priority a i{}
+#nbb-fb-quiet ul li.le-book a{ padding:10px; /*color:black !important; background-color:#D9EDF7;*/ }
+
+#nbb-fb-quiet.alt:after
+{
+    content:".";
+    clear:both;
+    visibility: hidden;
+}
+#nbb-fb-quiet.alt
+{
+    background-color:red;
+}
+#nbb-fb-quiet.alt ul{
+    padding-left:0px !important;
+
+}
+#nbb-fb-quiet.alt ul li:first-child
+{
+    border-right:1px solid rgba(255,255,255,0.5);
+}
+#nbb-fb-quiet.alt ul li
+{
+    display:block;
+    float:left;
+    width:50%;
+    margin:0px;
+    padding:0px;
+}
+#nbb-fb-quiet.alt ul li a
+{
+    display:block;
+    padding:10px;
+    text-align: center;
+}
+#nbb-fb-quiet.alt ul li a i
+{
+    font-size:25px
+}
+#nbb-fb-quiet.alt ul li.priority a
+{
+
+}
+#nbb-fb-quiet.alt ul li.priority a i
+{
+
+}
+#nbb-fb-quiet.alt ul li.le-book a
+{
+    padding:10px; /*color:black !important; background-color:#D9EDF7;*/
+}
+
+/* NEW UPDATES */
+#homepage-attorneys img
+{
+    width:125%;
+    left:-50px;
+}
+
+/* ==========================================================================
+   RESPONSIVE SITE
+   ========================================================================== */
+@media screen and (max-width: 1739px)
+{
+    #jal-div-element-header
+    {
+        /*width:88%;*/
+    }
+    #jal-img-element-logo{
+        left:0px;
+        height:50px;
+        top:15px
+    }
+}
+
+@media screen and (max-width: 1603px)
+{
+    #jal-div-element-header
+    {
+        width:100%;
+    }
+    #jal-img-element-logo{
+        left:0px;
+        height:50px;
+        top:15px
+    }
+    #jal-div-element-call-to-action{
+
+    }
+}
+
+@media screen and (max-width: 1525px)
+{
+    #jal-div-element-logos
+    {
+        position:relative;
+        width:100%;
+        left:50%;
+        margin-left:-50%;
+    }
+    #jal-div-element-logos ul li
+    {
+        margin:0px;
+    }
+    #jal-div-element-header
+    {
+        height:55px;
+        width:100%;
+    }
+    #jal-col-element-main-menu
+    {
+        height:auto;
+    }
+    #jal-img-element-logo{
+        left:0px;
+        height:40px;
+        top:7px
+    }
+    #jal-div-element-call-to-action{
+
+    }
+    #jal-ul-element-main-menu li a{
+        font-size:16px;
+        padding:16px 11px;
+    }
+    .jal-li-element-search-button a{
+        width:55px;
+        height:55px;
+    }
+    #jal-row-element-header-container{
+        /*height:55px;*/
+    }
+    #jal-ul-element-main-menu li:hover:after, #jal-ul-element-main-menu li.hover:after{
+        top:54px !important;
+    }
+    #jal-div-element-mega-menu{
+        top:55px;
+    }
+    #jal-div-element-call-to-action span:first-child{
+        font-size:13px;
+        top:9px;
+    }
+    #jal-div-element-call-to-action span:last-child{
+        font-size:21px;
+        bottom:0px;
+    }
+    #jal-ul-element-filters li{
+        width:auto;
+        margin:5px;
+    }
+}
+
+@media screen and (max-width:1199px)
+{
+    .homepage-first-block h1
+    {
+        margin-top:30px;
+    }
+    .homepage-block-row-icons h3
+    {
+        font-size:20px;
+    }
+    #jal-homepage-cases li
+    {
+        width:47%;
+    }
+    #jal-ul-element-main-menu
+    {
+        /*text-align:center;*/
+    }
+    #jal-div-element-mega-menu-container
+    {
+        width:100%;
+    }
+    #homepage-attorneys-cont
+    {
+        height:335px;
+    }
+    #homepage-attorneys img
+    {
+        width:100%;
+        left:0;
+    }
+}
+
+@media screen and (max-width:1280px)
+{
+    #jal-div-element-mega-menu
+    {
+        /*width:150%;
+        left:-25%;*/
+    }
+}
+
+@media screen and (max-width:1199px) and (min-width: 992px)
+{
+    .jal-any-attorney-profile
+    {
+        width:100%;
+    }
+    .jal-any-attorney-profile img
+    {
+        width:100%;
+    }
+    .jal-attorney-profile-name
+    {
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        overflow:hidden;
+        margin:0 auto;
+        width:190px;
+    }
+    #homepage-attorneys img
+    {
+        left:50px;
+        width:100%;
+    }
+
+
+}
+
+@media screen and (max-width: 991px) {
+    #homepage-attorneys img
+    {
+        width:80%;
+        margin:0 auto;
+        display:block;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%)
+    }
+    #homepage-attorney-text
+    {
+        padding:20px 60px;
+        background:rgba(0,0,0,0.8);
+    }
+    #no-padding-smol
+    {
+        padding-left:0px;
+        padding-right:0px;
+    }
+    #homepage-attorneys-cont
+    {
+        height:465px;
+    }
+}
+
+@media screen and (max-width: 989px) {
+    .jal-any-card-list .jal-any-card,
+    .jal-ul-posts li.jal-li-post
+    {
+        width:100%;
+        margin-right:0px;
+        margin-left:0px;
+    }
+}
+
+@media screen and (max-width:973px)
+{
+    #jal-homepage-cases li
+    {
+        width:47%;
+    }
+}
+
+@media screen and (max-width:861px)
+{
+    /* Arrows */
+    .slick-prev-jal i,
+    .slick-next-jal i{
+        font-size: 40px !important;
+    }
+    .slick-prev-jal,
+    .slick-next-jal
+    {
+        font-size: 40px !important;
+        line-height: 0;
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 50px;
+        /*top:61%;*/
+        top:auto;
+        bottom:-10% !important;
+        padding: 0;
+        -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        cursor: pointer;
+        color: rgba(0,0,0,0.25);
+        border: none;
+        outline: none;
+        background-color:rgba(255,255,255,0.5);
+    }
+    .slick-prev-jal:hover,
+    .slick-prev-jal:focus,
+    .slick-next-jal:hover,
+    .slick-next-jal:focus
+    {
+        /*color: transparent;
+        outline: none;
+        background: transparent;*/
+        opacity:0.75;
+    }
+    .slick-prev-jal:hover:before,
+    .slick-prev-jal:focus:before,
+    .slick-next-jal:hover:before,
+    .slick-next-jal:focus:before
+    {
+        opacity: 1;
+    }
+    .slick-prev-jal.slick-disabled:before,
+    .slick-next-jal.slick-disabled:before
+    {
+        opacity: .25;
+    }
+
+    .slick-prev-jal:before,
+    .slick-next-jal:before
+    {
+        /*font-family: 'slick';
+        font-size: 20px;
+        line-height: 1;
+        opacity: .75;
+        color: white;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;*/
+    }
+    .slick-prev-jal
+    {
+        left:0px;
+        z-index:999999;
+    }
+    .slick-prev-jal:before
+    {
+    }
+    .slick-next-jal
+    {
+        right:0px;
+        z-index:999999;
+    }
+    .slick-next-jal:before
+    {
+    }
+    .slick-slide {
+        margin: 0 27px;
+    }
+    /* the parent */
+    .slick-list {
+        margin: 0 -27px;
+    }
+}
+
+@media screen and (max-width: 769px)
+{
+    #jal-ul-element-breadcrubs
+    {
+        white-space:nowrap;
+        overflow-x:scroll;
+    }
+    #jal-row-element-header-container
+    {
+        position:static;
+    }
+    .jal-any-element-body h1,
+    .jal-any-element-body h2,
+    .jal-any-element-body h3,
+    .jal-any-element-body h4,
+    .jal-any-element-body p,
+    .jal-any-button,
+    .jal-wp-author-items
+    {
+        /*text-align: center;*/
+        /*text-align: justify;
+        text-align-last: left;*/
+        text-align: left;
+    }
+    #jal-homepage-cases li
+    {
+        width:98%;
+    }
+}
+
+@media screen and (max-width: 580px)
+{
+    #jal-homepage-cases li a
+    {
+        font-size:14px;
+    }
+    #homepage-attorneys
+    {
+        margin-top:-190px;
+    }
+    #homepage-attorneys img
+    {
+        width:320px;
+    }
+    #homepage-attorney-text
+    {
+        padding:20px;
+    }
+    #homepage-attorney-text p{
+        padding-right:0px !important;
+    }
+    .jal-li-settlement-card a, .jal-any-card a
+    {
+        position:static;
+        margin-top:20px;
+        text-align:center;
+    }
+    .jal-li-settlement-card img, .jal-any-card img
+    {
+        display:block;
+        margin:0 auto 20px auto;
+        width:60%;
+        float:none;
+    }
+    #jal-div-element-logos-container
+    {
+        display:none;
+    }
+    #homepage-testimonial-title
+    {
+        margin-top:80px;
+    }
+    #homepage-attorney-text .btn{
+        font-size:24px;
+    }
+}
+
+@media screen and (max-width: 380px)
+{
+    .jal-responsive-video
+    {
+        min-width: auto;
+    }
+}
+
+/* ==========================================================================
+   LEGACY CALCULATOR STYLES
+   ========================================================================== */
+li.search_contE {
+
+    list-style: none;
+
+    float: right;
+
+    top: 0;
+
+}
+
+#header_menu_cont3E form{
+
+    border-radius: 15px;
+
+    padding: 5px;
+
+    width: 30.5%;
+
+    float: right;
+
+    margin-bottom: -21px !important;
+
+    margin-right: -32px !important;
+
+}
+
+#header_menu_cont3E form .form-control {
+
+    float: left;
+
+    max-width: 92% !important;
+
+    display: inline-block !important;
+
+    border-radius: 3px;
+
+}
+input.magnifying_glss {
+    margin-left: -30px;
+    margin-top: 8px;
+}
+
+#header_menu_cont3E form .my_button_search {
+
+    max-width: 23%;
+
+    padding: 11px 13px !important;
+
+    height: auto;
+
+    display: inline-block !important;
+
+    text-transform: uppercase;
+
+}
+
+#header_menu_cont3E form input.search-side { border-radius:15px; padding:8px; font-style:italic;}
+
+p strong { font-weight: bold; }
+
+p.question_name {
+
+    padding: 10px;
+
+    font-size: 12pt;
+
+    font-weight: bold;
+
+}
+
+p.question_full {
+
+    font-size: 16pt;
+
+    padding: 10px;
+
+    font-weight: bold;
+
+}
+
+#gform_4 #input_4_1, #gform_4 #input_4_2 { border-radius:5px; }
+
+h1, h2, h3 { padding:10px 0; letter-spacing:1px; }
+
+.content-claim-calc h2 {
+
+    font-size: 22px !important;
+
+    font-weight: bold;
+
+    padding: 0 0 20px 0;
+
+}
+
+#start_again {
+
+    color: #035FAA;
+
+    font-weight: 600;
+
+    background: url('/wp-content/uploads/2016/01/arrow.png') no-repeat right;
+
+    padding: 6px 30px 10px 0px;
+
+    font-size: 22px;
+
+}
+
+a.price-send,
+.jal-chained-quiz-continue,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button.green,
+button.green,
+input[type="submit"].green,
+input[type="reset"].green,
+input[type="button"].green  {
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    border:0 none;
+    color: #fff;
+    display: inline-block;
+    font-size: 13px;
+    line-height:1;
+    text-transform:capitalize;
+    font-weight: 600;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    cursor: pointer;
+    margin-bottom: 21px;
+    line-height: 1;
+    padding: 12px 35px;
+    background: #8fbe32;
+    -webkit-transition: background 0.18s ease;
+    -moz-transition: background 0.18s ease;
+    -o-transition: background 0.18s ease;
+    transition: background 0.18s ease;
+    text-decoration:  none !important;
+}
+
+.col-md-8.content-claim-calc p{ line-height:24px; }
+
+.col-md-12.claim-calc {
+
+    border-top: 5px solid #035DA9;
+
+    border-bottom: 1.5px solid #CCC;
+
+    border-left: 1.5px solid #CCC;
+
+    border-right: 1.5px solid #CCC;
+
+    padding:30px;
+
+    background:#F3F1F1;
+
+}
+
+.col-md-12.claim-calc-inner {
+
+    border: 1.5px solid #CCC;
+
+    padding: 10px;
+
+    background:#FFF;
+
+}
+
+.chained-quiz-choice {
+
+    width: 50%;
+
+    float: left;
+
+    padding: 15px;
+
+    line-height: 22px;
+
+    font-size: 15px;
+
+}
+
+span.option-head {
+
+    font-size: 18px;
+
+}
+
+.chained-quiz-choice p {
+
+    padding-left: 27px;
+
+}
+
+.chained-quiz-action {
+
+    text-align:center;
+
+}
+
+input#chained-quiz-action-1 {
+
+    margin-top: 20px;
+
+    margin-bottom: -10px;
+
+}
+
+.dialog_popup {
+
+    display:none;
+
+    background: #FFF;
+
+    border:1px solid #CCC;
+
+    position: absolute;
+
+    width: 70%;
+
+    left: 15% !important;
+
+    padding: 20px 30px;
+
+    top: 15%;
+
+    border-radius:3px;
+
+}
+
+span.close_popup {
+
+    background: #025CAA;
+
+    padding: 5px 35px;
+
+    color: #FFF;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    font-size: 16px;
+
+    letter-spacing: 1px;
+
+    border-radius: 3px;
+
+    margin-left: 40%;
+
+}
+
+.dialog_popup .option-head { color:#737478; font-weight:bold;font-size: 22px; }
+
+.dialog_popup p { color:#737478; padding-left:0; margin-bottom:15px;margin-top:15px; }
+
+.opener {
+
+    margin-left: 27px;
+
+    color: #035FAA;
+
+    font-weight: bold;
+
+    margin-top: 10px;
+
+    display:none;
+
+}
+
+.col-md-6.results-left h2 {
+
+    font-weight: 900 !important;
+
+    color: #6F6969;
+
+    font-size: 24px;
+
+}
+
+.col-md-6.results-left p {
+
+    line-height: 24px;
+
+    text-align: justify;
+
+    margin-bottom: 15px;
+
+}
+
+.col-md-6.results-right p,
+#results-blue-box p
+{
+
+    line-height: 24px;
+
+    text-align: justify;
+
+    color:#FFF;
+
+    padding:0px 40px 40px;
+
+}
+
+.col-md-6.results-right,
+#results-blue-box
+{
+
+    background: #035DAB;
+
+    /*position: absolute;*/
+
+    right: 0;
+
+    top: 0;
+
+    bottom: 0;
+
+}
+
+.col-md-6.results-right h2,
+#results-blue-box h2
+{
+
+    color:#FFF;
+
+    text-align: center;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    margin-top: 30px;
+
+}
+
+.col-md-6.results-right h3,
+#results-blue-box h3
+{
+
+    color:#FFF;
+
+    text-align: center;
+
+    font-size: 50px;
+
+    font-weight: bold;
+
+}
+
+.col-md-6.results-left,  .col-md-6.results-right {
+
+    min-height: 375px;
+
+}
+
+/* ==========================================================================
+   Infusionsoft Global Styles
+   ========================================================================== */
+.infusion-field,
+.infusion-captcha
+{
+    display:block;
+    width:100%;
+    max-width:100%;
+    margin-bottom:20px;
+}
+.infusion-field label,
+.infusion-field-input-container label,
+.infusion-captcha label
+{
+    display:inline-block;
+    max-width:100%;
+    margin-bottom:5px;
+}
+.infusion-field input[type=text],
+.infusion-field-input-container input[type=text],
+.infusion-field input[type=email],
+.infusion-field-input-container input[type=email],
+.infusion-field textarea,
+.infusion-field-input-container textarea,
+.infusion-field select,
+.infusion-field-input-container select,
+.infusion-captcha input[type=text],
+.infusion-captcha input[type=email],
+.infusion-captcha textarea,
+.infusion-captcha select,
+.infusion-field-input
+{
+    display:block;
+    width:100%;
+    padding:6px 12px;
+    font-size:14px;
+    line-height:1.42857143;
+    color:#555;
+    background-color:#fff;
+    border:1px solid #ccc;
+    border-radius:4px;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+    height:34px;
+}
+.infusion-field textarea,
+.infusion-field-input-container textarea,
+.infusion-captcha textarea
+{
+    min-height:150px;
+}
+.infusion-submit button:hover
+{
+    background-color:#204d74;
+}
+.infusion-submit button
+{
+    display:inline-block;
+    padding:19px 16px;
+    margin-bottom:0px;
+    font-weight:400;
+    text-align:center;
+    white-space:nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor:pointer;
+    user-select:none;
+    background-image:none;
+    border:1px solid transparent;
+    border-radius:4px;
+    background-color:#1978BA;
+    position:relative;
+    float:left;
+    margin-left:0;
+    line-height:1.33333px;
+    border-radius:6px;
+    color:white;
+}
+
+.infusion-field .infusion-radio .options-container .infusion-option,
+.infusion-field-input-container .infusion-radio .options-container .infusion-option
+{
+    display:block;
+    min-width:100px;
+}
+
+.infusion-field .infusion-radio .options-container
+{
+
+}
+
+.infusion-field .infusion-radio
+{
+
+}
+
+.infusion-form br
+{
+    display:none;
+}
+
+
+
+/* ==========================================================================
+   JAL Chained Quiz (Custom)
+   ========================================================================== */
+#jal-chained-quiz-custom
+{
+    width:100%;
+    min-height:400px;
+    position:relative;
+}
+#jal-chained-quiz-custom-container{
+    padding:20px;
+}
+#jal-chained-quiz-custom-container:after
+{
+    content:"";
+    clear:both;
+    display:block;
+}
+#jal-chained-quiz-custom-container .jal-chained-quiz-content input,
+#jal-chained-quiz-custom-container .jal-chained-quiz-content .control-label
+{
+    font-size:15px;
+}
+#jal-chained-quiz-custom-container .jal-chained-quiz-content
+{
+    display:none;
+}
+#jal-chained-quiz-custom-container .jal-chained-quiz-content.active
+{
+    display:block;
+}
+#jal-chained-quiz-custom-container .jal-chained-quiz-answers
+{
+    padding:0px;
+    margin:0px;
+}
+#jal-chained-quiz-custom-container .jal-chained-quiz-answers li{
+    padding:0px;
+    margin:0px;
+    list-style-type: none;
+    float:left;
+    width:50%;
+    min-height:200px;
+}
+#jal-chained-quiz-custom-container .jal-chained-quiz-answers li label
+{
+    padding:20px;
+    display:block;
+}
+#jal-chained-quiz-custom-container .jal-chained-quiz-answers li label span
+{
+    font-size:18px;
+    font-weight:400;
+}
+#jal-chained-quiz-custom-container .jal-chained-quiz-answers li label p
+{
+    font-size:15px;
+    font-weight:400;
+    color:#737478;
+    margin-bottom:10px;
+}
+#jal-chained-quiz-custom-container .jal-chained-quiz-answers li label a
+{
+    font-size:15px;
+}
+#jal-chained-quiz-custom-container .chained-quiz-question .question_name
+{
+    margin-bottom:0px;
+}
+#jal-chained-quiz-custom-container .chained-quiz-question .question_full
+{
+    margin-bottom:0px;
+}
+#jal-chained-quiz-controls
+{
+    clear:both;
+}
+#jal-chained-quiz-controls ul
+{
+    text-align: center;
+}
+#jal-chained-quiz-controls ul li
+{
+    list-style-type:none;
+}
+#jal-chained-quiz-controls ul li *
+{
+    font-size:15px;
+}
+.jal-chained-quiz-control
+{
+    display:none;
+}
+#jal-chained-quiz-modal
+{
+    display:none;
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    z-index:99;
+    background-color:rgba(0,0,0,0.8);
+}
+#jal-chained-quiz-modal-content
+{
+    position:absolute;
+    width:50%;
+    min-height:200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    padding:30px;
+    background-color:white;
+}
+#jal-chained-quiz-modal-title
+{
+    display:block;
+    margin-bottom:10px;
+    font-weight:bold;
+}
+#jal-chained-quiz-modal-body
+{
+    font-size:15px;
+    font-weight:400;
+}
+#jal-chained-quiz-modal-close
+{
+    font-size:12px;
+    position:relative;
+    left:50%;
+    transform: translate(-50%, 0%);
+}
+@media screen and (max-width: 650px){
+    #jal-chained-quiz-modal-content{
+        width:80% !important;
+    }
+    #jal-chained-quiz-custom-container .jal-chained-quiz-answers li
+    {
+        width:100% !important;
+    }
+}
+
+/* ==========================================================================
+   LEGACY RESPONSIVE
+   ========================================================================== */
+@media screen and (max-width:1220px){
+    #nbb-fb-left{ width:52%; }
+}
+@media screen and (max-width:875px){
+    #nbb-fb-left{ overflow: visible; white-space: nowrap }
+    #nbb-footer-banner ul li a{ padding:10px 5px }
+}
+@media screen and (max-width:720px){
+    #nbb-fb-left, #nbb-fb-right{ display:none; }
+    /* #nbb-fb-right{ float:left;width:100%; } */
+}
+@media screen and (min-width:720px){
+    #nbb-fb-quiet{ display:none; }
+}
+@media screen and (max-width:380px){
+    #nbb-fb-right span{ display:none; }
+}
+
+/* ==========================================================================
+   ADDENDUM 05/09/2019
+   ========================================================================== */
+.force-780{
+    width:780px;
+    margin: 0px auto;
+}
+
+@media screen and (max-width: 1050px){
+    .force-780{
+        width:100%;
+        margin:0px 0px;
+    }
+}
+
+.bottom-right-black-bubble-invite-container{
+    bottom:50px !important;
+    right:25px !important;
+    display:none !important;
+    opacity:0 !important;
+}
+
+.wp-snippet-tyf{}
+.wp-snippet-tyf ol li
+{
+    list-style-type: decimal !important;
+}
+.wp-snippet-tyf ul li
+{
+    list-style-type: disc !important;
+}
+
+@media only screen and (max-width: 767px) {
+    .wp-block-columns {
+        display: block !important;
+    }
+    .has-2-columns .wp-block-column,
+    .has-3-columns .wp-block-column,
+    .has-4-columns .wp-block-column,
+    .has-5-columns .wp-block-column,
+    .has-6-columns .wp-block-column {
+        width: 95% !important;
+        margin:0 auto !important;
+    }
+}

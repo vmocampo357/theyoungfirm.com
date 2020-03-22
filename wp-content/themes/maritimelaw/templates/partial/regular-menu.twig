@@ -1,0 +1,19 @@
+{% import 'partial/regular-menu-macro.twig' as menu_macro %}
+<ul id="jal-ul-element-main-menu" class="regmenu">
+    {% for item in main_header_menu.items %}
+        {% set classes = item.classes %}
+        {% if item.title == "Home" %}
+            <li><a href="{{ home_link }}"><i class="fa fa-home"></i></a></li>
+        {% else %}
+            <li class="{{ classes|join(" ") }}"><a href="{{ item.link }}">{{ item.title }}</a>
+                {% if item.children|length > 0 %}
+                    <ul class="jal-regmenu-submenu jal-regmenu-submenu-alpha">
+                        {% for sub_item in item.children %}
+                            {{ menu_macro.sub_menu(sub_item) }}
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>

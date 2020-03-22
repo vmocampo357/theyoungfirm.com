@@ -1,0 +1,132 @@
+Oct 24 2018 13:28:39
+{"Number":8,"Message":"unserialize(): Error at offset 280 of 281 bytes","File":"\/var\/www\/new.jonesactlaw.com\/public_html\/wp-includes\/functions.php","Line":330}
+
+Oct 24 2018 13:28:39
+{"Number":8,"Message":"unserialize(): Error at offset 280 of 281 bytes","File":"\/var\/www\/new.jonesactlaw.com\/public_html\/wp-includes\/functions.php","Line":330}
+
+Oct 24 2018 13:28:39
+{"type":2,"message":"session_start(): open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","file":"\/var\/www\/new.jonesactlaw.com\/public_html\/wp-content\/plugins\/chained-quiz\/models\/basic.php","line":193}
+
+Oct 24 2018 13:28:39
+{"Number":2,"Message":"Unknown: open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:28:39
+{"Number":2,"Message":"Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (\/var\/lib\/php-fpm\/session)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:28:40
+{"type":2,"message":"session_start(): open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","file":"\/var\/www\/new.jonesactlaw.com\/public_html\/wp-content\/plugins\/chained-quiz\/models\/basic.php","line":193}
+
+Oct 24 2018 13:28:40
+{"Number":2,"Message":"Unknown: open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:28:40
+{"Number":2,"Message":"Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (\/var\/lib\/php-fpm\/session)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:28:40
+{"type":2,"message":"session_start(): open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","file":"\/var\/www\/new.jonesactlaw.com\/public_html\/wp-content\/plugins\/chained-quiz\/models\/basic.php","line":193}
+
+Oct 24 2018 13:28:40
+{"Number":2,"Message":"Unknown: open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:28:40
+{"Number":2,"Message":"Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (\/var\/lib\/php-fpm\/session)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:28:41
+{"type":2,"message":"session_start(): open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","file":"\/var\/www\/new.jonesactlaw.com\/public_html\/wp-content\/plugins\/chained-quiz\/models\/basic.php","line":193}
+
+Oct 24 2018 13:28:41
+{"Number":2,"Message":"Unknown: open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:28:41
+{"Number":2,"Message":"Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (\/var\/lib\/php-fpm\/session)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:28:52
+{"type":2,"message":"session_start(): open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","file":"\/var\/www\/new.jonesactlaw.com\/public_html\/wp-content\/plugins\/chained-quiz\/models\/basic.php","line":193}
+
+Oct 24 2018 13:28:52
+{"Number":2,"Message":"Unknown: open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:28:52
+{"Number":2,"Message":"Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (\/var\/lib\/php-fpm\/session)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:29:03
+{"type":2,"message":"session_start(): open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","file":"\/var\/www\/new.jonesactlaw.com\/public_html\/wp-content\/plugins\/chained-quiz\/models\/basic.php","line":193}
+
+Oct 24 2018 13:29:03
+{"Number":2,"Message":"Unknown: open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:29:03
+{"Number":2,"Message":"Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (\/var\/lib\/php-fpm\/session)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:29:13
+{"type":2,"message":"session_start(): open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","file":"\/var\/www\/new.jonesactlaw.com\/public_html\/wp-content\/plugins\/chained-quiz\/models\/basic.php","line":193}
+
+Oct 24 2018 13:29:13
+{"Number":2,"Message":"Unknown: open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:29:13
+{"Number":2,"Message":"Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (\/var\/lib\/php-fpm\/session)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:29:17
+{"type":2,"message":"session_start(): open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","file":"\/var\/www\/new.jonesactlaw.com\/public_html\/wp-content\/plugins\/chained-quiz\/models\/basic.php","line":193}
+
+Oct 24 2018 13:29:17
+{"Number":2,"Message":"Unknown: open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:29:17
+{"Number":2,"Message":"Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (\/var\/lib\/php-fpm\/session)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:29:27
+{"type":2,"message":"session_start(): open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","file":"\/var\/www\/new.jonesactlaw.com\/public_html\/wp-content\/plugins\/chained-quiz\/models\/basic.php","line":193}
+
+Oct 24 2018 13:29:27
+{"Number":2,"Message":"Unknown: open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:29:27
+{"Number":2,"Message":"Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (\/var\/lib\/php-fpm\/session)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:29:38
+{"type":2,"message":"session_start(): open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","file":"\/var\/www\/new.jonesactlaw.com\/public_html\/wp-content\/plugins\/chained-quiz\/models\/basic.php","line":193}
+
+Oct 24 2018 13:29:38
+{"Number":2,"Message":"Unknown: open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:29:38
+{"Number":2,"Message":"Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (\/var\/lib\/php-fpm\/session)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:29:42
+{"type":2,"message":"session_start(): open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","file":"\/var\/www\/new.jonesactlaw.com\/public_html\/wp-content\/plugins\/chained-quiz\/models\/basic.php","line":193}
+
+Oct 24 2018 13:29:42
+{"Number":2,"Message":"Unknown: open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:29:42
+{"Number":2,"Message":"Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (\/var\/lib\/php-fpm\/session)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:29:43
+{"type":2,"message":"session_start(): open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","file":"\/var\/www\/new.jonesactlaw.com\/public_html\/wp-content\/plugins\/chained-quiz\/models\/basic.php","line":193}
+
+Oct 24 2018 13:29:43
+{"Number":2,"Message":"Unknown: open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:29:43
+{"Number":2,"Message":"Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (\/var\/lib\/php-fpm\/session)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:29:43
+{"type":2,"message":"session_start(): open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","file":"\/var\/www\/new.jonesactlaw.com\/public_html\/wp-content\/plugins\/chained-quiz\/models\/basic.php","line":193}
+
+Oct 24 2018 13:29:43
+{"Number":2,"Message":"Unknown: open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:29:43
+{"Number":2,"Message":"Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (\/var\/lib\/php-fpm\/session)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:29:44
+{"type":2,"message":"session_start(): open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","file":"\/var\/www\/new.jonesactlaw.com\/public_html\/wp-content\/plugins\/chained-quiz\/models\/basic.php","line":193}
+
+Oct 24 2018 13:29:44
+{"Number":2,"Message":"Unknown: open(\/var\/lib\/php-fpm\/session\/sess_579obr2p5e7u90qmjg0kfc41m5, O_RDWR) failed: Permission denied (13)","File":"Unknown","Line":0}
+
+Oct 24 2018 13:29:44
+{"Number":2,"Message":"Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (\/var\/lib\/php-fpm\/session)","File":"Unknown","Line":0}
+

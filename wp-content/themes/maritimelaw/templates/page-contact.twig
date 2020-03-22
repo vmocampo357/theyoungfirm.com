@@ -1,0 +1,105 @@
+{% extends 'base-page.twig' %}
+
+{% block page_body %}
+    <div id="jal-any-element-primary" class="even-cols col-xs-12 jal-any-element-body content">
+
+        <div class="force-780">
+            <div class="row">
+                <div class="col-xs-12">
+                    {{ post.content }}
+                </div>
+            </div>
+            <hr />
+        </div>
+
+        <div class="force-780">
+            <div class="row">
+                <div class="col-lg-7 col-md-6">
+                    <form accept-charset="UTF-8" action="https://tyf.jonesactlaw.com/formCapture.php" data-alt="https://tschedule.infusionsoft.com/app/form/process/885a6a139779c8834563c06a4c579938" class="infusion-form" id="inf_form_885a6a139779c8834563c06a4c579938" method="POST">
+                        <input name="inf_form_xid" type="hidden" value="885a6a139779c8834563c06a4c579938" />
+                        <input name="inf_form_name" type="hidden" value="TYF Contact Us Form" />
+                        <input name="infusionsoft_version" type="hidden" value="1.70.0.183775" />
+                        <div class="infusion-field">
+                            <label for="inf_field_FirstName">First Name *</label>
+                            <input class="infusion-field-input" id="inf_field_FirstName" name="inf_field_FirstName" placeholder="First Name *" type="text" />
+                        </div>
+                        <div class="infusion-field">
+                            <label for="inf_field_Email">Email *</label>
+                            <input class="infusion-field-input" id="inf_field_Email" name="inf_field_Email" placeholder="Email *" type="text" />
+                        </div>
+                        <div class="infusion-field">
+                            <label for="inf_field_Phone1">Phone *</label>
+                            <input class="infusion-field-input" id="inf_field_Phone1" name="inf_field_Phone1" placeholder="Phone *" type="text" />
+                        </div>
+                        <div class="infusion-field">
+                            <label for="inf_misc_TellUsYourStory">Tell Us Your Story *</label>
+                            <textarea cols="24" id="inf_misc_TellUsYourStory" name="inf_misc_TellUsYourStory" placeholder="Tell Us Your Story *" rows="5"></textarea></div>
+                        <div>
+                            <div>&nbsp;</div>
+                        </div>
+                        <div class="infusion-submit">
+                            <button class="infusion-recaptcha" id="recaptcha_885a6a139779c8834563c06a4c579938" type="submit">Submit</button>
+                        </div>
+                    </form>
+                    <script type="text/javascript" src="https://tschedule.infusionsoft.app/app/webTracking/getTrackingCode"></script>
+                    <script type="text/javascript" src="https://tschedule.infusionsoft.com/resources/external/recaptcha/production/recaptcha.js?b=1.70.0.183775-hf-202001210817"></script>
+                    <script src="https://www.google.com/recaptcha/api.js?onload=onloadInfusionRecaptchaCallback&render=explicit" async="async" defer="defer"></script>
+                    <script type="text/javascript" src="https://tschedule.infusionsoft.com/app/timezone/timezoneInputJs?xid=885a6a139779c8834563c06a4c579938"></script>
+                    {#<form accept-charset="UTF-8" action="https://tyf.jonesactlaw.com/formCapture.php" data-alt="https://tschedule.infusionsoft.com/app/form/process/c99de201191be1511652fe95d66f5cd9" class="infusion-form" id="inf_form_c99de201191be1511652fe95d66f5cd9" method="POST">
+                        <input name="inf_form_xid" type="hidden" value="c99de201191be1511652fe95d66f5cd9" />
+                        <input name="inf_form_name" type="hidden" value="JAL Contact Us Form" />
+                        <input name="infusionsoft_version" type="hidden" value="1.69.0.46385" />
+                        <div class="infusion-field">
+                            <label for="inf_field_FirstName">First Name *</label>
+                            <input class="infusion-field-input" id="inf_field_FirstName" name="inf_field_FirstName" placeholder="First Name *" type="text" />
+                        </div>
+                        <div class="infusion-field">
+                            <label for="inf_field_Email">Email *</label>
+                            <input class="infusion-field-input" id="inf_field_Email" name="inf_field_Email" placeholder="Email *" type="text" />
+                        </div>
+                        <div class="infusion-field">
+                            <label for="inf_field_Phone1">Phone *</label>
+                            <input class="infusion-field-input" id="inf_field_Phone1" name="inf_field_Phone1" placeholder="Phone *" type="text" />
+                        </div>
+                        <div class="infusion-field">
+                            <label for="inf_misc_TellUsYourStory">Tell Us Your Story *</label>
+                            <textarea cols="24" id="inf_misc_TellUsYourStory" name="inf_misc_TellUsYourStory" placeholder="Tell Us Your Story *" rows="5"></textarea></div>
+                        <div class="infusion-captcha">
+                            <div>
+                                <img alt="captcha" border="0px" name="captcha" onclick="reloadJcaptcha();" src="https://tschedule.infusionsoft.com/Jcaptcha/img.jsp" title="If you can't read the image, click it to get another one." />
+                                <script>function reloadJcaptcha() {var now = new Date();if (document.images) {document.images.captcha.src = 'https://tschedule.infusionsoft.com/Jcaptcha/img.jsp?reload=' + now}}</script>
+                            </div>
+                            <div>
+                                <label for="captcha.typed">Enter the above code:</label>
+                            </div>
+                            <div>
+                                <input class="infusion-field-input-container" id="captcha.typed" name="captcha.typed" type="text" />
+                            </div>
+                        </div>
+                        <div>
+                            <div>&nbsp;</div>
+                        </div>
+                        <div class="infusion-submit">
+                            <button class="infusion-recaptcha" id="recaptcha_c99de201191be1511652fe95d66f5cd9" type="submit">Submit</button>
+                        </div>
+                    </form>
+                    <script src="https://tschedule.infusionsoft.com/app/webTracking/getTrackingCode"></script>
+                    <script src="https://tschedule.infusionsoft.com/resources/external/recaptcha/production/recaptcha.js?b=1.69.0.46385-hf-201805161808"></script>
+                    <script src="https://www.google.com/recaptcha/api.js?onload=onloadInfusionRecaptchaCallback&render=explicit" async="async" defer="defer"></script>
+                    <script src="https://tschedule.infusionsoft.com/app/timezone/timezoneInputJs?xid=c99de201191be1511652fe95d66f5cd9"></script>#}
+                </div>
+                <hr class="hidden-md visible-sm visible-xs" />
+                <div class="col-lg-5 col-md-6">
+                    <h3><i class="fa fa-phone"></i> Call</h3>
+                    <p><a href="tel:{{ primary_phone }}">{{ primary_phone }}</a></p>
+                    <h3><i class="fa fa-telegram"></i> Fax</h3>
+                    <p>{{ primary_fax }}</p>
+                    <h3><i class="fa fa-map"></i> Address</h3>
+                    <p>{{ addr_line_1 }}<br />{{ addr_line_2 }}</p>
+                    {{ map_embed_code }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% macro case_results_post_loop(case_results,terms,ctx) %}
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Sort Results</h2>
+            {#<br />
+            <div id="claim-results-filtering">
+                {% for term in terms %}
+                    <a class="crf-filter btn btn-primary" data-selected="false" data-for="tagged_{{ term.slug }}" href="javascript:void(0);">{{ term.name }}</a>
+                {% endfor %}
+            </div>#}
+        </div>
+        <div class="col-sm-6">
+            <br />
+            <select class="form-control" id="claim-results-filtering">
+                <option value="0">Claim Types</option>
+                {% for term in terms %}
+                    {#<a class="crf-filter btn btn-primary" data-selected="false" data-for="tagged_{{ term.slug }}" href="javascript:void(0);">{{ term.name }}</a>#}
+                    <option value="tagged_{{ term.slug }}">{{ term.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="jal-ul-settlement-cards">
+                {% for case in case_results %}
+                    <li class="jal-li-settlement-card {% for t in case.terms('claim-type') %}tagged_{{ t.slug }} {% endfor %}">
+                        {% if case.thumbnail|length > 0 %}
+                            <img width="210" class="alignleft" src="{{ case.thumbnail.src }}" />
+                        {% endif %}
+                        <h3>{{ case.title }}</h3>
+                        <span class="jal-span-settlement-dollar">{{ case.get_field('cr_settlement_amount')|default('Not Available') }}</span>
+                        <p>
+                            <strong>Claim Type:</strong> {{ case.get_field('cr_claim_type')|default('Not Available') }} <br />
+                            <strong>Injury Type:</strong> {{ case.get_field('cr_injury_type')|default('Not Available') }}
+                        </p>
+                        <a href="{{ case.link }}"><div><i class="fa fa-plus"></i></div> Read More</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endmacro %}

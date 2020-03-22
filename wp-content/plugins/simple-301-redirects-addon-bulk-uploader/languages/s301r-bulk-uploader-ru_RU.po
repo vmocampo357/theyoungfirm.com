@@ -1,0 +1,110 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: clearfy\n"
+"POT-Creation-Date: 2018-06-26 21:03+0300\n"
+"PO-Revision-Date: 2018-06-26 21:09+0300\n"
+"Last-Translator: alex.kovalevv@gmail.com <alex.kovalevv@gmail.com>\n"
+"Language-Team: Alex Kovalev <alex.kovalevv@gmail.com>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: libs\n"
+"X-Poedit-SearchPathExcluded-1: components\n"
+"X-Poedit-SearchPathExcluded-2: cache\n"
+
+#: simple-301-bulk-uploader.php:81
+msgid ""
+"301 Bulk Uploader requires the Simple 301 Redirects plugin to be installed "
+"and active in order to work."
+msgstr ""
+"Для работы 301 Bulk Uploader требуется, чтобы плагин Simple 301 Redirects "
+"был установлен и активирован."
+
+#: simple-301-bulk-uploader.php:91
+msgid "301 Bulk Redirects"
+msgstr ""
+
+#: simple-301-bulk-uploader.php:105
+msgid "Simple 301 Redirects - Bulk Upload"
+msgstr "Simple 301 Redirects - массовая загрузка"
+
+#: simple-301-bulk-uploader.php:106
+msgid "Example CSV"
+msgstr "Пример CSV"
+
+#: simple-301-bulk-uploader.php:108
+msgid "Export current 301's to CSV"
+msgstr ""
+
+#: simple-301-bulk-uploader.php:110
+msgid ""
+"Are you sure you want to do this? This will not be able to be retrieved. As "
+"a backup, please use the export feature to download a current copy before "
+"doing this."
+msgstr ""
+
+#: simple-301-bulk-uploader.php:112
+msgid "Clear 301 Redirect List (DO SO WITH CAUTION!)"
+msgstr ""
+
+#: simple-301-bulk-uploader.php:119
+msgid "Auto Detect End of Line"
+msgstr ""
+
+#: simple-301-bulk-uploader.php:121
+msgid ""
+"If you are experiencing unusual results after uploading and/or you are using "
+"a Mac and have generated the CSV via excel, it is recommended to use this "
+"option to force PHP to detect the end of line automatically. By default, PHP "
+"has this turned off. This option changes the "
+"<strong>'auto_detect_line_endings'</strong> php.ini option temporarily while "
+"uploading and reading your CSV file."
+msgstr ""
+
+#: simple-301-bulk-uploader.php:125
+msgid "Upload 301s"
+msgstr ""
+
+#: simple-301-bulk-uploader.php:186
+msgid "was added to redirect to"
+msgstr ""
+
+#: simple-301-bulk-uploader.php:188
+msgid "is missing a corresponding URL to redirect to"
+msgstr ""
+
+#: simple-301-bulk-uploader.php:189
+msgid "already exists and was not added"
+msgstr ""
+
+#: simple-301-bulk-uploader.php:196
+msgid ""
+"<strong>Invalid file</strong>. Use the below for debugging and when asking "
+"for support."
+msgstr ""
+
+#: simple-301-bulk-uploader.php:198
+msgid "File"
+msgstr ""
+
+#: simple-301-bulk-uploader.php:200
+msgid "Approved Mime Types"
+msgstr ""
+
+#: simple-301-bulk-uploader.php:203
+msgid ""
+"If you are certain that your filetype should be in this list, please let us "
+"know on the"
+msgstr ""
+
+#: simple-301-bulk-uploader.php:203
+msgid "forums"
+msgstr "форумы"

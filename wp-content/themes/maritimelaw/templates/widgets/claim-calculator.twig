@@ -1,0 +1,69 @@
+<div class="col-md-12 claim-calc">
+    <div class="col-md-12 claim-calc-inner" style="background-color: rgb(255, 255, 255); pointer-events: auto;">
+        <div id="jal-chained-quiz-custom" data-total-steps="{{ total_steps }}">
+            <div id="jal-chained-quiz-modal">
+                <div id="jal-chained-quiz-modal-content">
+                    <span id="jal-chained-quiz-modal-title">Sample Title</span>
+                    <p id="jal-chained-quiz-modal-body">This here would be a sample body</p>
+                    <a class="btn btn-info btn-sm" id="jal-chained-quiz-modal-close">Go Back</a>
+                </div>
+            </div>
+            <div id="jal-chained-quiz-custom-container">
+                <form>
+                {% for step, question in steps %}
+                    {% set step = step+1 %}
+                    {% set class_active = "" %}
+                    {% if step == 1 %}{% set class_active = "active" %}{% endif %}
+                    <div data-question-id="{{ question.question_id }}" data-jal-quiz-step="{{ step }}" class="jal-chained-quiz-content question {{ class_active }}">
+                        <div class="chained-quiz-question">
+                            {{ question.question_text|raw }}
+                        </div>
+                        <ul class="jal-chained-quiz-answers">
+                            {% for answer in question.answers %}
+                            <li>
+                                <label>
+                                    <input data-answer-id="{{ answer.answer_id }}" data-answer="" class="jal-chained-quiz-answer-radio" name="jal-chained-quiz-{{ step }}" type="radio" value="{{ answer.points }}" />
+                                    {{ answer.choice }}
+                                    <a class="jal-chained-quiz-expand-modal" href="javascript:void(0);">Read More</a>
+                                </label>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endfor %}
+                <div data-jal-quiz-step="{{ total_steps + 1 }}" id="jal-chained-quiz-content-gate" class="jal-chained-quiz-content">
+                    <div class="chained-quiz-question">
+                        <p class="question_name">Get your results now</p>
+                        <p class="question_full">For you to get your results, please submit the form below -- the results will be shown here and a copy will be sent to your e-mail!</p>
+                    </div>
+                    <div class="row"><div class="col-md-12">&nbsp;</div></div>
+                    <div class="row">
+                        <div class="col-md-4 col-md-push-4">
+                            <label class="control-label">Your Name*</label>
+                            <input id="jal-chained-quiz-name-input" type="text" class="form-control" placeholder="Your Name" />
+                            <br />
+                            <label class="control-label">Your E-mail*</label>
+                            <input id="jal-chained-quiz-email-input" type="email" class="form-control" placeholder="Your E-mail" />
+                        </div>
+                    </div>
+                    <div class="row"><div class="col-md-12">&nbsp;</div></div>
+                </div>
+                <div data-jal-quiz-step="{{ total_steps + 2 }}" id="jal-chained-quiz-content-result" class="jal-chained-quiz-content"></div>
+                </form>
+                <div id="jal-chained-quiz-controls">
+                    <ul>
+                        <li data-goto="0" class="jal-chained-quiz-control jal-chained-quiz-control-next">
+                            <a class="jal-chained-quiz-continue" href="javascript:void(0);">Go Ahead</a>
+                        </li>
+                        <li class="jal-chained-quiz-control jal-chained-quiz-control-gate-next">
+                            <a class="jal-chained-quiz-continue" href="javascript:void(0);">See My Results</a>
+                        </li>
+                        <li class="jal-chained-quiz-control jal-chained-quiz-control-redo">
+                            <a class="jal-chained-quiz-continue" href="javascript:void(0);">Start Over</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

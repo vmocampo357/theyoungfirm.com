@@ -1,0 +1,100 @@
+{% extends 'base-single.twig' %}
+
+{% block single_title_block %}
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="jal-any-element-body">
+                <h1>{{ post.title }}</h1>
+                <ul class="jal-wp-author-items">
+                    <li class="jal-wp-author-date"><span>{{ post.date }}</span></li>
+                    <li class="jal-wp-author-author"><span>{{ post.author.name|default('Jones Act Law') }}</span></li>
+                    {% if post.terms('video-category')|length > 0 %}
+                        <li class="jal-wp-author-category">
+                            <span>
+                            {% for term in post.terms('video-category') %}
+                                <a href="{{ term.link }}">{{ term.name }}</a>
+                            {% endfor %}
+                            </span>
+                        </li>
+                    {% endif %}
+                </ul>
+                {% if post.get_field('page_summary')|length > 0 %}
+                    <span id="jal-any-element-summary">{{ post.get_field('page_summary') }}</span>
+                {% else %}
+                    <br />
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block single_body %}
+    <div id="jal-any-element-primary" class="even-cols col-xs-12 jal-any-element-body content">
+        <div class="row">
+            <div class="col-lg-8 col-md-7">
+                {% if post.get_field('vv_video_url')|length > 0 %}
+                <div class="jal-responsive-video">
+                    <iframe width="737" height="437" src="https://www.youtube.com/embed/{{ post.get_field('vv_video_url')|youtube_id }}?rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                 <br />
+                    {% endif %}
+                {{ post.content }}
+
+                <!-- OTHER ARTICLES !-->
+                {% if related|length > 0 %}
+                    <br /><br />
+                    <div class="row jal-silo-row">
+                        <div class="jal-silo-col col-xs-12">
+                            <strong><i class="fa fa-file"></i>&nbsp;&nbsp;Related Articles</strong>
+                            <div class="jal-silo-summary-content">
+                                <ul>
+                                    {% for related_post in related %}
+                                        <li><a href="{{ related_post.link }}">{{ related_post.title }}</a></li>
+                                    {% endfor %}
+                                    <li><a style="margin-top:10px;" class="" href="{{ main_category_link }}">See All Related Articles</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <br /><br />
+                {% endif %}
+            </div>
+            <div class="col-lg-4 col-md-5">
+                {% if post.get_field('vv_related_file_link') %}
+                    <h4>Related Files</h4>
+                    <hr />
+                    <div id="webinar-files">
+                        <ul>
+                            <li>
+                                <span class="webinar-content-title"><i class="fa fa-file-pdf-o"></i> &nbsp; {{ post.get_field('vv_related_file_title')|default('Related File') }}</span>
+                                {% if post.has_field('vv_related_file_description') %}{{  post.get_field('vv_related_file_description') }}{% endif %}<p></p>
+                                <a class="btn btn-danger" target="_blank" href="{{ post.get_field('vv_related_file_link') }}">
+                                    <i class="fa fa-download"></i>&nbsp;
+                                    Download Now
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                {% endif %}
+                <h4>Similar Videos</h4>
+                <hr />
+                {% if related_videos|length > 0 %}
+                    <ul class="">
+                        {% for video in related_videos %}
+                        <li class="jal-div-video-slick-item" style="margin-bottom:20px;">
+                            <a href="{{ video.link }}">
+                                <div class="jal-div-video-single-content">
+                                    <span>{{ video.title }} <br /> {{ video.excerpt }}</span>
+                                </div>
+                                <div style="background-image:url('https://img.youtube.com/vi/{{ video.get_field('vv_video_url')|youtube_id }}/0.jpg');" class="jal-div-video-single-thumb"></div>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No related videos were found!</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
