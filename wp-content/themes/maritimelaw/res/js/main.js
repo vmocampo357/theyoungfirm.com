@@ -145,6 +145,24 @@ $(document).ready(function(){
     }
 
     /**
+     * WP DataTables
+     *
+     * For any table in the system, we turn it into a datatable now hahaha
+     *
+     */
+    if ($(".wp-block-table").length > 0) {
+        for (var $i=0; $i<$(".wp-block-table").length; $i++) {
+            var figure = $($(".wp-block-table").get($i));
+            var table = $(figure.children("table").get(0));
+                table.css("max-width","100% !important");
+            var dataTable = table.DataTable({
+                paging: false,
+                //responsive: true
+            });
+        }
+    }
+
+    /**
      * If the homepage links are visible
      */
     if($(".homepage-icon-link").length > 0)

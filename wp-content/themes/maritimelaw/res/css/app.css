@@ -412,7 +412,7 @@ hr.jal-hr-colored {
 }
 
 .jal-any-element-body table {
-    max-width: 90%
+    max-width: 100%;
 }
 
 .jal-any-element-body h2,
