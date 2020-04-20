@@ -146,7 +146,7 @@ $(document).ready(function(){
 
     /**
      * WP DataTables
-     *
+     *  
      * For any table in the system, we turn it into a datatable now hahaha
      *
      */
