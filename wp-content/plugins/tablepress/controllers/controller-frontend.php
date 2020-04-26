@@ -203,8 +203,8 @@ class TablePress_Frontend_Controller extends TablePress_Controller {
 	 * @since 1.0.0
 	 */
 	protected function _enqueue_datatables() {
-		$js_file = 'js/jquery.datatables.min.js';
-		$js_url = plugins_url( $js_file, TABLEPRESS__FILE__ );
+		# $js_file = 'js/jquery.datatables.min.js';
+		# $js_url = plugins_url( $js_file, TABLEPRESS__FILE__ );
 		/**
 		 * Filter the URL from which the DataTables JavaScript library file is loaded.
 		 *
@@ -213,8 +213,8 @@ class TablePress_Frontend_Controller extends TablePress_Controller {
 		 * @param string $js_url  URL of the DataTables JS library file.
 		 * @param string $js_file Path and file name of the DataTables JS library file.
 		 */
-		$js_url = apply_filters( 'tablepress_datatables_js_url', $js_url, $js_file );
-		wp_enqueue_script( 'tablepress-datatables', $js_url, array( 'jquery-core' ), TablePress::version, true );
+		# $js_url = apply_filters( 'tablepress_datatables_js_url', $js_url, $js_file );
+		# wp_enqueue_script( 'tablepress-datatables', $js_url, array( 'jquery-core' ), TablePress::version, true );
 	}
 
 	/**
@@ -329,6 +329,9 @@ class TablePress_Frontend_Controller extends TablePress_Controller {
 					$parameters['custom_commands'] = $js_options['datatables_custom_commands'];
 				}
 
+				# Injected by JAL team
+				$parameters['custom_commands'] = 'responsive: \'true\'';
+
 				/**
 				 * Filter the parameters that are passed to the DataTables JavaScript library.
 				 *
@@ -353,7 +356,7 @@ class TablePress_Frontend_Controller extends TablePress_Controller {
 				$parameters = implode( ',', $parameters );
 				$parameters = ( ! empty( $parameters ) ) ? '{' . $parameters . '}' : '';
 
-				$command = "$('#{$html_id}').dataTable({$parameters});";
+				$command = "$('#{$html_id}').dataTable({$parameters}); $('#{$html_id}').css('width','100%');";
 				/**
 				 * Filter the JavaScript command that invokes the DataTables JavaScript library on one table.
 				 *

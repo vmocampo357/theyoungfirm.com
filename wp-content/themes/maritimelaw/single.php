@@ -70,8 +70,16 @@ $args = array(
     ]
 );
 
+# Single page sidebar swap
+$custom_sidebar = get_post_meta( $post->id, '_sidebar_name', true );
+$has_custom_sidebar = false;
+if (!empty($custom_sidebar)) {
+    $has_custom_sidebar = true;
+}
+
 # Finally, put the related articles somewhere cool
 $context['related'] = Timber::get_posts( $args );
+$context['has_custom_sidebar'] = $has_custom_sidebar;
 $context['terms'] = $terms;
 
 # Final rendering

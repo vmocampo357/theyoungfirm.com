@@ -153,12 +153,15 @@ $(document).ready(function(){
     if ($(".wp-block-table").length > 0) {
         for (var $i=0; $i<$(".wp-block-table").length; $i++) {
             var figure = $($(".wp-block-table").get($i));
-            var table = $(figure.children("table").get(0));
-                table.css("max-width","100% !important");
-            var dataTable = table.DataTable({
-                paging: false,
-                //responsive: true
-            });
+            console.log(figure.find("thead"));
+            if (figure.find("thead").length > 0) {
+                var table = $(figure.children("table").get(0));
+                var dataTable = table.DataTable({
+                    paging: false,
+                    responsive: true
+                });
+                table.css("width","100%");
+            }
         }
     }
 
