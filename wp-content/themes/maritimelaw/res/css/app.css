@@ -412,10 +412,10 @@ hr.jal-hr-colored {
 }
 
 .jal-any-element-body table thead th:hover {
-    background-color:rgba(25,120,186,1);
+    background-color:rgba(39,89,124,1);
 }
 .jal-any-element-body table thead th {
-    background-color:rgba(25,120,186,0.7);
+    background-color:rgba(39,89,124,0.9);
     color:white;
 }
 
