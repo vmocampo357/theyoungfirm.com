@@ -32,7 +32,11 @@
 		<div id="jal-any-sticky-bar">
 			{% include 'partial/social.twig' %}
 			<div id="jal-any-sticky-bar-get-help-with">
-				{{ primary_sidebar }}
+				{% if has_custom_sidebar %}
+					{{ secondary_sidebar }}
+				{% else %}
+					{{ primary_sidebar }}
+				{% endif %}
 			</div>
 		</div>
 	</div>
