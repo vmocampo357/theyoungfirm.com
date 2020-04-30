@@ -44,7 +44,7 @@ class TablePress_Frontend_Controller extends TablePress_Controller {
 		 * @param bool $use Whether the Default CSS shall be loaded. Default true.
 		 */
 		if ( apply_filters( 'tablepress_use_default_css', true ) || TablePress::$model_options->get( 'use_custom_css' ) ) {
-			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_css' ) );
+			// add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_css' ) );
 		}
 
 		// Add DataTables invocation calls.

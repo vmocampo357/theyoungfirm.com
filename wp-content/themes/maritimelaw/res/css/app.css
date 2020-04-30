@@ -411,8 +411,33 @@ hr.jal-hr-colored {
     border: 1px solid rgba(0, 0, 0, .3)
 }
 
+.jal-any-element-body table thead th:hover {
+    background-color:rgba(25,120,186,1);
+}
+.jal-any-element-body table thead th {
+    background-color:rgba(25,120,186,0.7);
+    color:white;
+}
+
+.jal-any-element-body tr.even {
+    background-color:rgba(0,0,0,0.03) !important;
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th:first-child:before {
+    background-color: red !important;
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before {
+    background-color:rgb(25, 120, 186) !important;
+}
+
+
 .jal-any-element-body table {
     max-width: 100%;
+}
+
+figure {
+    margin: 10px 0px !important;
 }
 
 .jal-any-element-body h2,
