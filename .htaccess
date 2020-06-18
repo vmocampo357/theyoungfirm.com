@@ -1,10 +1,12 @@
 RewriteEngine on
 
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
-
 RewriteCond %{HTTPS} !on
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301]
+
+<Files xmlrpc.php>
+order deny,allow
+ deny from all
+</Files>
 
 # BEGIN W3TC Browser Cache
 <IfModule mod_mime.c>
@@ -155,26 +157,26 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 # END W3TC Browser Cache
 
 # BEGIN W3TC Page Cache core
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteBase /
-    RewriteCond %{HTTPS} =on
-    RewriteRule .* - [E=W3TC_SSL:_ssl]
-    RewriteCond %{SERVER_PORT} =443
-    RewriteRule .* - [E=W3TC_SSL:_ssl]
-    RewriteCond %{HTTP:X-Forwarded-Proto} =https [NC]
-    RewriteRule .* - [E=W3TC_SSL:_ssl]
-    RewriteCond %{HTTP:Accept-Encoding} gzip
-    RewriteRule .* - [E=W3TC_ENC:_gzip]
-    RewriteCond %{HTTP_COOKIE} w3tc_preview [NC]
-    RewriteRule .* - [E=W3TC_PREVIEW:_preview]
-    RewriteCond %{REQUEST_METHOD} !=POST
-    RewriteCond %{QUERY_STRING} =""
-    RewriteCond %{HTTP_COOKIE} !(comment_author|wp\-postpass|w3tc_logged_out|wordpress_logged_in|wptouch_switch_toggle) [NC]
-    RewriteCond %{REQUEST_URI} \/$
-    RewriteCond "%{DOCUMENT_ROOT}/wp-content/cache/page_enhanced/%{HTTP_HOST}/%{REQUEST_URI}/_index%{ENV:W3TC_SSL}%{ENV:W3TC_PREVIEW}.html%{ENV:W3TC_ENC}" -f
-    RewriteRule .* "/wp-content/cache/page_enhanced/%{HTTP_HOST}/%{REQUEST_URI}/_index%{ENV:W3TC_SSL}%{ENV:W3TC_PREVIEW}.html%{ENV:W3TC_ENC}" [L]
-</IfModule>
+#<IfModule mod_rewrite.c>
+#    RewriteEngine On
+#    RewriteBase /
+#    RewriteCond %{HTTPS} =on
+#    RewriteRule .* - [E=W3TC_SSL:_ssl]
+#    RewriteCond %{SERVER_PORT} =443
+#    RewriteRule .* - [E=W3TC_SSL:_ssl]
+#    RewriteCond %{HTTP:X-Forwarded-Proto} =https [NC]
+#    RewriteRule .* - [E=W3TC_SSL:_ssl]
+#    RewriteCond %{HTTP:Accept-Encoding} gzip
+#    RewriteRule .* - [E=W3TC_ENC:_gzip]
+#    RewriteCond %{HTTP_COOKIE} w3tc_preview [NC]
+#    RewriteRule .* - [E=W3TC_PREVIEW:_preview]
+#    RewriteCond %{REQUEST_METHOD} !=POST
+#    RewriteCond %{QUERY_STRING} =""
+#    RewriteCond %{HTTP_COOKIE} !(comment_author|wp\-postpass|w3tc_logged_out|wordpress_logged_in|wptouch_switch_toggle) [NC]
+#    RewriteCond %{REQUEST_URI} \/$
+#    RewriteCond "%{DOCUMENT_ROOT}/wp-content/cache/page_enhanced/%{HTTP_HOST}/%{REQUEST_URI}/_index%{ENV:W3TC_SSL}%{ENV:W3TC_PREVIEW}.html%{ENV:W3TC_ENC}" -f
+#    RewriteRule .* "/wp-content/cache/page_enhanced/%{HTTP_HOST}/%{REQUEST_URI}/_index%{ENV:W3TC_SSL}%{ENV:W3TC_PREVIEW}.html%{ENV:W3TC_ENC}" [L]
+#</IfModule>
 # END W3TC Page Cache core
 
 # BEGIN WordPress
@@ -184,11 +186,6 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
-
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-RewriteCond %{HTTPS} !on
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -208,6 +205,8 @@ Header set X-Content-Type-Options nosniff
 
 # Redirect 301    /html/index.html    /
 # Redirect 301    /index.html /
+Redirect 301    https://theyoungfirm.com/html/index.html /
+Redirect 301    /personal-injury/benzene-cancer/ /jones-act-cases/benzene-cancer/
 Redirect 301    /html/firm.html	/about-us/
 Redirect 301    /html/html/firm.html	/about-us/
 Redirect 301    /html/maritimeexclusiveseal.html	/about-us/
