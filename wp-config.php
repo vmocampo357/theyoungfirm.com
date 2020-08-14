@@ -23,13 +23,13 @@ define('WP_CACHE', true); // Added by W3 Total Cache
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'tyfsite_prod' );
+define( 'DB_NAME', 'tyfsite_dev' );
 
 /** MySQL database username */
 define( 'DB_USER', 'jonesact' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'Joneslaw2017!' );
+define( 'DB_PASSWORD', 'xsKXecKXghKStWx7' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
@@ -80,7 +80,7 @@ $table_prefix = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define( 'WP_DEBUG', false );
+define( 'WP_DEBUG', true );
 
 /* That's all, stop editing! Happy publishing. */
 

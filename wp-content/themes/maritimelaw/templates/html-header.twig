@@ -101,7 +101,7 @@
         <div class="row" id="responsive-search-box">
             <div class="col-md-12">
                 <div class="jal-search-box">
-                    <form method="get" action="{{ home_link }}">
+                    <form method="POST" action="{{ home_link }}">
                         <button class="jal-search-icon fa fa-search btn btn-default"></button>
                         <input type="text" class="form-control" value="{{ term|default('') }}" name="s" />
                     </form>

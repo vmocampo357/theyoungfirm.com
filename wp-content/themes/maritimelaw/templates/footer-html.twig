@@ -36,7 +36,7 @@
             </div>
             <div class="col-lg-3">
                 <div class="jal-search-box">
-                    <form method="get" action="{{ home_link }}">
+                    <form method="POST" action="{{ home_link }}">
                         <button class="jal-search-icon fa fa-search btn btn-default"></button>
                         <input placeholder="Search for answers" type="text" class="form-control" value="{{ term|default('') }}" name="s" />
                         <label style="display: none" for="s">Search for answers</label>
